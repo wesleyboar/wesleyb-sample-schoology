@@ -66,9 +66,10 @@ router.get('/:term([a-zA-Z]*)', async ctx => {
   const isTermLengthValid = ( term.length < 20 && term.length > 1 );
 
   // RFE: Isolate assertions to simplify route logic
-  // RFE: Pull messages from JSON object
+  // RFE: Pull messages from object
+  // RFE: Pull assertions variables (like message length limits) from object
   ctx.assert( hasData, 404, 'No animals found.');
-  ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 20 characters, maximum is 20 characters.');
+  ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 1 character, maximum is 20 characters.');
 
   ctx.body = data;
 });
