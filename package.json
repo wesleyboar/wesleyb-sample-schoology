@@ -4,7 +4,9 @@
   "description": "A code sample of an auto-fill web service",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony --use_strict --optimize_for_size app.js"
+    "start": "node --harmony --use_strict --optimize_for_size app.js",
+    "docs": "jsdoc --configure .jsdocrc --recurse --readme README.md",
+    "watch": "npm-watch"
   },
   "author": "wesleyb@pm.me",
   "license": "UNLICENSED",
@@ -13,5 +15,21 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa-subdomain": "^3.0.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3",
+    "npm-watch": "^0.6.0"
+  },
+  "watch": {
+    "docs": {
+      "patterns": "./",
+      "ignore": [
+        "./public",
+        "./docs",
+        "./data",
+        "node_modules"
+      ],
+      "extensions": "js,jsdoc"
+    }
   }
 }

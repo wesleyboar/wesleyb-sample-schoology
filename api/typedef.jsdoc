@@ -1,0 +1,6 @@
+// Some JavaScript documentation references global type definitions; those should all be defined here.
+
+/**
+ * [Koa](https://koajs.com/) Web Framework: [`app.context`](https://koajs.com/#app-context)
+ * @typedef KoaAppContext
+ */

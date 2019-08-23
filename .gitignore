@@ -12,9 +12,7 @@
 #
 
 # Final location for compiled files
-# RFE: Uncomment when these are available
-# /public/
-# !/public/README.md
+/docs
 
 #
 # Node (NPM)
