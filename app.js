@@ -29,6 +29,9 @@ const routes = require( path.join(__dirname, '/api/routes.js') );
 
 // If external service defines port, then so be it
 const port = process.env.PORT || 9000;
+// This is used to log URLs of relevant resources
+// WARN: This is a real domain…
+const hostname = "animal.farm";
 
 // Directories
 const staticDir = './public';
@@ -60,8 +63,9 @@ app.listen( port, ( err ) => {
 
   console.log(`Listening on port ${port}`);
 
-  // TODO: Create client app
-  // console.log(`Client app is available at http://domain.tld:${port}`);
-  console.log(`Server app docs are available at http://domain.tld:${port}/docs`);
-  console.log(`Web API is available at http://api.domain.tld:${port}`);
+  console.log(`Client app is available at http://${hostname}:${port}`);
+  // console.log(`Client app docs are available at http://${hostname}:${port}/docs`);
+  console.log(`Server app docs are available at http://docs.${hostname}:${port}`);
+  console.log(`Web API is available at http://api.${hostname}:${port}`);
+  console.log(`Web API docs are available at http://docs.${hostname}:${port}/tutorial-API.html`);
 });

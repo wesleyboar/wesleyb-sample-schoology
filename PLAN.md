@@ -48,6 +48,7 @@ Document me (what I do, JSDoc, PEP0350).
 if hasValue
 then (async) `GET` & populate, (async) GET & store
 else (async is consistent and scalable, but not required) GET & populate & store
+```
 
 ## Style
 

@@ -1,11 +1,17 @@
 {
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "./node_modules/ink-docstrap/template",
+    "tutorials": "./tutorials"
+  },
   "source": {
     "include": "./",
     "exclude": ["./public", "./data", "./docs", "node_modules"],
     "includePattern": ".+\\.js(doc)?$"
   },
-  "opts": {
-    "destination": "./docs"
-  },
-  "plugins": ["plugins/markdown"]
+  "plugins": ["plugins/markdown"],
+  "markdown": {
+      "idInHeadings": true
+  }
 }

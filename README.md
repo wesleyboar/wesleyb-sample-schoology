@@ -1,28 +1,59 @@
-# WES - Schoology Code Project
-
-## Introduction
+# Schoology Autofill Project
 
 This is a Node web service of a code sample for Wesley B to Schoology.
 
 This project contains the (future) client web app **and** the server web API. It is also (to be later) bundled in a single docker.
 
-It uses [Node.js][nodejs] and (later) [Docker][docker].
+> **To Do**
+>
+> - Configure [ESLint][eslint].
+> - Add unit tests.
 
-### To Do
+## Requirements
 
-- Configure [ESLint][eslint].
-- Add unit tests.
+- [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
+    - [NPM](https://docs.npmjs.com/getting-started/installing-node#updating-npm) 6.X+ _(or latest available for given Node version)_
+- DNS manipulation (see [Quick Start](#quick-start))
+- (later) [Docker][docker]
 
-### Getting Started
+## Quick Start
 
-- Read and obey all of the "Developer Rules" section.
-- Read the "Quick Start" section to begin using this project.
+### DNS
 
-## Developer Rules
+Edit your `/etc/hosts` file, or DNS, to direct `animal.farm` to `localhost` i.e.
 
-- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix comments.
+```
+127.0.0.1	api.animal.farm
+127.0.0.1	api.docs.animal.farm
+127.0.0.1	www.animal.farm
+127.0.0.1	docs.animal.farm
+127.0.0.1	animal.farm
+```
 
-## Directory Structure
+> **Warning**
+>
+> There is a real domain [https://www.animal.farm](https://www.animal.farm), so you will not have access to that website while these changes are in effect.
+
+### Server & Web API
+
+1. `npm install`¹
+    - _CI/CD should run `npm ci`, instead._
+2. `npm start`
+    - Build docs
+    - Run tests (when available)
+    - Serve web API
+
+<small>
+
+¹ If running the command as root, add the flag `--unsafe-perm`.
+
+</small>
+
+### Client Web App
+
+(Coming soon)
+
+## Directories
 
 These directories are manually maintained.
 
@@ -37,47 +68,24 @@ These directories are automatically maintained.
        |_ public        // user-facing static files for client web app
        |_ node_modules  // node package installation
 
-## Requirements
-
-- [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
-    - [NPM](https://docs.npmjs.com/getting-started/installing-node#updating-npm) 6.X+ _(or latest available for given Node version)_
-
-## Quick Start
-
-Build optimized user-facing static content using the command most appropriate for your host:
-
-- Node: `npm install --unsafe-perm && npm run start`¹
-
-**The result is serving static files in `./dist`.**
-
-> ¹ The `--unsafe-perm` flag is only necessary for running the command as root/sudo.
-
 ## Development
 
-### Notice
+### Rules
 
-To be effectual, the following commands:
-
-- **must** be run from this (`./`) directory
-- **must** have been preceeded by the command `npm install`¹ _at least once_
-
-> ¹ If `npm install` produces an error that mentions `cannot run in wd`, you are likely trying to run the command as root/sudo. If so, add the flag `--unsafe-perm`.
+- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix comments.
 
 ### Commands
 
-#### Start via `npm start`
+- Run commands from this (`./`) directory.
+- Run command `npm install`¹ _at least once_ beforehand.
 
-Run a local instance of the web service.
+#### `npm start`
+
+Run a local instance of the web API service.
 
 ## Deployment
 
-### Initial Setup
-
-…
-
-### Commands
-
-…
+(Coming soon)
 
 ## Footnotes
 

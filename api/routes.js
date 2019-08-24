@@ -57,7 +57,7 @@ exports.getFiltered = function ( ctx, term ) {
   // RFE: Isolate user-entry assertions to simplify route logic
   // RFE: Pull messages from object
   // RFE: Pull assertions variables (like message length limits) from object
-  ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 1 character, maximum is 20 characters.');
+  ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 2 characters, maximum is 20 characters.');
   ctx.assert( isTermCharsetValid, 400, 'Search term has invalid characters; only the "ISO basic Latin alphabet" is supported.');
 
   ctx.assert( hasData, 404, 'No animals found.');
