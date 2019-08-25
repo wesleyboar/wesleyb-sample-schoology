@@ -8,7 +8,7 @@
   },
   "source": {
     "include": "./",
-    "exclude": ["./public", "./data", "./docs", "node_modules"],
+    "exclude": ["./public", "./data", "./client", "./client-2", "./docs", "node_modules"],
     "includePattern": ".+\\.js(doc)?$"
   },
   "plugins": ["plugins/markdown"],
