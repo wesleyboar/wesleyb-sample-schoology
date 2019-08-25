@@ -58,15 +58,17 @@ Edit your `/etc/hosts` file, or DNS, to direct `animal.farm` to `localhost` i.e.
 These directories are manually maintained.
 
     ./
-       |_ api           // source files for the server web API
+        |_ api             // source files of the server web API
+        |_ client          // source files of the client web app
+        |_ data            // data for the server web API
 
 These directories are automatically maintained.
 
     ./
-       |_ data          // data for the server web API
-       |_ docs          // documentation (for now, server web API; later, also client web app)
-       |_ public        // user-facing static files for client web app
-       |_ node_modules  // node package installation
+        |_ docs            // developer documentation for web services
+        |_ node_modules    // node package installation
+        |_ public          // user-facing static files for client web app
+        |_ tutorials       // documentation for web service modules
 
 ## Development
 

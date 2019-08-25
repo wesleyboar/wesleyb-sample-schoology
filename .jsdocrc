@@ -1,6 +1,6 @@
 {
   "opts": {
-    "destination": "./docs",
+    "destination": "./docs/service",
     "recurse": true,
     "template": "./node_modules/ink-docstrap/template",
     "tutorials": "./tutorials"

@@ -2,10 +2,10 @@
   "name": "wesleyb-sample-schoology-auto-fill-web-service",
   "version": "1.0.0",
   "description": "A code sample of an auto-fill web service",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "npm-run-all --parallel docs test && npm run serve",
-    "serve": "node --harmony --use_strict --optimize_for_size app.js",
+    "serve": "node --harmony --use_strict --optimize_for_size main.js",
     "docs": "jsdoc --configure .jsdocrc --recurse --readme README.md",
     "test": "echo \"Tests are not implemented\"",
     "watch": "npm-watch"

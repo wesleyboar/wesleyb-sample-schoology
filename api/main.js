@@ -1,16 +1,33 @@
 /**
- * API Service - Routes
+ * Server-Side Web API Service
  * ---
- * @module api/routes
+ * @module api
+ * @tutorial Server-Side Web API
  */
 
-const path = require('path');
+const Router = require('koa-router');
+const router = new Router();
 
 // RFE: Get data from external source
-// - committed external list (static-ish, maintenance concern)
-// - API call (dynamic, reliability concern)
-// - saved results of API call (dynamic-ish, low maintenance, reliability concern)
-const data = require( path.join(__dirname, '/../data/farm-animals.json') );
+// SEE: ../data/README.md
+/** List of animals
+ * @const {module:api~AnimalList}
+ */
+const data = require('../data/farm-animals.json');
+
+//
+// Definitions
+//
+
+/**
+ * An animal name
+ * @typedef {String} Animal
+ */
+
+/**
+ * A list of animal names
+ * @typedef {Array.<module:api~Animal>} AnimalList
+ */
 
 //
 // Helper Functions
@@ -30,13 +47,13 @@ function _filterListByString( list, keyString ) {
 }
 
 //
-// Export
+// Route Functions
 //
 
 /** Get all data
  * @param {KoaAppContext} ctx
  */
-exports.get = function ( ctx ) {
+get = function ( ctx ) {
   ctx.body = data;
 };
 
@@ -48,7 +65,7 @@ exports.get = function ( ctx ) {
  * @param {KoaAppContext} ctx
  * @param {String} term
  */
-exports.getFiltered = function ( ctx, term ) {
+getFiltered = function ( ctx, term ) {
   const list = _filterListByString( data, term );
   const hasData = ( list.length > 0 );
   const isTermLengthValid = ( term.length < 21 && term.length > 1 );
@@ -63,4 +80,23 @@ exports.getFiltered = function ( ctx, term ) {
   ctx.assert( hasData, 404, 'No animals found.');
 
   ctx.body = list;
+};
+
+//
+// Router
+//
+
+router.get('/', async ctx => {
+  get( ctx );
+});
+router.get('/:term', async ctx => {
+  getFiltered( ctx, ctx.params.term );
+});
+
+//
+// Export
+//
+
+module.exports = {
+  koaRouter: router
 };

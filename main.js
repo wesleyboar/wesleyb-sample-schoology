@@ -1,27 +1,24 @@
 /**
- * API Service
+ * Web Services
  * ---
- * @module api
+ * - [Server-Side Web API]{@link module:api}
+ * - [Client-Side Web App]{@link module:client}
+ * @module services
  */
 
 // RFE: Add unit testing
-
-const path = require('path');
 
 // RFE: Support different environment configurations
 // require('dotenv').config();
 
 const Koa = require('koa');
 const Subdomain = require('koa-subdomain');
-const Router = require('koa-router');
 
 const app = new Koa();
 const subdomain = new Subdomain();
-const router = new Router();
 const serve = require('koa-static');
 
-/** @const {module:api/routes} */
-const routes = require( path.join(__dirname, '/api/routes.js') );
+const router = require('./api/main.js').koaRouter;
 
 //
 // Definitions
@@ -41,13 +38,6 @@ const docsDir = './docs';
 // Application
 //
 
-// Routes
-router.get('/', async ctx => {
-  routes.get( ctx );
-});
-router.get('/:term', async ctx => {
-  routes.getFiltered( ctx, ctx.params.term );
-});
 // API requests must be sent to `api.domain.tld`; others may use any sub-domain
 subdomain.use( 'www', serve( staticDir ));
 subdomain.use( 'docs', serve( docsDir ));
@@ -63,9 +53,9 @@ app.listen( port, ( err ) => {
 
   console.log(`Listening on port ${port}`);
 
-  console.log(`Client app is available at http://${hostname}:${port}`);
-  // console.log(`Client app docs are available at http://${hostname}:${port}/docs`);
-  console.log(`Server app docs are available at http://docs.${hostname}:${port}`);
-  console.log(`Web API is available at http://api.${hostname}:${port}`);
-  console.log(`Web API docs are available at http://docs.${hostname}:${port}/tutorial-API.html`);
+  console.log(`Web Service documentation is available at http://docs.${hostname}:${port}/service/`);
+  console.log(`Client-Side Web App is available at http://${hostname}:${port}`);
+  // console.log(`Client-Side Web App documentation is available at http://docs.${hostname}:${port}/client`);
+  console.log(`Server-Side Web API is available at http://api.${hostname}:${port}`);
+  console.log(`Server-Side Web API documentation is available at http://docs.${hostname}:${port}/service/tutorial-API.html`);
 });

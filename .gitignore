@@ -12,7 +12,10 @@
 #
 
 # Final location for compiled files
-/docs
+/docs/service
+/docs/client
+/public/*
+!/public/README.md
 
 #
 # Node (NPM)

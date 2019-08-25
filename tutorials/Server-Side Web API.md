@@ -1,12 +1,13 @@
 # Schoology Autofill API
 
-This API has only two endpoints, to get a list of all animals, or to get a filtered list of animals.
+This API has only two endpoints, to get a list of names of all recognized farm animals, or to get a filtered list.
 
 > **To Do**
 >
 > - Support version number in requests.
 > - Consider expanding API definition to have `animals` in URL as a resource.
 > - Add API examples for more interfaces than just `curl`.
+> - Auto-generate API documentation from a functional API definition.
 
 ## `GET` All
 
@@ -40,26 +41,6 @@ Get a list of all animals
 ### `GET` Filtered
 
 Get a filtered list of animals
-
-- Method `GET`
-- Path: `/_TERM_`
-- Request Params:
-    - `_TERM_`: a string by which to filter the items of the array
-- Request Body: _none_
-- Response Type: `JSON`
-- Example:
-    - Request:
-        - curl: `curl -H "Content-Type: application/json" http://api.domain.tld:9000/do`
-    - Response:
-        - JSON:
-            ```json
-            [
-                "dog",
-                "donkey"
-            ]
-            ```
-
-## Get a list of all animals
 
 | Method | Path | Request Params | Request Body | Response Type |
 | :- | :- | :- | :- | :- |
