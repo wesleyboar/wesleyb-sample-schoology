@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel docs test && npm run serve",
     "serve": "node --harmony --use_strict --optimize_for_size main.js",
-    "docs": "jsdoc --configure .jsdocrc --recurse --readme README.md",
+    "docs": "jsdoc --configure .jsdocrc",
     "test": "echo \"Tests are not implemented\"",
     "watch": "npm-watch"
   },

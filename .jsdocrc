@@ -2,6 +2,7 @@
   "opts": {
     "destination": "./docs/service",
     "recurse": true,
+    "readme": "README.md",
     "template": "./node_modules/ink-docstrap/template",
     "tutorials": "./tutorials"
   },
