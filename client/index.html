@@ -8,11 +8,11 @@
     <!-- Styles -->
     <!-- <link rel="stylesheet" href="/style.css"> -->
     <!-- Scripts -->
-    <script src="/____.js" type="module" defer></script>
   </head>
   <body>
     <main>
     </main>
-    <script></script>
+    <!-- FAQ: Placed at end of `<body>`, because polyfill-dependent browser may not support `defer` -->
+    <script src="/node_modules/datalist-polyfill/datalist-polyfill.min.js"></script>
   </body>
 </html>

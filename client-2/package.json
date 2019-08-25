@@ -9,6 +9,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "datalist-polyfill": "^1.23.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
