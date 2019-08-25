@@ -22,6 +22,7 @@ export function Data() {
     });
   }
 
+  // RFE: Add second `useEffect` to trigger after onChange changes `list` (which is not used, yet—it requires sovling a problem)
   useEffect(() => {
     getOptionData().then( data => {
       const optionElements = createOptions( data );
