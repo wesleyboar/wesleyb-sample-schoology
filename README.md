@@ -71,15 +71,24 @@ These directories are automatically maintained.
 
 #### `npm start`
 
-Run a local instance of the services.
+1. [`npm build`](#npm-build)
+1. [`npm serve`](#npm-serve)
+
+#### `npm build`
+
+Perform fresh builds for all services.
+
+#### `npm serve`
+
+Run a local instance of the server.
 
 #### `npm docs`
 
-Compile documentation from services.
+Compile documentation from all services.
 
 #### `npm test`
 
-Run tests for all services.
+Run tests from all services.
 
 ## Deployment
 

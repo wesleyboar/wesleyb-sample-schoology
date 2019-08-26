@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.simplex.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-api.html">api</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="tutorial-README.html">README</a></li><li><a href="tutorial-Server-Side Web API.html">Server-Side Web API</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html">Global</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h1 id="schoology-autofill-project---api">Schoology Autofill Project - API</h1>
+<p>This is all the code for the API service logic.</p>
+<p>It assumes the <a href="https://koajs.com/" title="Koa">Koa Web Framework</a> is used by its consumer, so it exports a Koa middleware that has a <code>routes</code> function.</p>
+<blockquote>
+<p><strong>To Do</strong></p>
+<ul>
+<li>Support version number in requests.</li>
+<li>Consider expanding API definition to have <code>animals</code> in URL as a resource.</li>
+<li>Add API examples for more interfaces than just <code>curl</code>.</li>
+<li>Auto-generate API documentation from a functional API definition.</li>
+<li>Configure/support <a href="%5Beslint%5D">ESLint</a>.</li>
+</ul>
+</blockquote>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://nodejs.org/" title="Node.js">Node</a> 10.X+ <em>(do <strong>not</strong> exceed LTS)</em>
+<ul>
+<li><a href="https://docs.npmjs.com/getting-started/installing-node#updating-npm">NPM</a> 6.X+ <em>(or latest available for given Node version)</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<ol>
+<li>Require the file's <code>koaRouter</code>.</li>
+<li>Use the routes in the app (or through a middleware).</li>
+</ol>
+<p>Example:</p>
+<pre class="prettyprint source lang-javascript"><code>const router = require('./api/main.js').koaRouter;
+
+// Use directly
+app.use( router.routes());
+// Or via middleware
+// subdomain.use( 'api', router.routes());
+</code></pre>
+<h2 id="directories">Directories</h2>
+<p>These directories are manually maintained.</p>
+<pre><code>./
+    |_ tutorials       // tutorials for the developer documentation
+</code></pre>
+<p>These directories are automatically maintained.</p>
+<pre><code>./
+    |_ docs            // developer documentation for web services
+    |_ node_modules    // node package installation
+</code></pre>
+<h2 id="development">Development</h2>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Use <a href="https://www.python.org/dev/peps/pep-0350/">PEP 350</a> to prefix comments.</li>
+</ul>
+<h3 id="commands">Commands</h3>
+<ul>
+<li>Run commands from this (<code>./</code>) directory.</li>
+<li>Run command <code>npm install</code>¹ <em>at least once</em> beforehand.</li>
+</ul>
+<h4 id="npm-docs"><code>npm docs</code></h4>
+<p>Generate documentation from code comments and tutorials.</p>
+<h4 id="npm-test"><code>npm test</code></h4>
+<p>(Coming soon)</p>
+<h4 id="npm-watch"><code>npm watch</code></h4>
+<p>Run commands as relevant files change.</p>
+<h2 id="footnotes">Footnotes</h2>
+<ol>
+<li>For Windows, ensure that <code>node.exe</code> is on the <code>PATH</code> system variable.</li>
+<li>Do <strong>not</strong> install dependencies globally.</li>
+</ol></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on 2019-08-26T02:55:26-05:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
