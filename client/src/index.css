@@ -1,15 +1,11 @@
 @import "./styles/site/core.css";
 
-:root {
-    --global--font-size: 1.4rem;
-}
-
 fieldset {
-    border: 1px solid black;
+    border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
     padding: 1em;
     margin: 1em;
 }
 
 small {
-    font-size: var(--global--font-size);
+    font-size: var(--global-font-size--small);
 }

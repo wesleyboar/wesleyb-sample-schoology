@@ -1,0 +1,49 @@
+/* Fade in the component */
+.c-loading {
+  text-align: center;
+
+  opacity: 0;
+
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.c-loading__text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Show animated ellipsis after loading text */
+/* SEE: https://stackoverflow.com/a/28074607 */
+:root {
+  --c-loading-ellipsis--width: 0.4ch;
+  --c-loading-ellipsis--animation-steps: 3;
+}
+.c-loading__text::after {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  display: inline-block;
+  content: "...";
+  width: 0ch;
+
+  text-align: left;
+  vertical-align: bottom;
+
+  animation: ellipsis steps( var(--c-loading-ellipsis--animation-steps), start) 2s infinite;
+}
+@keyframes ellipsis {
+  to {
+    width: calc(
+      var(--c-loading-ellipsis--width)
+      * var(--c-loading-ellipsis--animation-steps)
+    );
+  }
+}

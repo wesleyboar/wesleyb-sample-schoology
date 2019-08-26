@@ -8,7 +8,7 @@ Markup: c-delimited-list.twig
 .c-delimited-list--char-pipe - Pipe Delimiter i.e. "|"
 .c-delimited-list--char-colon - Colon Delimiter i.e. ":"
 
-Styleguide Core.Components.Atoms.DelimitedList
+Styleguide Components.Atoms.DelimitedList
 */
 .c-delimited-list,
 [class*=".c-delimited-list--"] {

@@ -20,7 +20,7 @@ Rules:
 
 Weight: 6
 
-Styleguide Core.Components
+Styleguide Components
 */
 
 /*
@@ -37,7 +37,7 @@ Rules:
 - One atom may not contain other atoms.
 - Many atoms may be combined to form molecules.
 
-Styleguide Core.Components.Atoms
+Styleguide Components.Atoms
 */
 
 /*
@@ -54,7 +54,7 @@ Rules:
 - One molecule may contain many atoms.
 - Many molecules may be combined to form organisms.
 
-Styleguide Core.Components.Molecules
+Styleguide Components.Molecules
 */
 
 /*
@@ -71,7 +71,7 @@ Rules:
 - One organism may contain many molecules.
 - Many organisms may be combined to form organisms.
 
-Styleguide Core.Components.Organisms
+Styleguide Components.Organisms
 */
 
 /* DO NOT ADD STYLES HERE; ADD THEM INSIDE STYLESHEETS IN THIS DIRECTORY */

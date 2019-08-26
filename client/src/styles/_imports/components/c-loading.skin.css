@@ -1,0 +1,4 @@
+.c-loading {
+    display: table; /* FAQ: Behaves like a "shrink-wrapped" div */
+    margin: var(--env-space--small) 0;
+}

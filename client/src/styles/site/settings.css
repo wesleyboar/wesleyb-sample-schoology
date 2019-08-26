@@ -1,7 +1,9 @@
 /*! SCHOOLOGY | Site Settings */
 
 /* RFE: Use globbing or script to reduce maintenance */
-/* @import "../_imports/settings/env.vars.json"; */
+@import "../_imports/settings/env.misc.css";
+@import "../_imports/settings/env.space.css";
+@import "../_imports/settings/env.vw.css";
 @import "../_imports/settings/media.screen.css";
 @import "../_imports/settings/prop.colors.css";
 @import "../_imports/settings/prop.font.css";

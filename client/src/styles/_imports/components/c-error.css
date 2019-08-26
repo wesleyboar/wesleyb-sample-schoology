@@ -8,6 +8,11 @@ Markup: c-error.twig
 Styleguide Components.Error
 */
 .c-error {
-  color: red;
-  font-weight: bold;
+  display: inline-block;
+  padding: 0.5em;
+  margin: var(--env-space--small) 0;
+
+  color: var(--global-color-danger--xx-dark);
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-danger--xx-dark);
+  background-color: var(--global-color-danger--xx-light);
 }

@@ -3,7 +3,7 @@ Columns
 
 A column-based content container.
 
-Styleguide Core.Objects.Columns
+Styleguide Objects.Columns
 */
 .o-columns {
   column-count: var(--global-layout--col-count);

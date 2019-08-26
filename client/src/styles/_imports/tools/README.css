@@ -9,7 +9,7 @@ Reference:
 
 Weight: 2
 
-Styleguide Core.Tools
+Styleguide Tools
 */
 
 /*
@@ -23,7 +23,7 @@ Reference:
 - [SASS `@function`](https://sass-lang.com/documentation/at-rules/function)
 - [LESS `@plugin`](http://lesscss.org/features/#plugin-atrules-feature)
 
-Styleguide Core.Tools.Functions
+Styleguide Tools.Functions
 */
 
 /*
@@ -37,7 +37,7 @@ Reference:
 - [SASS `@extend`](https://sass-lang.com/documentation/at-rules/extend)
 - [LESS `@extend`](http://lesscss.org/features/#extend-feature)
 
-Styleguide Core.Tools.Extends
+Styleguide Tools.Extends
 */
 
 /*
@@ -50,7 +50,7 @@ Reference:
 - [SASS `@mixin`](https://sass-lang.com/documentation/at-rules/function)
 - [OOCSS `@mixin`](http://oocss.org/spec/css-mixins.html)
 
-Styleguide Core.Tools.Mixins
+Styleguide Tools.Mixins
 */
 
 /* DO NOT ADD STYLES HERE; ADD GLOBAL TOOLS INSIDE STYLESHEETS IN THIS DIRECTORY */

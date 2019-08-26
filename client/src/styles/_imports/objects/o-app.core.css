@@ -10,7 +10,7 @@ Markup: o-app.twig
 .o-app--layout-vert - App with vertical layout (header, main body, footer)
 .o-app--layout-horz - App with horizontal layout (side bar, main body, side bar)
 
-Styleguide Core.Objects.App
+Styleguide Objects.App
 */
 @custom-selector :--o-app
   .o-app,

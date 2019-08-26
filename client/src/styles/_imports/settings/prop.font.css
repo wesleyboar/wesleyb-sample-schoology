@@ -6,44 +6,58 @@ Font
 
 These are the global font properties.
 
-Styleguide Example.Settings.CustomProperties.Font
+Styleguide Settings.CustomProperties.Font
 */
 
+:root {
 /*
 Sizes
 
 These are the global font sizes.
+
+<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
 
 Markup:
 <section class="c-sample" id="d-font-size">
   <div class="{{ modifier_class }}">I am font.</div>
 </section>
 
-.d-font-size--xxx-large - For giant font-size.
-.d-font-size--xx-large - For massive font-size.
-.d-font-size--x-large - For larger font-size.
-.d-font-size--large - For large font-size.
-.d-font-size--normal - For normal font-size.
-.d-font-size--small - For small font-size.
-.d-font-size--x-small - For smaller font-size.
-.d-font-size--xx-small - For tiny font-size.
-.d-font-size--xxx-small - For baby font-size.
+--global-font-size--xx-small: 1.0rem
+--global-font-size--x-small: 1.2rem
+--global-font-size--small: 1.4rem
+--global-font-size--normal: 1.8rem
+--global-font-size--large: 2.4rem
+--global-font-size--x-large: 3.0rem
+--global-font-size--xx-large: 3.8rem
 
 Styleguide Settings.CustomProperties.Font.Sizes
 */
+  /* FAQ: The ratio between each adjacent style is about ~1.25 */
+  --global-font-size--xx-small: 1.0rem;
+  --global-font-size--x-small: 1.2rem;
+  --global-font-size--small: 1.4rem;
+  --global-font-size--normal: 1.8rem;
+  --global-font-size--large: 2.4rem;
+  --global-font-size--x-large: 3.0rem;
+  --global-font-size--xx-large: 3.8rem;
 
-:root {
-  /* FAQ: The ratio is about ~1.25 */
-  /* RFE: Consider environmental variables */
-  --global-font-size--xxx-small: 0.8rem;  /* env(--space--x-small) */
-  --global-font-size--xx-small: 1.0rem;   /* env(--space--small) */
-  --global-font-size--x-small: 1.2rem;    /* common size */
-  --global-font-size--small: 1.4rem;      /* common size */
-  --global-font-size--normal: 1.8rem;     /* env(--space--normal) */
-  --global-font-size--large: 2.4rem;      /* avg. nearest siblings */
-  --global-font-size--x-large: 3.0rem;    /* env(--space--large) */
-  --global-font-size--xx-large: 3.8rem;   /* avg. nearest siblings */
-  --global-font-size--xxx-large: 4.8rem;  /* env(--space--x-large) */
+/*
+Families
+
+These are the global font families.
+
+<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+
+Markup:
+<section class="c-sample" id="d-font-size">
+  <div class="{{ modifier_class }}">I am font.</div>
+</section>
+
+--global-font-family--primary: Georgia, Times, serif
+
+Styleguide Settings.CustomProperties.Font.Families
+*/
+  --global-font-family--primary: Georgia, Times, serif;
 }
 
 /* DO NOT ADD STYLES HERE; USE THE VARIABLES FOR STYLES IN OTHER STYLESHEETS */

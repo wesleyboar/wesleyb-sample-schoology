@@ -1,12 +1,9 @@
 /* FAQ: Using `:not` and `display: none` avoids choosing the wrong `display` to "show" element */
-/* Do NOT show: */
-/* - The loading component if data is loaded */
-.js-datalist.has-data .c-loading,
-/* - Elements other than loading component, if data is not loaded */
-.js-datalist:not(.has-data) :not(.c-loading),
-/* - The error component, if no error occurred */
-.js-datalist:not(.has-error) .c-error,
-/* - Elements other than error component, if error occurred */
-.js-datalist.has-error :not(.c-error) {
+
+/* While `.is-loading`, hide children NOT visible while `.is-loading` */
+.js-datalist.is-loading > :not(.is-loading__visible),
+
+/* While NOT `.is-loading`, hide children ONLY visible while `.is-loading` */
+.js-datalist:not(.is-loading) > .is-loading__visible {
   display: none;
 }

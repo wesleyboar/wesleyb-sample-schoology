@@ -24,7 +24,7 @@ Rules:
 
 Weight: 1
 
-Styleguide Core.Settings
+Styleguide Settings
 */
 
 /*
@@ -35,7 +35,22 @@ Custom properties are native CSS property value variables.
 Reference:
 - [Custom Properties](https://preset-env.cssdb.org/features#custom-properties)
 
-Styleguide Core.Settings.CustomProperties
+Styleguide Settings.CustomProperties
+*/
+
+/*
+Custom Environmental Variables
+
+Custom environmental variables are variables that originate ouside the scope of CSS.
+
+> **Warning**
+>
+> - The application currently does not support these per spec. Instead, -either_ they are available as custom properties _or_ the values are used directly or indirectly.
+
+Reference:
+- [Custom Environmnetal Variables](https://preset-env.cssdb.org/features#environment-variables)
+
+Styleguide Settings.CustomEnvironmnetalVariables
 */
 
 /*
@@ -46,7 +61,7 @@ Custom media queries are native CSS media query variables.
 Reference:
 - [Custom Media Queries](https://preset-env.cssdb.org/features#custom-media-queries)
 
-Styleguide Core.Settings.CustomMediaQueries
+Styleguide Settings.CustomMediaQueries
 */
 
 /*
@@ -57,7 +72,7 @@ Custom selectors are native CSS selector variables.
 Reference:
 - [Custom Selectors](https://preset-env.cssdb.org/features#custom-selectors)
 
-Styleguide Core.Settings.CustomSelectors
+Styleguide Settings.CustomSelectors
 */
 
 /* DO NOT ADD STYLES HERE; ADD GLOBAL SETTINGS INSIDE STYLESHEETS IN THIS DIRECTORY */

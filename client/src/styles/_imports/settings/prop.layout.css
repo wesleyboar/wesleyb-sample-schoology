@@ -1,91 +1,36 @@
 /*
 Layout
 
-These are the global layout properties.
+These are the global layout properties. Examples:
 
---global-layout--page-width - current width of the page
---global-layout--page-width-min - minimum width of page
---global-layout--page-width-max - maximum width of page
---global-layout--page-padding-x - horizontal padding of page
---global-layout--page-padding-y - vertical padding of page
---global-layout--page-margin-x  - hoirzontal margin of page
---global-layout--page-margin-y  - vertical margin of page
---global-layout--page-buffer-x  - horizontal negative space of page (used only for calcualtion)
---global-layout--colwrap-width  - width of content column container
---global-layout--col-width      - width of a content column width
---global-layout--col-count      - number of content columns allowed
---global-layout--col-gap        - space between content columns (this reduces column width)
---global-layout--col-ruler-width  - width of ruler between content columns (this reduces column width)
---global-layout--border-width - standard border width
---global-layout--border-width--thick - thicker border width
---global-layout--border-style - consistent border style
---global-layout--border-radius - consistent border radius
---global-layout--list-decorator-width - width of list item decorator
---global-layout--line-height - common line-height
+- border
+- page dimension
+
+Styleguide Settings.CustomProperties.Layout
 */
 
 :root {
-  /* Page */
+/*
+Border
 
-  /* The page __must__:
-      1. be horizontally centered */
-  /* WARNING: Magic values; avoid editting */
-  --global-layout--page-width: 100vw;   /* always equal to full page width */
-  --global-layout--page-margin-x: auto; /* center page horizontally */
-  --global-layout--page-margin-y: 0;    /* prevent conflict with children */
+These are the global border properties.
 
-  /* SEE: For commented values, see `object/o-page.css` */
-  /* --global-layout--page-width-max: env(…); */
-  /* --global-layout--page-width-min: env(…); */
+<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
 
-  /* The page padding __must__:
-      1. __not__ break any use of the golden ratio
-      2. prevent page from touching window edge
-      3. follow vertical spacing ratios */
-  /* SEE: For commented values, see `object/o-page.css` */
-  /* --global-layout--page-padding-x: env(…); */
-  --global-layout--page-padding-y: 0;
+--global-layout--border-width: 1px
+--global-layout--border-width--thick: 3px
+--global-layout--border-width--x-thick: 6px
+--global-layout--border-style: solid
+--global-layout--border-radius: 3px
 
-  /* Column */
+Styleguide Settings.CustomProperties.Layout.Border
+*/
 
-  /* The column wrapper width __must__:
-      1. be less than the current page width
-      2. have a golden ratio with current page width */
-  --global-layout--colwrap-width:
-      calc( var(--global-layout--page-width) / env(--phi) );
-
-  /* The space between columns __must__:
-      1. account for multiple columns
-      2. increase proportional to column count
-      3. respect minimum column width */
-  --global-layout--col-width-total:
-    calc( var(--global-layout--col-width) * var(--global-layout--col-count) );
-
-  /* FAQ: For exact column width, set all properties */
-  /* SEE: https://developer.mozilla.org/en-US/docs/Web/CSS/column-width */
-  /* SEE: For commented values, see `object/o-page.css` */
-  /* --global-layout--col-gap: …; */
-  /* --global-layout--col-count: …; */
-  --global-layout--col-width: env(--vw--narrow);
-  --global-layout--col-ruler-width: 0;
-
-  /* Border */
-
-  --global-layout--border-width:
-      calc( env(--space--small) / 10 );
-  --global-layout--border-width--thick:
-      calc( env(--space--normal) / 10 );
-  --global-layout--border-width--x-thick:
-      calc( env(--space--large) / 10 );
+  --global-layout--border-width: 1px;
+  --global-layout--border-width--thick: 3px;
+  --global-layout--border-width--x-thick: 6px;
   --global-layout--border-style: solid;
-  --global-layout--border-radius: 5px;
-
-  /* Miscellaneous */
-
-  /* The width of list decorators, like for `<li>` and `<summary>` */
-  --global-layout--list-decorator-width: 1.5ch;
-  /* The common line-height for the website */
-  --global-layout--line-height: env(--phi);
+  --global-layout--border-radius: 3px;
 }
 
 /* DO NOT ADD STYLES HERE; USE THE VARIABLES FOR STYLES IN OTHER STYLESHEETS */

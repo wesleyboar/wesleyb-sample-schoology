@@ -14,14 +14,14 @@ They are the "universal breakpoints" for Wesley B websites.
 --screen-narrow-and-below - `300`–
 --screen-narrow-to-medium - `300`—`670`
 
-Styleguide Core.Settings.CustomMediaQueries.ScreenWidth
+Styleguide Settings.CustomMediaQueries.ScreenWidth
 */
 
 /* WARNING: Use pixels!
             A reference online (since lost) proved how only
             the `px` units were reliable in media queries. */
 
-/* NOTE: If we need styles to apply to two media queries,
+/* NOTE: If necessary to apply styles to multiple media query ranges,
          like `--screen-medium-to-wide` and `--screen-narrow-to-medium`,
          then use a comma in media query selector, like:
          `@media (--screen-medium-to-wide), (--screen-narrow-to-medium) { … }` */

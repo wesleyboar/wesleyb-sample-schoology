@@ -3,76 +3,32 @@ Non-Tag
 
 These styles are applied to elements independently of the elements' tag.
 - `help` cursor for elements with `title` attribute
-- disabled `disabled` elements even more (visually and functionally)
-- style the text-selection
+- disable `disabled` elements even more (visually and functionally)
+- style focused elements
+- style text selection
 
 Weight: 0
 
-Styleguide Core.Generics.NonTag
+Styleguide Generics.NonTag
 */
-@import "../../_imports/generics/non-tag/title.css";
 
-:root {
-  --g-non-tag-focus--outline-style: double;
-  --g-non-tag-focus--outline-width: 0.14em; /* estimate `text-decoration-style: solid` width */
-  --g-non-tag-focus--outline-offset:
-    calc( var(--g-non-tag-focus--outline-width) / 2 );
-  --g-non-tag-focus--outline-color: var(--global-color-warning);
-
-  --g-non-tag-focus--selection-background: var(--global-color-accent);
-  --g-non-tag-focus--selection-color: var(--global-color-accent--xxx-light);
+[title] {
+  curosr: help;
 }
 
-[disabled] {
-  pointer-events: none;
-  text-decoration: line-through solid;
-  opacity: 0.25;
-}
-/* NOTE: Consider this; see `./forms.css` */
-/*
 :disabled {
   cursor: not-allowed;
+  pointer-events: none;
 }
-*/
 
 :focus {
-  outline-width: var(--g-non-tag-focus--outline-width);
-  outline-style: var(--g-non-tag-focus--outline-style);
-  outline-color: var(--g-non-tag-focus--outline-color);
-  outline-offset: var(--g-non-tag-focus--outline-offset);
-}
-/* FAQ: A `summary` could have it's outline invisible,
-        because its a block element (width usually 100%)
-        and its ancestors could hide overflow */
-summary:focus {
-  width: calc( 100% - var(--g-non-tag-focus--outline-offset) - var(--g-non-tag-focus--outline-width) );
+  outline-width: var(--global-layout--border-width--thick);
+  outline-style: double;
+  outline-color: var(--global-color-inform);
+  outline-offset: calc( var(--global-layout--border-width--thick) / 2);
 }
 
 ::selection {
-  background: var(--g-non-tag-focus--selection-background);
-  color: var(--g-non-tag-focus--selection-color);
-}
-
-:target::after,
-/* FAQ: The dynamic addition of HTML breaks all hash-based functionality;
-        this is yet another JavaScript reproduction of native feature…
-        Reminder to All: Do NOT _ever_ break native functionality! */
-.js-target::after {
-  content: "★";
-  display: inline-block;
-  vertical-align: middle;
-  margin-inline-start: 1ch;
-
-  color: var(--g-non-tag-focus--outline-color);
-
-  font-size: var(--global-font-size--x-large);
-  line-height: 100%;
-}
-:target::after:dir(ltr),
-.js-target::after:dir(ltr) {
-  content: "☜";
-}
-:target::after:dir(rtl),
-.js-target::after:dir(rtl) {
-  content: "☞";
+  background: var(--global-color-accent);
+  color: var(--global-color-accent--xxx-light);
 }

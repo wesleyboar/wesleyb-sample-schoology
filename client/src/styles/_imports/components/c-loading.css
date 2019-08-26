@@ -1,37 +1,9 @@
-.c-loading {
-  text-align: center;
+/*
+Loading
 
-  opacity: 0;
+The loading component informs a user that content they should see is not yet available.
 
-  animation-name: fadein;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-.c-loading__text {
-  position: relative;
-  display: inline-block;
-}
-/* SEE: https://stackoverflow.com/a/28074607 */
-.c-loading__text::after {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 100%;
-
-  display: inline-block;
-  content: "...";
-  width: 0;
-
-  text-align: left;
-  vertical-align: bottom;
-
-  animation: ellipsis steps(3, start) 2s infinite;
-}
-@keyframes ellipsis {
-  to   { width: 1em; }
-}
+Styleguide Components.Loading
+*/
+@import "./c-loading.structure.css";
+@import "./c-loading.skin.css";

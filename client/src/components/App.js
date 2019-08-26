@@ -8,7 +8,8 @@ import React from 'react';
 
 import DataListEntry from './DataListEntry.js';
 
-import './App.css';
+// FAQ: Only use for JavaScript-specific classes require styling
+// import './App.css';
 
 /** @constructor */
 class App extends React.Component {

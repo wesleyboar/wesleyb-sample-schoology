@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+// FAQ: Only use for JavaScript-specific classes require styling
 import './DataListEntry.css';
 
 //
@@ -95,8 +96,18 @@ class DataListEntry extends React.Component {
     let   { className } = this.props;
 
     const optionElements = this.createOptionElements( list );
-    // RFE: For a full-fledged project, create an error component
-    const errorMessage = ( error ) ? error.message : '';
+    // HACK: For a full-fledged project, create a component
+    const errorElement = (function () { if ( error && error.message ) {
+      return( <span className="c-error">{error.message}</span> );
+    }}());
+    // HACK: For a full-fledged project, create a component
+    const loadingElement = (function () {
+      return(
+        <span className="c-loading is-loading__visible">
+          <span className="c-loading__text">Loading</span>
+        </span>
+      );
+    }());
 
     const listId = 'comp-datalist-list-' + count++;
     const inputId = 'comp-datalist-input-' + count++;
@@ -110,16 +121,14 @@ class DataListEntry extends React.Component {
     const classNames = {
       prop: className,
       jsId: 'js-datalist',
-      hasError: ( error != undefined ) ? 'has-error' : '', // eslint-disable-line eqeqeq
-      // NOTE: Semantically, this is an assumption; but `isLoading: false` after component "has data"
-      isLoading: ( ! isLoading ) ? 'has-data' : ''
+      isLoading: ( isLoading ) ? 'is-loading' : '',
     };
     className = Object.values( classNames ).filter( name => name ).join(' ');
 
     return (
       <Tag className={className}>
-        <span className="c-loading">Loading</span>
-        <span className="c-error">{errorMessage}</span>
+        {loadingElement}
+        {errorElement}
 
         <label htmlFor={inputId}>Farm Animal</label>
         <input list={listId} id={inputId} name={nameAttr} />
