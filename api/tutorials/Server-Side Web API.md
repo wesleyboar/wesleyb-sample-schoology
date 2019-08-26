@@ -2,7 +2,7 @@
 
 This API has only two endpoints, to get a list of names of all recognized farm animals, or to get a filtered list.
 
-To test the service, load http://api.animal.farm:9000 in your browser.
+To test the service, load [`http://api.animal.farm:9000`](http://api.animal.farm:9000) in your browser.
 
 ## `GET` All
 

@@ -10,8 +10,9 @@
 #
 
 # Final location for compiled files
-/docs/service
-/docs/client
+docs
+!/docs/index.html
+!/docs/README.md
 /public/*
 !/public/README.md
 

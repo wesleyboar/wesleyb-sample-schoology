@@ -71,12 +71,14 @@ These directories are automatically maintained.
 
 #### `npm start`
 
-1. [`npm build`](#npm-build)
+1. [`npm build:cache`](#npm-build)
 1. [`npm serve`](#npm-serve)
 
-#### `npm build`
+#### `npm build:*`
 
-Perform fresh builds for all services.
+Perform fresh builds for all services:
+- `npm build:cache` will use available dependencies and cache
+- `npm build:fresh` will first clean and install all dependencies
 
 #### `npm serve`
 

@@ -47,8 +47,7 @@ app.listen( port, ( err ) => {
 
   console.log(`Listening on port ${port}`);
 
-  console.log(`Client-Side Web App is available at http://${hostname}:${port}`);
-  console.log(`Client-Side Web App documentation is available at http://docs.${hostname}:${port}/client`);
+  console.log(`Client-Side Web App is available at http://www.${hostname}:${port}`);
   console.log(`Server-Side Web API is available at http://api.${hostname}:${port}`);
-  console.log(`Server-Side Web API documentation is available at http://docs.${hostname}:${port}/service/tutorial-API.html`);
+  console.log(`User and Dev Docs are available at http://docs.${hostname}:${port}`);
 });

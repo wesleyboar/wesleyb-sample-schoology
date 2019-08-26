@@ -1,4 +1,4 @@
-# Schoology Autofill Project - API
+# Schoology Autofill - Server Web API
 
 This is all the code for the API service logic.
 

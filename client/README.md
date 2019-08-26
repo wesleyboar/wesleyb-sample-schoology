@@ -1,4 +1,4 @@
-# Schoology Autofill Client Web App
+# Schoology Autofill - Client Web App
 
 This is all the code for the client web app.
 

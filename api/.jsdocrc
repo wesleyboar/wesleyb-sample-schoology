@@ -1,14 +1,14 @@
 {
   "opts": {
     "destination": "./docs",
-    "recurse": true,
+    "recurse": false,
     "readme": "README.md",
     "template": "./node_modules/ink-docstrap/template",
     "tutorials": "./tutorials"
   },
   "source": {
     "include": "./",
-    "exclude": ["./public", "./data", "./client", "./client-2", "./docs", "node_modules"],
+    "exclude": ["./docs", "node_modules"],
     "includePattern": ".+\\.js(doc)?$"
   },
   "plugins": ["plugins/markdown"],
