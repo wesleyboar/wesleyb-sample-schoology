@@ -13,5 +13,5 @@ This mixins assigns the colors (to the given selector) using cross-browser suppo
 
 To __not__ set any value (except selector, which is required), use the value `null`. _A blank parameter will be used as if it were a value._
 
-Styleguide Schoology.Tools.Mixins.ProgressColor
+Styleguide Tools.Mixins.ProgressColor
 */

@@ -1,1 +1,15 @@
 @import "./styles/site/core.css";
+
+:root {
+    --global--font-size: 1.4rem;
+}
+
+fieldset {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+
+small {
+    font-size: var(--global--font-size);
+}
