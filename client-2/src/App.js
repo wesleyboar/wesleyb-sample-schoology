@@ -1,12 +1,19 @@
+/**
+ * Client application wrapper
+ * @module app
+ */
+
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Data as Animals } from './Data.js';
+import DataList from './DataList.js';
 
-function App() {
-  return (
-    <Animals />
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <DataList />
+    );
+  }
 }
 
 export default App;
