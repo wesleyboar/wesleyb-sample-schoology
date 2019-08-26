@@ -9,12 +9,13 @@
 # These directories contain the compilations of source files
 #
 
-# Final location for compiled files
+# Final location for compiled files (recursive)
 docs
 !/docs/index.html
 !/docs/README.md
-/public/*
-!/public/README.md
+build
+# Final location for compiled files (root)
+/public
 
 #
 # Node (NPM)
