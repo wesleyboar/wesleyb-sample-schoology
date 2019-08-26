@@ -11,5 +11,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 
 import './index.css';
+// !!!: Do NOT do this on production!
+import './test.css';
 
 ReactDOM.render( <App />, document.getElementById('root'));

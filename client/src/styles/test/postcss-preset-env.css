@@ -1,0 +1,163 @@
+/* FAQ: This file tests a variety of Stage 0—3 `postcss-preset-env` features */
+/* SEE: https://preset-env.cssdb.org/features */
+
+/*! SCHOOLOGY | Settings */
+
+@custom-selector :--simple s, span, small;
+@custom-selector :--nested nav;
+@custom-selector :--class-attr-newline
+    .c-attr,
+    [class*="c-attr--"];
+
+@custom-media --screen-wide-and-above screen and (min-width: 1200px);
+@custom-media --screen-wide-and-above-with-range screen and (width > 1200px);
+@custom-media --screen-wide-and-above-via-env screen and (min-width: env(--vw--wide));
+@custom-media --screen-wide-and-above-with-range-via-env screen and (width > env(--vw--wide));
+
+/*! SCHOOLOGY | Code */
+
+:--simple {
+    color: black;
+}
+
+:--class-attr-newline {
+    color: black;
+}
+
+:--nested {
+    & :--simple {
+        color: black;
+    }
+}
+
+:--class-attr-newline {
+    & :--nested {
+        color: black;
+    }
+}
+
+@media (--screen-wide-and-above) {
+    :--simple {
+        color: black;
+    }
+}
+@media screen and (width > 1200px) {
+    :--simple {
+        color: black;
+    }
+}
+@media (--screen-wide-and-above-with-range) {
+    :--simple {
+        color: black;
+    }
+}
+@media (--screen-wide-and-above-via-env) {
+    :--simple {
+        color: black;
+    }
+}
+@media (--screen-wide-and-above-with-range-via-env) {
+    :--simple {
+        color: black;
+    }
+}
+@media (--screen-wide-and-above) {
+    :--nested {
+        & :--simple {
+            color: black;
+        }
+    }
+}
+
+.test--border-block-width {
+	border-block-width: 5px 15px;
+}
+.test--border-block-start-width {
+	border-block-start-width: 5px;
+}
+.test--border-block-end-width {
+	border-block-end-width: 15px;
+}
+.test--border-inline-width {
+	border-inline-width: 10px 20px;
+}
+.test--border-inline-start-width {
+	border-inline-start-width: 20px;
+}
+.test--border-inline-end-width {
+	border-inline-end-width: 10px;
+}
+
+/*! SCHOOLOGY | Expected */
+
+/*
+s, span, small {
+    color: black;
+}
+
+.c-attr,
+[class*="c-attr--"] {
+    color: black;
+}
+
+nav s, nav span, nav small {
+    color: black;
+}
+
+.c-attr nav,
+[class*="c-attr--"] nav {
+    color: black;
+}
+
+@media screen and (min-width: 1200px) {
+    s, span, small {
+        color: black;
+    }
+}
+@media screen and (min-width: 1200px) {
+    s, span, small {
+        color: black;
+    }
+}
+@media screen and (min-width: 1200px) {
+    s, span, small {
+        color: black;
+    }
+}
+@media screen and (min-width: 1200px) {
+    s, span, small {
+        color: black;
+    }
+}
+@media screen and (min-width: 1200px) {
+    s, span, small {
+        color: black;
+    }
+}
+@media screen and (min-width: 1200px) {
+    nav s, nav span, nav small {
+        color: black;
+    }
+}
+
+.test--border-block-width {
+	border-top-width: 5px
+	border-bottom-width: 15px;
+}
+.test--border-block-start-width {
+	border-top-width: 5px;
+}
+.test--border-block-end-width {
+	border-bottom-width: 15px;
+}
+.test--border-inline-width {
+	border-left-width: 10px;
+	border-right-width: 20px;
+}
+.test--border-inline-start-width {
+	border-left-width: 20px;
+}
+.test--border-inline-end-width {
+	border-right-width: 10px;
+}
+*/
