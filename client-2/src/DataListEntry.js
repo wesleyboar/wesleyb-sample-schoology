@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import './DataList.css';
+import './DataListEntry.css';
 
 //
 // Definitions
@@ -15,6 +15,12 @@ import './DataList.css';
  * @type {Number}
  */
 let count = 0;
+
+// FAQ: The `<span>` tag is chosen, because all child elements are inline or invisible
+/** The tag name to use if {@link module:component/dataList.props.tagName} is not defined
+ * @type {String}
+ */
+const defaultTagName = 'span';
 
 /**
  * An item name
@@ -32,9 +38,9 @@ let count = 0;
 class DataList extends React.Component {
   /**
    * @param {Object} props
-   * @property {String} className - The `class` attribute for the element wrapper
-   * @property {String} nameAttr - The `name` attribute for the user-entry element of the form
-   * @property {String} tagName - The type of tag with which to wrap the component elements
+   * @property {String} [className] - The `class` attribute for the element wrapper
+   * @property {String} [nameAttr] - The `name` attribute for the user-entry element of the form
+   * @property {String} [tagName="span"] - The type of tag with which to wrap the component elements
    */
   constructor( props ) {
     super( props );
@@ -57,12 +63,11 @@ class DataList extends React.Component {
   }
 
   getData() {
-    return fetch('http://api.animal.farm:9000/')
+    return fetch('http://api.animal.farm:9000')
       .then( response => {
         if ( response.ok ) {
           return response.json();
         } else {
-          // TODO: Conditionally render `<span className="c-error">{error.message}</span>`
           // RFE: For a full-fledged project, create an error component
           throw new Error('Something went wrong ...', response );
         }
@@ -91,24 +96,32 @@ class DataList extends React.Component {
   render() {
     const { list, error } = this.state;
     const options = this.createOptions( list );
+    // RFE: For a full-fledged project, create an error component
+    const errorMessage = ( error ) ? error.message : '';
 
     const listId = 'comp-datalist-list-' + count++;
     const inputId = 'comp-datalist-input-' + count++;
     const nameAttr = this.props.nameAttr;
-    const Tag = this.props.tagName;
+    // HACK: For a full-fledged project, abstract this because it would be used again
+    const Tag = ({ level, children, ...props }) => {
+      return React.createElement( this.props.tagName || defaultTagName, props , children );
+    }
+
     // FAQ: All CSS classes defined here will be attached, except for empty strings
     const className = {
       prop: this.props.className,
       jsId: 'js-datalist',
-      hasError: ( error != undefined ) ? error.message : '', // eslint-disable-line eqeqeq
+      hasError: ( error != undefined ) ? 'has-error' : '', // eslint-disable-line eqeqeq
       // NOTE: Semantically, this is an assumption; but `isLoading: false` after component "has data"
       isLoading: ( ! this.state.isLoading ) ? 'has-data' : ''
     };
     const classNames = Object.values( className ).filter( name => name ).join(' ');
 
+    // TODO: Support a custom tag name, because markup experts have opinions
     return (
-      <div className={classNames}>
+      <Tag className={classNames}>
         <span className="c-loading">Loading</span>
+        <span className="c-error">{errorMessage}</span>
 
         <label htmlFor={inputId}>Select the desired farm animal</label>
         <input list={listId} id={inputId} name={nameAttr} />
@@ -116,7 +129,7 @@ class DataList extends React.Component {
         <datalist id={listId}>
           {options}
         </datalist>
-      </div>
+      </Tag>
     );
   }
 }

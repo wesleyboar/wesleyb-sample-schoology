@@ -6,12 +6,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import DataList from './DataList.js';
+import DataListEntry from './DataListEntry.js';
 
 class App extends React.Component {
   render() {
     return (
-      <DataList />
+      <DataListEntry tagName="div" />
     );
   }
 }
