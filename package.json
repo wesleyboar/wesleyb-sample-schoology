@@ -1,5 +1,5 @@
 {
-  "name": "wesleyb-sample-schoology-auto-fill-web-service",
+  "name": "wesleyb-sample-schoology-web-service",
   "version": "1.0.0",
   "description": "A code sample of an auto-fill web service",
   "main": "main.js",

@@ -1,5 +1,5 @@
 {
-  "name": "client-2",
+  "name": "wesleyb-sample-schoology-client-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -32,6 +32,9 @@
       "extensions": "md,js,jsdoc"
     }
   },
+  "// browserslist // ???": "What is the browser support for the project? Undefined.",
+  "// browserslist // NOTE": "This is `create-react-app`'s default configuration; I may not agree with it.",
+  "// browserslist // WARN": "It may be faster to dev on modern build, but is slower to debug production build",
   "browserslist": {
     "production": [
       ">0.2%",
