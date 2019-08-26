@@ -47,6 +47,7 @@ app.listen( port, ( err ) => {
 
   console.log(`Listening on port ${port}`);
 
+  // RFE: Support client dev server and API on same port, so CORS is not an issue
   console.log(`Client-Side Web App is available at http://www.${hostname}:${port}`);
   console.log(`Server-Side Web API is available at http://api.${hostname}:${port}`);
   console.log(`User and Dev Docs are available at http://docs.${hostname}:${port}`);
