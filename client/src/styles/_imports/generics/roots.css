@@ -17,3 +17,16 @@ html {
   /* SEE: http://snook.ca/archives/html_and_css/font-size-with-rem */
   font-size: 62.5%;
 }
+
+body {
+  margin: 0;
+
+  background-color: var(--global-color-bkgd--normal);
+  color: var(--global-color-text--normal);
+  font-size: var(--global-font-size--normal);
+  /* RFE: Design the page */
+  /* NOTE: If you style the page much more,
+           then you will start wearing your designer hat,
+           fall down a colorful rabbit hole and never return. */
+  font-family: Georgia, serif;
+}

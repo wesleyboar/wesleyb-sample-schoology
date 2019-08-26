@@ -1,9 +1,35 @@
-/* TODO: Add core Wesley B style sproject as a dependency */
-/* FAQ: This stylsheet is copied from core shared styles repo,
-        which has not yet been added a dependency in this project;
-        so, for now, we clone it and extend styles after it */
-@import "../../_imports/generics/main-root.core.css";
+/*
+Main Root (i.e. `html`)
 
+The root (top-level element) of an HTML document. These styles cascade to affect most elements.
+- Make 1 `rem` equal 10 `px`, so we can use pixel value with rem unit.
+
+Reference:
+
+- [MDN: HTML element reference: Main root](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Main_root)
+
+Weight: 1
+
+Styleguide Core.Generics.MainRoot
+*/
+html {
+  /* FAQ: Makes `1.0rem` equal `10px` */
+  /* SEE: http://snook.ca/archives/html_and_css/font-size-with-rem */
+  font-size: 62.5%;
+}
+/*
+Sectioning Root (i.e. `body`)
+
+The content of an HTML document. These styles cascade to affect most elements.
+
+Reference:
+
+- [MDN: HTML element reference: Main root](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Sectioning_root)
+
+Weight: 1.5
+
+Styleguide Core.Generics.SectioningRoot
+*/
 body {
   margin: 0;
 
@@ -13,6 +39,6 @@ body {
   /* RFE: Design the page */
   /* NOTE: If you style the page much more,
            then you will start wearing your designer hat,
-           fall down a colorful hole and never return. */
+           fall down a colorful rabbit hole and never return. */
   font-family: Georgia, serif;
 }
