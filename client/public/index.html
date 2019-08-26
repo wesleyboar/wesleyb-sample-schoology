@@ -40,6 +40,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
+    <!-- Styles -->
+    <!-- FAQ: Why is `<link>` element inside `<body>` tag (not permitted)?
+              * Defer load of print styles (not vital to page load).
+              * Liberal usage of `itemprop` permits `<link>` as "flow content". -->
+    <!-- SEE: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Technical_summary -->
+    <!-- SEE: https://schema.org/Thing -->
+    <link itemscope="" itemprop="url" rel="stylesheet" media="print" href="%PUBLIC_URL%/external/css/print.css">
+
+    <!-- Scripts -->
     <!-- RFE: Load polyfill, only once, via JavaScript for only the component that needs it -->
     <!-- FAQ: Placed at end of `<body>`, because polyfill-dependent browser may not support `defer` -->
     <!-- NOTE: With no easy way to test unsupporting browsers, I opt for reliable HTML load of script -->
