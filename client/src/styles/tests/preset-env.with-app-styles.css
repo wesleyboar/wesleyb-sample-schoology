@@ -1,4 +1,4 @@
-/*! WES | Settings */
+/*! SCHOOLOGY | Settings */
 
 /* FAQ: Automatically provided by `postcss.config.js`. */
 
@@ -13,9 +13,9 @@
            which would import the exported settings of the first build! */
 @import "../_exports/settings.css";
 
-/*! WES | Code */
+/*! SCHOOLOGY | Code */
 
-/*! WES | Code.EnvVariables */
+/*! SCHOOLOGY | Code.EnvVariables */
 
 body {
     line-height: env(--phi);
@@ -26,7 +26,7 @@ body {
     line-height: env(--vw--wide);
 }
 
-/*! WES | Code.FormSelector */
+/*! SCHOOLOGY | Code.FormSelector */
 
 :--global-form-ux-element {
     color: black;
@@ -35,7 +35,7 @@ body {
     color: var(--global-color-warning);
 }
 
-/*! WES | Code.TitleSelector */
+/*! SCHOOLOGY | Code.TitleSelector */
 
 :--global-title-element--any {
     text-decoration-style: underline;
@@ -50,7 +50,7 @@ body {
     text-decoration-line: dotted;
 }
 
-/*! WES | Code.HeadingSelector */
+/*! SCHOOLOGY | Code.HeadingSelector */
 
 :--global-heading-element {
     color: black;

@@ -1,0 +1,9 @@
+/*! SCHOOLOGY | Site Settings */
+
+/* RFE: Use globbing or script to reduce maintenance */
+/* @import "../_imports/settings/env.vars.json"; */
+@import "../_imports/settings/media.screen.css";
+@import "../_imports/settings/prop.colors.css";
+@import "../_imports/settings/prop.font.css";
+@import "../_imports/settings/prop.layout.css";
+@import "../_imports/settings/select.elements.css";

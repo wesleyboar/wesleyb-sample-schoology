@@ -1,4 +1,4 @@
-/*! WES | Settings */
+/*! SCHOOLOGY | Settings */
 
 :root {
 	--m-progress-color--fill: red;
@@ -6,9 +6,9 @@
 	--m-progress-color--border: brickred;
 }
 
-/*! WES | Code */
+/*! SCHOOLOGY | Code */
 
-/*! WES | Code: Test */
+/*! SCHOOLOGY | Code: Test */
 
 .test--border-block-width {
 	border-block-width: 5px 15px;
@@ -29,7 +29,7 @@
 	border-inline-end-width: 10px;
 }
 
-/*! WES | Expected */
+/*! SCHOOLOGY | Expected */
 
 /*
 .test--border-block-width {

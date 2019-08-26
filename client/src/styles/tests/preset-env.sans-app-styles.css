@@ -1,4 +1,4 @@
-/*! WES | Settings */
+/*! SCHOOLOGY | Settings */
 
 @custom-selector :--simple s, span, small;
 
@@ -8,7 +8,7 @@
 
 @custom-selector :--nested nav;
 
-/*! WES | Code */
+/*! SCHOOLOGY | Code */
 
 :--simple {
     color: black;

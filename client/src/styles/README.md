@@ -1,14 +1,15 @@
-# WES Styles
-
-Coming soon.
+# SCHOOLOGY Styles
 
 Follow ITCSS, BEM with Namespaces, Atomic Design, and KSS comments.
 
-Use Parcel, PostCSS, and some CSS linter.
+> **To Do**
+>
+> - Add a CSS linter.
+> - Support absolute paths.
 
 ## Browser Support
 
-See [`/.browserslistrc`](../../.browserslistrc).
+See [`/client/package.json` @ `browserslist`](../../client/package.json).
 
 ## Notes
 
@@ -18,20 +19,6 @@ See [`/.browserslistrc`](../../.browserslistrc).
 
 Nope. I can glob via `postcss-easy-import`, but glob in `@import` is not standards-compliant future-proof code, while `postcss-import` is.
 
-### Parcel
+### Create React App
 
-This bundler __indirectly__ parces PostCSS, and has these requirements:
-
-- paths start with `styles/`
-    - _(would be `/styles/`, but set in `package.json` config via `alias`)_
-- `postcss.config.js` __must not__ use `postcss-imports` plugin
-    - _(so Parcel and `postcss-import` do not conflict)_
-
-### PostCSS
-
-This tool __directly__ parces PostCSS, and has these requirements:
-
-- paths start with `styles/`
-    - _(would be `../../../`, but set in `postcss.config.js` via `path`)_
-- `postcss.config.js` __must__ use `postcss-imports` plugin
-    - _(so imported CSS is available to parse and apply)_
+Paths are relative to the file that is importing. Customizing `create-react-app`, to support absolute paths, is out of scope.
