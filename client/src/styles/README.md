@@ -6,6 +6,7 @@ Follow ITCSS, BEM with Namespaces, Atomic Design, and KSS comments.
 >
 > - Add a CSS linter.
 > - Support absolute paths.
+> - Process `./test` directory, _but_ **not** on production.
 
 ## Browser Support
 
