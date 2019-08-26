@@ -4,11 +4,9 @@ This is all the code for the client web app.
 
 It uses [React][react] and was bootstrapped with This project was bootstrapped with [Create React App][create-react-app].
 
-## To Do
-
-- Fix polyfill for HTML `<datalist>`.
-- Add API `getFiltered` endpoint as fallback, explain why I use it only to meet requirements.
-- Consider adding _at least_ unit tests, if time allows.
+> **To Do**
+>
+> - Finish unit tests.
 
 > **Notice**
 >
