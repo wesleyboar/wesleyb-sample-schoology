@@ -1,7 +1,6 @@
 # To Do
 
 1. Client Web App
-    - Add API `getFiltered` endpoint as fallback, explain why I use it only to meet requirements.
     - Use TypeScript
         - Fix JSDoc (or replace with TSDoc)
     - Style UI
