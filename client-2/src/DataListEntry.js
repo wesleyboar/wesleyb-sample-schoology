@@ -1,7 +1,8 @@
 /**
- * Data List (that user can filter)
+ * Data List
  * ---
- * @module component/dataList
+ * A list of asynchronously-acquired data that the user may filter.
+ * @module component/dataListEntry
  */
 
 import React from 'react';
@@ -39,15 +40,15 @@ const defaultTagName = 'span';
 class DataListEntry extends React.Component {
   /**
    * @param {Object} props
+   * @property {Function} getData - The function to retrieve data (must return a Promise)
    * @property {String} [className] - The `class` attribute for the element wrapper
    * @property {String} [nameAttr] - The `name` attribute for the user-entry element of the form
    * @property {String} [tagName="span"] - The type of tag with which to wrap the component elements
-   * @property {Function} onMount - The function to run when component is mounted
    */
   constructor( props ) {
     super( props );
 
-    /** @type {Object} state */
+    /** @type {Object} */
     this.state = {
       /** The list of datum
        * @type {ItemList}
@@ -68,7 +69,7 @@ class DataListEntry extends React.Component {
   }
 
   componentDidMount() {
-    this.props.onMount()
+    this.props.getData()
       .then( data => this.setState({ list: data }))
       .catch( err => this.setState({ error: err }))
       .finally( () => this.setState({ isLoading: false }));

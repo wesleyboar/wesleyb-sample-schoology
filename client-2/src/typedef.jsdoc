@@ -1,5 +1,5 @@
 /**
  * Response from unfiltered `GET` endpoint call to `animal.farm` API
- * @typedef {Object} FarmAnimalList
+ * @typedef {Array.<String>} FarmAnimalList
  * @see [Animal Farm API - `GET`](http://docs.animal.farm:9000/service/tutorial-Server-Side%20Web%20API.html#get-all)
  */

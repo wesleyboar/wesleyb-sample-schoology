@@ -1,9 +1,11 @@
+# Schoology Autofill Client Web App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## To Do
 
 - Remove use of `react-scripts` (massive dependency that hides the setup).
-- Add polyfill for HTML `<datalist>`.
+- Fix polyfill for HTML `<datalist>`.
 - Add API `getFiltered` endpoint as fallback, explain why I use it only to meet requirements.
 
 ## Available Scripts

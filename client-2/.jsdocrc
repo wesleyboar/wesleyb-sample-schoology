@@ -1,0 +1,18 @@
+{
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "readme": "README.md",
+    "template": "./node_modules/ink-docstrap/template",
+    "tutorials": "./tutorials"
+  },
+  "source": {
+    "include": "./",
+    "exclude": ["./build", "node_modules"],
+    "includePattern": ".+\\.js(doc)?$"
+  },
+  "plugins": ["plugins/markdown"],
+  "markdown": {
+      "idInHeadings": true
+  }
+}

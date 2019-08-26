@@ -1,13 +1,16 @@
 /**
- * Client application wrapper
+ * App Root
+ * ---
  * @module app
  */
 
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+
 import DataListEntry from './DataListEntry.js';
 
+import './App.css';
+
+/** @constructor */
 class App extends React.Component {
   /**
    * Get all farm animals
@@ -31,11 +34,11 @@ class App extends React.Component {
       <form>
         <fieldset>
           <legend>Animal Selection</legend>
+          <small>The purpose of your choice is for us to know and your to find out.</small>
           <DataListEntry tagName="div"
                          className="c-datalist"
                          nameAttr="farm_animal"
-                         onMount={this.getFarmAnimals} />
-          <small>The purpose of your choice is for us to know and your to find out.</small>
+                         getData={this.getFarmAnimals} />
         </fieldset>
       </form>
     );

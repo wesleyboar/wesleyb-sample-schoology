@@ -1,6 +1,4 @@
 #
-# WES - `.browserlistrc`
-# ===
 # This file tells `browserlist`-compatible software which browsers we support.
 #
 # SEE: https://github.com/ai/browserslist#readme
