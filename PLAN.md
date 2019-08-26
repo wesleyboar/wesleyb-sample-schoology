@@ -20,7 +20,7 @@ Document me (what I do, JSDoc, and a curl command).
 
 # Server
 
-Document me (how to run, use config file, whaat I do).
+Document me (how to run, use config file, what I do).
 
 ## Docker
 
