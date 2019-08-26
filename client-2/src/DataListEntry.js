@@ -102,6 +102,7 @@ class DataList extends React.Component {
     const listId = 'comp-datalist-list-' + count++;
     const inputId = 'comp-datalist-input-' + count++;
     const nameAttr = this.props.nameAttr;
+    // TODO: Also, support no tag name, because markup experts have opinions
     // HACK: For a full-fledged project, abstract this because it would be used again
     const Tag = ({ level, children, ...props }) => {
       return React.createElement( this.props.tagName || defaultTagName, props , children );
@@ -117,13 +118,12 @@ class DataList extends React.Component {
     };
     const classNames = Object.values( className ).filter( name => name ).join(' ');
 
-    // TODO: Support a custom tag name, because markup experts have opinions
     return (
       <Tag className={classNames}>
         <span className="c-loading">Loading</span>
         <span className="c-error">{errorMessage}</span>
 
-        <label htmlFor={inputId}>Select the desired farm animal</label>
+        <label htmlFor={inputId}>Farm Animal</label>
         <input list={listId} id={inputId} name={nameAttr} />
 
         <datalist id={listId}>

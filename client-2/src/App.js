@@ -11,7 +11,13 @@ import DataListEntry from './DataListEntry.js';
 class App extends React.Component {
   render() {
     return (
-      <DataListEntry tagName="div" />
+      <form>
+        <fieldset>
+          <legend>Animal Selection</legend>
+          <DataListEntry tagName="div" />
+          <small>The purpose of your choice is for us to know and your to find out.</small>
+        </fieldset>
+      </form>
     );
   }
 }
