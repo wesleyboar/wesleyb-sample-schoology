@@ -1,12 +1,6 @@
-/**
- * Web Services
- * ---
- * - [Server-Side Web API]{@link module:api}
- * - [Client-Side Web App]{@link module:client}
- * @module services
- */
-
-// RFE: Add unit testing
+//
+// Dependencies
+//
 
 // RFE: Support different environment configurations
 // require('dotenv').config();
@@ -55,7 +49,7 @@ app.listen( port, ( err ) => {
 
   console.log(`Web Service documentation is available at http://docs.${hostname}:${port}/service/`);
   console.log(`Client-Side Web App is available at http://${hostname}:${port}`);
-  // console.log(`Client-Side Web App documentation is available at http://docs.${hostname}:${port}/client`);
+  console.log(`Client-Side Web App documentation is available at http://docs.${hostname}:${port}/client`);
   console.log(`Server-Side Web API is available at http://api.${hostname}:${port}`);
   console.log(`Server-Side Web API documentation is available at http://docs.${hostname}:${port}/service/tutorial-API.html`);
 });

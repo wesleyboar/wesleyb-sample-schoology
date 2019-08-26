@@ -1,0 +1,33 @@
+{
+  "name": "wesleyb-sample-schoology-server-api",
+  "version": "1.0.0",
+  "description": "An API for an auto-fill web service",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "docs": "jsdoc --configure .jsdocrc",
+    "test": "echo \"Tests are not implemented, yet\""
+  },
+  "author": "wesleyb@pm.me",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "ink-docstrap": "^1.3.2",
+    "jsdoc": "^3.6.3",
+    "npm-watch": "^0.6.0"
+  },
+  "watch": {
+    "docs": {
+      "patterns": "./",
+      "ignore": [
+        "./public",
+        "./docs",
+        "./data",
+        "node_modules"
+      ],
+      "extensions": "md,js,jsdoc"
+    }
+  }
+}

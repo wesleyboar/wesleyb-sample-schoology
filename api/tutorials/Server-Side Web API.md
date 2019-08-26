@@ -1,13 +1,8 @@
-# Schoology Autofill API
+# Schoology Autofill Server API
 
 This API has only two endpoints, to get a list of names of all recognized farm animals, or to get a filtered list.
 
-> **To Do**
->
-> - Support version number in requests.
-> - Consider expanding API definition to have `animals` in URL as a resource.
-> - Add API examples for more interfaces than just `curl`.
-> - Auto-generate API documentation from a functional API definition.
+To test the service, load http://api.animal.farm:9000 in your browser.
 
 ## `GET` All
 

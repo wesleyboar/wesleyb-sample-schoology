@@ -1,64 +1,10 @@
-# Schoology Autofill Client Web App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is all the code for the client web app.
+## Available Scripts
 
-It uses [React][react] and was bootstrapped with This project was bootstrapped with [Create React App][create-react-app].
+In the project directory, you can run:
 
-## To Do
-
-- Fix polyfill for HTML `<datalist>`.
-- Add API `getFiltered` endpoint as fallback, explain why I use it only to meet requirements.
-- Consider adding _at least_ unit tests, if time allows.
-
-> **Notice**
->
-> I considered performing either of the following:
-> - Create a minimal React app, and add desired tooling.
-> - Run `npm run eject` to customize and trim the setup.
-> But, I do not have the time.
-
-## Requirements
-
-- [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
-    - [NPM](https://docs.npmjs.com/getting-started/installing-node#updating-npm) 6.X+ _(or latest available for given Node version)_
-
-## Quick Start
-
-1. Install dependencies by running `npm install`.
-    - _For CI/CD environments, run `npm ci`, instead._
-1. Build and start the services by running `npm start`.
-
-## Directories
-
-These directories are manually maintained.
-
-    ./
-        |_ src             // source files for this app
-        |_ public          // user-facing static files for client web app
-        |_ tutorials       // tutorials for the developer documentation
-
-These directories are automatically maintained.
-
-    ./
-        |_ docs            // developer documentation for web services
-        |_ node_modules    // node package installation
-
-## Development
-
-### Rules
-
-- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix comments.
-
-### Commands
-
-- Run commands from this (`./`) directory.
-- Run command `npm install`¹ _at least once_ beforehand.
-
-> **Notice**
->
-> The following instructions in this section, and the "Learn More" section, are copied from [Create React App][create-react-app].
-
-#### `npm start`
+### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -66,12 +12,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-#### `npm test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### `npm run build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -81,7 +27,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### `npm run eject`
+### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -120,15 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## Footnotes
-
-1. For Windows, ensure that `node.exe` is on the `PATH` system variable.
-2. Do **not** install dependencies globally.
-
-
-[eslint]: https://eslint.org/ "ESLint"
-[nodejs]: https://nodejs.org/ "Node.js"
-[docker]: https://www.docker.com/ "Docker"
-[react]: https://reactjs.org/ "React"
-[create-react-app]: (https://github.com/facebook/create-react-app) "Create React App"

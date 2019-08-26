@@ -2,12 +2,7 @@
 
 This is a Node web service of a code sample for Wesley B to Schoology.
 
-This project contains the (future) client web app **and** the server web API. It is also (to be later) bundled in a single docker.
-
-> **To Do**
->
-> - Configure [ESLint][eslint].
-> - Add unit tests.
+This project contains the client web app **and** the server web API. It is also _(to be later)_ bundled in a single docker.
 
 ## Requirements
 
@@ -18,40 +13,34 @@ This project contains the (future) client web app **and** the server web API. It
 
 ## Quick Start
 
+### Services
+
+1. Install dependencies by running `npm install`.
+    - _For CI/CD environments, run `npm ci`, instead._
+1. Build and start the services by running `npm start`.
+
 ### DNS
 
-Edit your `/etc/hosts` file, or DNS, to direct `animal.farm` to `localhost` i.e.
+The URLs in documentation and CLI output assume the established domain `animal.farm`.
 
+To use these URLs, edit your DNS, or `/etc/hosts` file, to direct specific domains to `localhost:9000`.
+
+Specific Domains:
+- `animal.farm`
+- `www.animal.farm`
+- `api.animal.farm`
+- `docs.animal.farm`
+
+Hosts Example:
 ```
-127.0.0.1	api.animal.farm
-127.0.0.1	api.docs.animal.farm
-127.0.0.1	www.animal.farm
-127.0.0.1	docs.animal.farm
 127.0.0.1	animal.farm
+127.0.0.1	www.animal.farm
+# 127.0.0.1	…
 ```
 
 > **Warning**
 >
 > There is a real domain [https://www.animal.farm](https://www.animal.farm), so you will not have access to that website while these changes are in effect.
-
-### Server & Web API
-
-1. `npm install`¹
-    - _CI/CD should run `npm ci`, instead._
-2. `npm start`
-    - Build docs
-    - Run tests (when available)
-    - Serve web API
-
-<small>
-
-¹ If running the command as root, add the flag `--unsafe-perm`.
-
-</small>
-
-### Client Web App
-
-(Coming soon)
 
 ## Directories
 
@@ -68,7 +57,6 @@ These directories are automatically maintained.
         |_ docs            // developer documentation for web services
         |_ node_modules    // node package installation
         |_ public          // user-facing static files for client web app
-        |_ tutorials       // documentation for web service modules
 
 ## Development
 
@@ -83,7 +71,15 @@ These directories are automatically maintained.
 
 #### `npm start`
 
-Run a local instance of the web API service.
+Run a local instance of the services.
+
+#### `npm docs`
+
+Compile documentation from services.
+
+#### `npm test`
+
+Run tests for all services.
 
 ## Deployment
 
@@ -97,5 +93,4 @@ Run a local instance of the web API service.
 
 [eslint]: https://eslint.org/ "ESLint"
 [nodejs]: https://nodejs.org/ "Node.js"
-[gitsubmod]: https://git-scm.com/docs/git-submodule "Git: Submodule"
 [docker]: https://www.docker.com/ "Docker"

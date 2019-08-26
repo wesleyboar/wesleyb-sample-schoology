@@ -1,12 +1,13 @@
 {
   "name": "wesleyb-sample-schoology-client-app",
   "version": "0.1.0",
+  "description": "An SPA for an auto-fill web service",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "docs": "jsdoc --configure .jsdocrc",
-    "test": "echo \"Tests are not implemented, yet\"",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "npm-watch"
   },
@@ -20,17 +21,6 @@
     "jsdoc": "^3.6.3",
     "npm-watch": "^0.6.0",
     "react-scripts": "^3.1.1"
-  },
-  "watch": {
-    "docs": {
-      "patterns": "./",
-      "ignore": [
-        "./build",
-        "./docs",
-        "node_modules"
-      ],
-      "extensions": "md,js,jsdoc"
-    }
   },
   "// browserslist // ???": "What is the browser support for the project? Undefined.",
   "// browserslist // NOTE": "This is `create-react-app`'s default configuration; I may not agree with it.",
@@ -46,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "watch": {
+    "docs": {
+      "patterns": "./",
+      "ignore": [
+        "./build",
+        "./docs",
+        "node_modules"
+      ],
+      "extensions": "md,js,jsdoc"
+    }
   }
 }
