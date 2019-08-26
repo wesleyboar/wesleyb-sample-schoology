@@ -1,8 +1,6 @@
 # To Do
 
 1. Client Web App
-    - Use TypeScript
-        - Fix JSDoc (or replace with TSDoc)
     - Style UI
 2. Web Services
     - Create Docker
