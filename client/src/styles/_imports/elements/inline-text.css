@@ -1,0 +1,14 @@
+/*
+Inline Text Semantics
+
+A word, line, or any arbitrary piece of text.
+
+Reference:
+
+- [MDN: HTML element reference: Inline text semantics](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics)
+
+Styleguide Schoology.Elements.InlineTextSemantics
+*/
+
+@import "../../_imports/elements/inline-text.anchor.css";
+@import "../../_imports/elements/inline-text.misc.css";

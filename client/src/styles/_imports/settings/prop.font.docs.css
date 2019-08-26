@@ -1,0 +1,7 @@
+
+/* For every font size, define rule for relevant class */
+@each $modifier in var(--global-array--size-modifier) {
+  .d-font-size--$(modifier) {
+    font-size: var(--global-font-size--$(modifier)) !important;
+  }
+}

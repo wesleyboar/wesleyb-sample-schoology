@@ -1,0 +1,14 @@
+/*
+Every Element
+
+These styles are applied directly to every element.
+- Declare borders to be inside blocks.
+    - Reference: [`box-sizing: border-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
+Weight: 0
+
+Styleguide Core.Generics.EveryElement
+*/
+* {
+  box-sizing: border-box;
+}

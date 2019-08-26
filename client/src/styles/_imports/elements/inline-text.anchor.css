@@ -1,0 +1,37 @@
+/*
+<a>
+
+Styleguide Schoology.Elements.InlineTextSemantics.Anchor
+*/
+:root {
+    --element-anchor--color: var(--global-color-accent);
+}
+
+a {
+    /* FAQ: Added with hopeful joy that one day it is supported — 2019-08 */
+    text-decoration-skip-ink: auto;
+}
+a:any-link {
+    color: var(--element-anchor--color);
+}
+a:link {
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+}
+a:visited,
+a:hover {
+    text-decoration-style: double;
+}
+a:focus {
+    outline-color: var(--element-anchor--color);
+
+    text-decoration-line: none;
+}
+a:active {
+    /* Give link the appearance of being pressed down */
+    position: relative; top: 1px;
+
+    color: var(--element-anchor--color);
+
+    text-decoration-line: none;
+}

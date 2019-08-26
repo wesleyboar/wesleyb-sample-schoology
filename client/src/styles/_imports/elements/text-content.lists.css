@@ -1,0 +1,23 @@
+/*
+Lists
+
+Styleguide Example.Elements.TextContent.Lists
+*/
+
+:--global-list-element {
+  margin-block: env(--space--small);
+  /* IDEA: Use `*l[class=""]` to limit styles to "default" lists */
+  padding-inline-start: var(--global-layout--list-decorator-width);
+}
+:--global-list-element :--global-list-element {
+  margin-block: env(--space--x-small);
+}
+
+/* Ensure list item markers are "aligned" at the top */
+/* SEE: `./interactive.details-summary.css` */
+/* RFE: Share this code */
+:--global-list-element > * {
+  /* FAQ: The alignment to be adjusted is that of element(s) in the list item */
+  /* SEE: https://stackoverflow.com/a/6735690/11817077 */
+  vertical-align: text-top;
+}

@@ -1,0 +1,14 @@
+/*
+Text Content
+
+Specific interactive user interface objects. Elements to organize blocks or sections of content. Important for accessibility and SEO, these elements identify the purpose or structure of that content.
+
+Reference:
+
+- [MDN: HTML element reference: Interactive elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content)
+
+Styleguide Example.Elements.TextContent
+*/
+
+@import "../../_imports/elements/text-content.lists.css";
+@import "../../_imports/elements/text-content.misc.css";

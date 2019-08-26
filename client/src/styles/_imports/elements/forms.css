@@ -1,0 +1,13 @@
+/*
+Forms
+
+A number of elements which, together, create forms.
+
+Reference:
+
+- [MDN: HTML element reference: Forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms)
+
+Styleguide Schoology.Elements.Form
+*/
+
+@import "../../_imports/elements/forms.progress.css";

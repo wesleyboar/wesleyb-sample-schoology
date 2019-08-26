@@ -1,0 +1,82 @@
+/*
+Page
+
+An application-specific page layout
+
+Styleguide Schoology.Objects.Page
+*/
+
+/* Hide scrollable content caused by `--global-layout--page-width: 100vw` */
+/* FAQ: Any screen narrower than absolute minimum width must be scrollable */
+/* FAQ: `100vw` includes scroll bar width, so `100vw` → `px` > `100%` → `px` */
+/* SEE: https://github.com/w3c/csswg-drafts/issues/1766 */
+/* HACK: We should not define element styles here, but this problem is precicely an `.o-page` and `html` element problem---a class should not be added to `html` element to solve this, because that class would only be effectual on the `html` element. */
+@media (--screen-narrow-and-above) {
+  html { overflow-x: hidden; }
+}
+
+.o-page {
+  /* FAQ: This is already set on `*`, but it is so important to remember
+          for this stylesheet, that it is added in comments as a reminder */
+  /* box-sizing: border-box; */
+
+  inline-size: var(--global-layout--colwrap-width);
+  max-inline-size: var(--global-layout--page-width-max);
+  min-inline-size: var(--global-layout--page-width-min);
+  margin-inline: var(--global-layout--page-margin-x);
+  margin-block: var(--global-layout--page-margin-y);
+  padding-inline: var(--global-layout--page-padding-x);
+  padding-block: var(--global-layout--page-padding-y);
+}
+.o-page__article {
+    margin-block-end: env(--space--normal);
+}
+.o-page__article:last-child {
+    margin-block-end: 0;
+}
+
+/* FAQ: These styles seem to belong in `prop.layout.css`—I want to move them—
+        but styles are not allowed there; if moved, they will be unavailable */
+
+/* Wide screens have:
+    - three columns
+    - more space available for column gap
+    - wide page width range */
+@media (--screen-wide-and-above) {
+  :root {
+    --global-layout--col-count: 3;
+    --global-layout--col-gap: env(--space--normal); /* 250px available space */
+    --global-layout--page-width-max: env(--vw--wide);
+    --global-layout--page-width-min: env(--vw--wide);
+
+    --global-layout--page-padding-x: env(--space--x-large);
+  }
+}
+/* Medium screens have:
+    - two columns
+    - exact space available for column gap
+    - medium page width range */
+@media (--screen-medium-to-wide) {
+  :root {
+    --global-layout--col-count: 2;
+    --global-layout--col-gap: env(--space--small); /* 10px available space */
+    --global-layout--page-width-max: env(--vw--medium-wide);
+    --global-layout--page-width-min: env(--vw--medium);
+
+    --global-layout--page-padding-x: env(--space--large);
+  }
+}
+/* Narrow screens have:
+    - one column
+    - no space needed for column gap
+    - narrow page width range */
+@media (--screen-medium-and-below) {
+  :root {
+    --global-layout--col-count: 1;
+    --global-layout--col-gap: 0; /* 0px available space */
+    --global-layout--page-width-max: env(--vw--narrow-medium);
+    --global-layout--page-width-min: env(--vw--narrow);
+
+    --global-layout--page-padding-x: env(--space--normal);
+  }
+}

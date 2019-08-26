@@ -1,0 +1,44 @@
+/*! WES | Site Core */
+
+/* WES | Site Core: Settings */
+
+/* SEE: https://stackoverflow.com/q/54990081/11817077 */
+/* FAQ: Processor applies global settings via configuration */
+/* FAQ: A previous solution exported settings to a file */
+/* @import "../_imports/settings/*.css"; */
+/* @import "./_exports/settings.css"; */
+
+/* WES | Site Core: Tools */
+
+/* FAQ: Processor uses global tools via configuration */
+/* @import "../_imports/tools/mixins/*.css"; */
+
+/*! WES | Site Core: Generic */
+
+@import "../_imports/generics/vendor/normalize.css";
+@import "../_imports/generics/vendor/h5bp.base.css";
+@import "../_imports/generics/vendor/h5bp.browserupgrade.css";
+
+@import "../_imports/generics/main-root.css";
+@import "../_imports/generics/every-element.css";
+@import "../_imports/generics/non-tag.css";
+
+/*! WES | Site Core: Elements */
+
+@import "../_imports/elements/content-sectioning.css";
+@import "../_imports/elements/inline-text.css";
+@import "../_imports/elements/interactive.css";
+@import "../_imports/elements/text-content.css";
+@import "../_imports/elements/forms.css";
+
+/*! WES | Site Core: Objects */
+
+@import "../_imports/objects/o-columns.css";
+@import "../_imports/objects/o-page.css";
+@import "../_imports/objects/o-app.css";
+
+/*! WES | Site Core: Components */
+
+@import "../_imports/components/c-intro.css";
+@import "../_imports/components/c-loading.css";
+@import "../_imports/components/c-error.css";

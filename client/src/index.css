@@ -1,14 +1,1 @@
-body {
-  margin: 0;
-  font-family: "Georgia", Times, serif;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.c-error {
-  color: red;
-  font-weight: bold;
-}
+@import "./styles/site/core.css";

@@ -1,0 +1,70 @@
+/*
+App
+
+A flexible application layout.
+
+> *Warning*: The core implementation uses flexbox, so it does not support sidebars _and_ header/footer's. For a complex layout, consider implementing a CSS grid modifier class for your application.
+
+Markup: o-app.twig
+
+.o-app--layout-vert - App with vertical layout (header, main body, footer)
+.o-app--layout-horz - App with horizontal layout (side bar, main body, side bar)
+
+Styleguide Core.Objects.App
+*/
+@custom-selector :--o-app
+  .o-app,
+  [class*="o-app--"];
+
+:--o-app {
+  display: flex;
+}
+.o-app__body {
+  /* FAQ: No universal styles are decided. */
+  /* IDEA: Padding */
+  /* padding: 10px; *//* Set your value in your app */
+  /* box-sizing: content-box; *//* Set your value in your app */
+}
+
+.o-app--layout-vert {
+  flex-direction: column;
+
+  & > .o-app__head {
+    /* z-index: 3; *//* Set your value in your app */
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  & > .o-app__body {
+    /* z-index: 2; *//* Set your value in your app */
+    flex-grow: 1;
+  }
+  & > .o-app__foot {
+    /* z-index: 1; *//* Set your value in your app */
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  /* CAVEAT: To support these children, implement CSS grid layout */
+  & > .o-app__side {
+    display: none;
+  }
+}
+
+.o-app--layout-horz {
+  flex-direction: row;
+
+  & > .o-app__side,
+  & > .o-app__body {
+    overflow-y: auto;
+  }
+  & > .o-app__side {
+    /* FAQ: No universal styles are decided. */
+  }
+  & > .o-app__body {
+    flex-grow: 1;
+  }
+  /* CAVEAT: To support these children, implement CSS grid layout */
+  & > .o-app__head,
+  & > .o-app__foot {
+    display: none;
+  }
+}

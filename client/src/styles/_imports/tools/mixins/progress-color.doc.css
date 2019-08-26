@@ -1,0 +1,17 @@
+/*
+progress-color
+(selector, fill, background, border)
+
+Set the colors of a progress bar. _[Indeterminite](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) progress bars are transparent._
+
+$selector - (required) A selector that captures the element to be colored
+$fill - The value for the progress bar fill color
+$background  - The value for the progress bar background color
+$border  - The value for the progress bar border color
+
+This mixins assigns the colors (to the given selector) using cross-browser supported methods for setting color. Shorthand values are allowed, and supported as browser supports them—_**but**, this mixin makes no attempt to "fix" values for browsers.
+
+To __not__ set any value (except selector, which is required), use the value `null`. _A blank parameter will be used as if it were a value._
+
+Styleguide Schoology.Tools.Mixins.ProgressColor
+*/

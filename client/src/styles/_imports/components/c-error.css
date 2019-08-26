@@ -1,0 +1,13 @@
+/*
+Error
+
+An error message for the user.
+
+Markup: c-error.twig
+
+Styleguide Schoology.Components.Error
+*/
+.c-error {
+  color: red;
+  font-weight: bold;
+}

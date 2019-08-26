@@ -1,0 +1,31 @@
+/*! WES | Settings */
+
+:root {
+	--m-progress-color--fill: red;
+	--m-progress-color--bkgd: pink;
+	--m-progress-color--border: brickred;
+}
+
+/*! WES | TEST! */
+
+@mixin progress-color
+    .c-gauge--overlap[class*="has-range--count"] .c-gauge__range:not(:last-child),
+    null, transparent, null;
+
+/*! WES | Code */
+
+/*! WES | Code: Test: Custom Properties */
+
+@mixin progress-color progress, var(--m-progress-color--fill), var(--m-progress-color--bkgd), var(--m-progress-color--border);
+
+/*! WES | Code: Test: Raw Values */
+
+@mixin progress-color progress, red, pink, brickred {};
+
+/*! WES | Code: Test: Empty Values */
+
+@mixin progress-color progress, , ,  {};
+
+/*! WES | Code: Test: Null Values */
+
+@mixin progress-color progress, null, null, null {};

@@ -1,0 +1,45 @@
+/*
+Introduction
+
+An introduction to a topic, with a short and long piece of text.
+
+_This component **should not** become some grand layout element. It has no heading and no greater semantic meaning beyond a short introduction that is part of soemthing greater._
+
+Markup: c-intro.twig
+
+Styleguide Schoology.Components.Intro
+*/
+.c-intro {
+    /* Remove layout spacing */
+    /* FAQ: The intro is meant to be a part of some greater layout. */
+    margin-block: 0;
+}
+
+[class*="c-intro__"] + [class*="c-intro__"] {
+    margin-top: env(--space--x-small);
+}
+.c-intro__major {
+    font-size: var(--global-font-size--normal);
+}
+.c-intro__minor {
+    font-size: var(--global-font-size--small);
+}
+
+.c-intro__extra {
+    white-space: nowrap;
+}
+.c-intro__extra::before {
+    content: "&";
+    margin-inline-end: 0.5ch;
+}
+small.c-intro__extra::before {
+    /* Add space, after seperator, that is equal to `1ch` of parent */
+    /* FAQ: The `0.8` is from `normalize`'s `font-size: 80%` for `<small>` */
+    /* RFE: Use global variable for the `80%` of `<small>` from `normalize` */
+    margin-inline-end: calc( 0.5ch * 0.8 );
+}
+
+.c-intro__abbr {
+    font-size: var(--global-font-size--small);
+    white-space: nowrap;
+}

@@ -1,0 +1,27 @@
+/*! WES | Imports */
+
+@import "../_imports/components/c-gauge/layout-overlap.css";
+
+/*! WES | Code */
+
+/* SEE: c-gauge/overlap.structure.css */
+.c-gauge--overlap {
+    /* Arrange labels horizontally */
+    @extend %c-gauge--overlap--arrange-labels--horz;
+}
+/* CAVEAT: These styles will overlap with styles from
+           `media (…) { .o-columns .c-gauge { … } }` */
+@media (--screen-medium-and-below) {
+    .c-gauge--overlap {
+        /* Arrange labels vertically */
+        @extend %c-gauge--overlap--arrange-labels--vert;
+    }
+}
+/* CAVEAT: These styles will overlap with styles from
+           `@media (…) { .c-gauge { … } }` */
+@media (--screen-wide-and-below) {
+    .o-columns .c-gauge--overlap {
+        /* Arrange labels vertically */
+        @extend %c-gauge--overlap--arrange-labels--vert;
+    }
+}

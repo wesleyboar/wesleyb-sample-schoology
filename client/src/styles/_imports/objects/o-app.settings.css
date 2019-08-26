@@ -1,0 +1,4 @@
+@custom-selector :--o-app--item
+  .o-app__head,
+  .o-app__body,
+  .o-app__foot;

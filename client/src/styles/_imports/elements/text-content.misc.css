@@ -1,0 +1,18 @@
+/*
+Miscellaneous
+
+Styleguide Example.Elements.TextContent.Misc
+*/
+
+p,
+blockquote,
+blockquote footer {
+  margin-block: env(--space--normal);
+}
+blockquote cite {
+  opacity: 0.63;
+}
+blockquote footer::before {
+  content: "—";
+  margin-inline-end: 0.5ch;
+}

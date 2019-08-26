@@ -1,0 +1,18 @@
+/* TODO: Add core Wesley B style sproject as a dependency */
+/* FAQ: This stylsheet is copied from core shared styles repo,
+        which has not yet been added a dependency in this project;
+        so, for now, we clone it and extend styles after it */
+@import "../../_imports/generics/main-root.core.css";
+
+body {
+  margin: 0;
+
+  background-color: var(--global-color-bkgd--normal);
+  color: var(--global-color-text--normal);
+  font-size: var(--global-font-size--normal);
+  /* RFE: Design the page */
+  /* NOTE: If you style the page much more,
+           then you will start wearing your designer hat,
+           fall down a colorful hole and never return. */
+  font-family: Georgia, serif;
+}

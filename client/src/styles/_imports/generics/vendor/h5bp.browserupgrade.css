@@ -1,0 +1,14 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/* SCHOOLOGY: Prepend any changes with comments starting with `SCHOOLOGY: ` */
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

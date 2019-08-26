@@ -1,0 +1,33 @@
+.o-app--layout-narrow {
+  max-width: env(--vw--medium);
+  margin: 0 auto;
+}
+
+:--o-app--item {
+  padding-block: var(--o-app-space--normal);
+}
+
+/* For wide screens, large space */
+@media (--screen-wide-and-above) {
+  :root {
+    --o-app-space--large: env(--space--xx-large);
+    --o-app-space--normal: env(--space--x-large);
+    --o-app-space--small: env(--space--small);
+  }
+}
+/* For medium screens, normal space */
+@media (--screen-narrow-to-wide) {
+  :root {
+    --o-app-space--large: env(--space--x-large);
+    --o-app-space--normal: env(--space--large);
+    --o-app-space--small: env(--space--x-small);
+  }
+}
+/* For narrow screens, small space */
+@media (--screen-narrow-and-below) {
+  :root {
+    --o-app-space--large: env(--space--large);
+    --o-app-space--normal: env(--space--normal);
+    --o-app-space--small: env(--space--xx-small);
+  }
+}

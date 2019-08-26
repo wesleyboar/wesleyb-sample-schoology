@@ -1,0 +1,13 @@
+/*
+<b>, <mark>
+
+Styleguide Schoology.Elements.InlineTextSemantics.Misc
+*/
+b {
+    font-weight: normal;
+}
+mark {
+    padding: 0.5ch;
+
+    background-color: var(--global-color-warning--x-light);
+}

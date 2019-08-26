@@ -1,0 +1,9 @@
+/*
+Title Attribute
+
+The title attribute, on narrower screens, appears as content after its element. The title attribute, on wider screens, does not appear unless browser feature exposes it to the user (like a tooltip on desktop browsers).
+
+Styleguide Core.Generics.NonTag.TitleAttr
+*/
+@import "./title.structure.css";
+@import "./title.skin.css";

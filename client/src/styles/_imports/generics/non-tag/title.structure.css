@@ -1,0 +1,52 @@
+/* WARNING: There is a clash between:
+            - `.c-gauge--layout-overlap .c-gauge__label`
+            - `:--global-title-element--any`
+*/
+/* FAQ: `:--global-title-element--block` uses `::before`,
+        because `label::after` should often be (and is, as `.c-gauge__label`,
+        for this website) used to add a colon ":" after the label. */
+
+:--global-title-element--any {
+  /* BB17: Some instances may not want this. If one, like `c-gauge__label`, is
+          found, then overriding with `position: static` works in Firefox 68,
+          but not Chrome 75. Try adding `position: relative` to ancestor. */
+  /* SEE: https://bitbucket.org/wesleyb/wesleyb-web-about/issues/17/allow-label-tooltip-to-expand-to-full */
+  position: relative; /* for absolutely positioned tooltip */
+}
+
+/* For medium and wide screens, the `title` is assumed available as a tooltip */
+@media (--screen-medium-and-above) {
+  :--global-title-element--any:not(a) {
+    cursor: help;
+  }
+
+  /* NOTE: Reduce obviousness of Chrome defect */
+  /* SEE: `styles/_imports/trumps/_u-fix.css` */
+  :--global-title-element--inline { display: inline-block; line-height: normal; }
+}
+/* For medium and narrow screens, the `title` is appended as block text */
+@media (--screen-medium-and-below) {
+  /* Allow movement of pseudo elements */
+  :--global-title-element--block { display: flex; }
+  :--global-title-element--inline { display: inline-flex; }
+  :--global-title-element--any {
+    /* FAQ: Do not set to `flex-direction: column`, because an `:after`,
+            authored elsewhere, would be affected unexpectedly; the `flex-wrap`
+            value makes a long title appear on a new line, as desired. */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  :--global-title-element--any::before {
+    content: attr(title);
+    white-space: normal; /* override possible `white-space` of parent */
+
+    /* Render tooltip after parent */
+    order: 3;
+    visibility: visible;
+  }
+  :--global-title-element--inline::before {
+    margin-inline: 0.5em;
+  }
+}

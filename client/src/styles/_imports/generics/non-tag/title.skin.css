@@ -1,0 +1,46 @@
+:root {
+  --generic-title--color: var(--global-color-text--normal);
+  --generic-title--background: var(--global-color-bkgd--light);
+  --generic-title--border-width: var(--global-layout--border-width--thick);
+  --generic-title--font-size: var(--global-font-size--x-small);
+  --generic-title--space: env(--space--x-small);
+}
+
+:--global-title-element--any::before {
+  font-size: var(--generic-title--font-size);
+  font-family: "Trebuchet MS", sans-serif;
+
+  opacity: 0.80;
+}
+:--global-title-element--abbr {
+  /* FAQ: If I were to use `none` then a `<s><abbr …>…</abbr></s>`
+          would not inherit the `line-through` decoration from `<s>` */
+  text-decoration: inherit; /* override browser and normalize styles */
+}
+
+/* For medium and wide screens, the `title` is assumed available as a tooltip */
+@media (--screen-medium-and-above) {
+  :--global-title-element--any {
+    border-style: dotted;
+    border-block-start-width: 0;
+    border-block-end-width: var(--generic-title--border-width);
+    border-inline-width: 0;
+  }
+  :--global-title-element--any:hover {
+    border-style: dashed;
+  }
+  :--global-title-element--any:focus {
+    border-block-end-color: transparent;
+  }
+}
+/* For medium and narrow screens, the `title` is appended as block text */
+@media (--screen-medium-and-below) {
+  :--global-title-element--block::before {
+    padding-block: calc( var(--generic-title--space) / 2 );
+    /* FAQ: The "parent" text line-height provides space at block start,
+            so we only need to add some space at block end (match padding) */
+    margin-block-end: calc( var(--generic-title--space) / 2 );
+
+    color: var(--global-color-text--light);
+  }
+}

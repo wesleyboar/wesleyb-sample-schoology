@@ -1,0 +1,246 @@
+
+/* RFE: Make all of these environmental variables, instead! */
+
+/*
+Colors
+
+These are standard colors for an application. The format is:
+- `global-color-*--xxx-light`
+- `global-color-*--xx-light`
+- `global-color-*--x-light`
+- `global-color-*--light`
+- `global-color-*`
+- `global-color-*--dark`
+- `global-color-*--x-dark`
+- `global-color-*--xx-dark`
+- `global-color-*--xxx-dark`
+
+__WCAG__
+- The contrast between these values _should_ pass __some__ WCAG ratios:
+    - from `*--xxx-light` to `*`
+    - from `*--xxx-dark` to `*`
+- The contrast between these values _should_ pass __all__ WCAG ratios:
+    - from `*--xxx-light` to `*--x-dark`
+    - from `*--xxx-dark` to `*--x-light`
+
+> For colors that do __not__ have all shades and tints defined, the WCAG ratios value contrast requirements __must__ be documented.
+
+Styleguide Core.Settings.CustomProperties.Colors
+*/
+/*
+Common Text
+
+Colors:
+global-color-text--xxx-light: hsl(0, 0%, 62%)
+global-color-text--xx-light:  hsl(0, 0%, 50%)
+global-color-text--x-light:   hsl(0, 0%, 38%)
+global-color-text--light:     hsl(0, 0%, 26%)
+global-color-text--normal:    hsl(0, 0%, 14%)
+global-color-text--dark:      hsl(0, 0%, 02%)
+global-color-text--x-dark:    hsl(0, 0%, 00%)
+
+__WCAG__
+- The contrast between these values _should_ pass __all__ WCAG ratios:
+    - from `white` to `*--light`
+- The contrast between these values _should_ pass __most__ WCAG ratios:
+    - from `white` to `*--x-light`
+
+Weight: 0
+
+Styleguide Core.Settings.CustomProperties.Colors.CommonText
+*/
+/*
+Common Backgrounds
+
+Colors:
+global-color-bkgd--light:     hsl(0, 0%, 100%)
+global-color-bkgd--normal:    hsl(0, 0%, 98%)
+global-color-bkgd--dark:      hsl(0, 0%, 86%)
+
+__WCAG__
+When using, check color contrast against WCAG ratios.
+
+Weight: 0.5
+
+Styleguide Core.Settings.CustomProperties.Colors.CommonText
+*/
+/*
+Gray
+
+These colors are for positive things, like:
+- confirmative actions
+- success notifications
+- beneficial events
+
+Colors:
+global-color-success--xxx-light: hsl(155, 100%, 98%)
+global-color-success--xx-light:  hsl(155, 100%, 86%)
+global-color-success--x-light:   hsl(155, 100%, 74%)
+global-color-success--light:     hsl(155, 100%, 62%)
+global-color-success:            hsl(155, 100%, 50%)
+global-color-success--dark:      hsl(155, 100%, 38%)
+global-color-success--x-dark:    hsl(155, 100%, 26%)
+global-color-success--xx-dark:   hsl(155, 100%, 14%)
+global-color-success--xxx-dark:  hsl(155, 100%, 02%)
+
+Weight: 1
+
+Styleguide Core.Settings.CustomProperties.Colors.Gray
+*/
+/*
+Positive
+
+These colors are for positive things, like:
+- confirmative actions
+- success notifications
+- beneficial events
+
+Colors:
+global-color-success--xxx-light: hsl(155, 100%, 98%)
+global-color-success--xx-light:  hsl(155, 100%, 86%)
+global-color-success--x-light:   hsl(155, 100%, 74%)
+global-color-success--light:     hsl(155, 100%, 62%)
+global-color-success:            hsl(155, 100%, 50%)
+global-color-success--dark:      hsl(155, 100%, 38%)
+global-color-success--x-dark:    hsl(155, 100%, 26%)
+global-color-success--xx-dark:   hsl(155, 100%, 14%)
+global-color-success--xxx-dark:  hsl(155, 100%, 02%)
+
+Weight: 1
+
+Styleguide Core.Settings.CustomProperties.Colors.Positive
+*/
+/*
+Warning
+
+These colors are for things of concern, like:
+- potentially destructive actions
+- warning notifications
+- possibly dangerous events
+
+Colors:
+global-color-warning--xxx-light: hsl(50, 100%, 98%)
+global-color-warning--xx-light:  hsl(50, 100%, 86%)
+global-color-warning--x-light:   hsl(50, 100%, 74%)
+global-color-warning--light:     hsl(50, 100%, 62%)
+global-color-warning:            hsl(50, 100%, 50%)
+global-color-warning--dark:      hsl(50, 100%, 38%)
+global-color-warning--x-dark:    hsl(50, 100%, 26%)
+global-color-warning--xx-dark:   hsl(50, 100%, 14%)
+global-color-warning--xxx-dark:  hsl(50, 100%, 02%)
+
+Weight: 2
+
+Styleguide Core.Settings.CustomProperties.Colors.Warning
+*/
+/*
+Negative
+
+These colors are for negative things, like:
+- destructive actions
+- error notifications
+- dangerous events
+
+Colors:
+global-color-danger--xxx-light: hsl(0, 100%, 98%)
+global-color-danger--xx-light:  hsl(0, 100%, 86%)
+global-color-danger--x-light:   hsl(0, 100%, 74%)
+global-color-danger--light:     hsl(0, 100%, 62%)
+global-color-danger:            hsl(0, 100%, 50%)
+global-color-danger--dark:      hsl(0, 100%, 38%)
+global-color-danger--x-dark:    hsl(0, 100%, 26%)
+global-color-danger--xx-dark:   hsl(0, 100%, 14%)
+global-color-danger--xxx-dark:  hsl(0, 100%, 02%)
+
+Weight: 3
+
+Styleguide Core.Settings.CustomProperties.Colors.Negative
+*/
+/*
+Objective
+
+These colors are for things to notice, like:
+- alternate actions
+- informative notifications
+- noteworthy events
+
+Colors:
+global-color-inform--xxx-light: hsl(210, 100%, 98%)
+global-color-inform--xx-light:  hsl(210, 100%, 86%)
+global-color-inform--x-light:   hsl(210, 100%, 74%)
+global-color-inform--light:     hsl(210, 100%, 62%)
+global-color-inform:            hsl(210, 100%, 50%)
+global-color-inform--dark:      hsl(210, 100%, 38%)
+global-color-inform--x-dark:    hsl(210, 100%, 26%)
+global-color-inform--xx-dark:   hsl(210, 100%, 14%)
+global-color-inform--xxx-dark:  hsl(210, 100%, 02%)
+
+Weight: 4
+
+Styleguide Core.Settings.CustomProperties.Colors.Objective
+*/
+:root {
+  --global-color-text--xxx-light:    hsl(0, 0%, 62%);
+  --global-color-text--xx-light:     hsl(0, 0%, 50%);
+  --global-color-text--x-light:      hsl(0, 0%, 38%);
+  --global-color-text--light:        hsl(0, 0%, 26%);
+  --global-color-text--normal:       hsl(0, 0%, 14%);
+  --global-color-text--dark:         hsl(0, 0%, 02%);
+  --global-color-text--x-dark:       hsl(0, 0%, 00%);
+
+  --global-color-bkgd--light:        hsl(0, 0%, 100%);
+  --global-color-bkgd--normal:       hsl(0, 0%, 98%);
+  --global-color-bkgd--dark:         hsl(0, 0%, 86%);
+
+  --global-color-success--xxx-light: hsl(130, 30%, 98%);
+  --global-color-success--xx-light:  hsl(130, 30%, 86%);
+  --global-color-success--x-light:   hsl(130, 30%, 74%);
+  --global-color-success--light:     hsl(130, 30%, 62%);
+  --global-color-success:            hsl(130, 30%, 50%);
+  --global-color-success--dark:      hsl(130, 30%, 38%);
+  --global-color-success--x-dark:    hsl(130, 30%, 26%);
+  --global-color-success--xx-dark:   hsl(130, 30%, 14%);
+  --global-color-success--xxx-dark:  hsl(130, 30%, 02%);
+
+  --global-color-warning--xxx-light: hsl(35, 40%, 98%);
+  --global-color-warning--xx-light:  hsl(35, 40%, 86%);
+  --global-color-warning--x-light:   hsl(35, 40%, 74%);
+  --global-color-warning--light:     hsl(35, 40%, 62%);
+  --global-color-warning:            hsl(35, 40%, 50%);
+  --global-color-warning--dark:      hsl(35, 40%, 38%);
+  --global-color-warning--x-dark:    hsl(35, 40%, 26%);
+  --global-color-warning--xx-dark:   hsl(35, 40%, 14%);
+  --global-color-warning--xxx-dark:  hsl(35, 40%, 02%);
+
+  --global-color-danger--xxx-light: hsl(330, 60%, 98%);
+  --global-color-danger--xx-light:  hsl(330, 60%, 86%);
+  --global-color-danger--x-light:   hsl(330, 60%, 74%);
+  --global-color-danger--light:     hsl(330, 60%, 62%);
+  --global-color-danger:            hsl(330, 60%, 50%);
+  --global-color-danger--dark:      hsl(330, 60%, 38%);
+  --global-color-danger--x-dark:    hsl(330, 60%, 26%);
+  --global-color-danger--xx-dark:   hsl(330, 60%, 14%);
+  --global-color-danger--xxx-dark:  hsl(330, 60%, 02%);
+
+  --global-color-inform--xxx-light: hsl(190, 40%, 98%);
+  --global-color-inform--xx-light:  hsl(190, 40%, 86%);
+  --global-color-inform--x-light:   hsl(190, 40%, 74%);
+  --global-color-inform--light:     hsl(190, 40%, 62%);
+  --global-color-inform:            hsl(190, 40%, 50%);
+  --global-color-inform--dark:      hsl(190, 40%, 38%);
+  --global-color-inform--x-dark:    hsl(190, 40%, 26%);
+  --global-color-inform--xx-dark:   hsl(190, 40%, 14%);
+  --global-color-inform--xxx-dark:  hsl(190, 40%, 02%);
+
+  --global-color-accent--xxx-light: hsl(270, 50%, 98%);
+  --global-color-accent--xx-light:  hsl(270, 50%, 86%);
+  --global-color-accent--x-light:   hsl(270, 50%, 74%);
+  --global-color-accent--light:     hsl(270, 50%, 62%);
+  --global-color-accent:            hsl(270, 50%, 50%);
+  --global-color-accent--dark:      hsl(270, 50%, 38%);
+  --global-color-accent--x-dark:    hsl(270, 50%, 26%);
+  --global-color-accent--xx-dark:   hsl(270, 50%, 14%);
+  --global-color-accent--xxx-dark:  hsl(270, 50%, 02%);
+}
+
+/* DO NOT ADD STYLES HERE; USE THE VARIABLES FOR STYLES IN OTHER STYLESHEETS */
