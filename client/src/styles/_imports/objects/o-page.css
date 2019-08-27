@@ -29,7 +29,7 @@ Styleguide Objects.Page
   padding-block: var(--global-layout--page-padding-y);
 }
 .o-page__article {
-    margin-block-end: env(--space--normal);
+    margin-block-end: var(--env-space--normal);
 }
 .o-page__article:last-child {
     margin-block-end: 0;
@@ -45,11 +45,11 @@ Styleguide Objects.Page
 @media (--screen-wide-and-above) {
   :root {
     --global-layout--col-count: 3;
-    --global-layout--col-gap: env(--space--normal); /* 250px available space */
-    --global-layout--page-width-max: env(--vw--wide);
-    --global-layout--page-width-min: env(--vw--wide);
+    --global-layout--col-gap: var(--env-space--normal); /* 250px available space */
+    --global-layout--page-width-max: var(--env-vw--wide);
+    --global-layout--page-width-min: var(--env-vw--wide);
 
-    --global-layout--page-padding-x: env(--space--x-large);
+    --global-layout--page-padding-x: var(--env-space--x-large);
   }
 }
 /* Medium screens have:
@@ -59,11 +59,11 @@ Styleguide Objects.Page
 @media (--screen-medium-to-wide) {
   :root {
     --global-layout--col-count: 2;
-    --global-layout--col-gap: env(--space--small); /* 10px available space */
-    --global-layout--page-width-max: env(--vw--medium-wide);
-    --global-layout--page-width-min: env(--vw--medium);
+    --global-layout--col-gap: var(--env-space--small); /* 10px available space */
+    --global-layout--page-width-max: var(--env-vw--medium-wide);
+    --global-layout--page-width-min: var(--env-vw--medium);
 
-    --global-layout--page-padding-x: env(--space--large);
+    --global-layout--page-padding-x: var(--env-space--large);
   }
 }
 /* Narrow screens have:
@@ -74,9 +74,9 @@ Styleguide Objects.Page
   :root {
     --global-layout--col-count: 1;
     --global-layout--col-gap: 0; /* 0px available space */
-    --global-layout--page-width-max: env(--vw--narrow-medium);
-    --global-layout--page-width-min: env(--vw--narrow);
+    --global-layout--page-width-max: var(--env-vw--narrow-medium);
+    --global-layout--page-width-min: var(--env-vw--narrow);
 
-    --global-layout--page-padding-x: env(--space--normal);
+    --global-layout--page-padding-x: var(--env-space--normal);
   }
 }

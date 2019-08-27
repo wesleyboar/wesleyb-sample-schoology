@@ -16,7 +16,7 @@ Styleguide Components.Intro
 }
 
 [class*="c-intro__"] + [class*="c-intro__"] {
-    margin-top: env(--space--x-small);
+    margin-top: var(--env-space--x-small);
 }
 .c-intro__major {
     font-size: var(--global-font-size--normal);

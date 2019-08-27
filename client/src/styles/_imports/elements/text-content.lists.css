@@ -5,12 +5,12 @@ Styleguide Elements.TextContent.Lists
 */
 
 :--global-list-element {
-  margin-block: env(--space--small);
+  margin-block: var(--env-space--small);
   /* IDEA: Use `*l[class=""]` to limit styles to "default" lists */
   padding-inline-start: var(--global-layout--list-decorator-width);
 }
 :--global-list-element :--global-list-element {
-  margin-block: env(--space--x-small);
+  margin-block: var(--env-space--x-small);
 }
 
 /* Ensure list item markers are "aligned" at the top */

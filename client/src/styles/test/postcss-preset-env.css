@@ -11,8 +11,8 @@
 
 @custom-media --screen-wide-and-above screen and (min-width: 1200px);
 @custom-media --screen-wide-and-above-with-range screen and (width > 1200px);
-@custom-media --screen-wide-and-above-via-env screen and (min-width: env(--vw--wide));
-@custom-media --screen-wide-and-above-with-range-via-env screen and (width > env(--vw--wide));
+@custom-media --screen-wide-and-above-via-env screen and (min-width: var(--env-vw--wide));
+@custom-media --screen-wide-and-above-with-range-via-env screen and (width > var(--env-vw--wide));
 
 /*! SCHOOLOGY | Code */
 

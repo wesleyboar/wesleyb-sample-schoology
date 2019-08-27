@@ -14,36 +14,36 @@ h1 {
   font-size: var(--global-font-size--x-large);
   font-weight: normal;
 }
-h1 + h1 { margin-block-end: env(--space--normal); }
+h1 + h1 { margin-block-end: var(--env-space--normal); }
 
 h2 {
   min-height: calc( var(--global-font-size--large) * var(--global-layout--line-height) );
   font-size: var(--global-font-size--large);
 }
-h2 + h2 { margin-block-end: env(--space--small); }
+h2 + h2 { margin-block-end: var(--env-space--small); }
 
 h3 {
   min-height: calc( var(--global-font-size--normal) * var(--global-layout--line-height) );
   font-size: var(--global-font-size--normal);
   font-weight: normal;
 }
-h3 + h3 { margin-block-end: env(--space--x-small); }
+h3 + h3 { margin-block-end: var(--env-space--x-small); }
 
 h4 {
   min-height: calc( var(--global-font-size--normal) * var(--global-layout--line-height) );
   font-size: var(--global-font-size--normal);
 }
-h4 + h4 { margin-block-end: env(--space--x-small); }
+h4 + h4 { margin-block-end: var(--env-space--x-small); }
 
 h5 {
   min-height: calc( var(--global-font-size--small) * var(--global-layout--line-height) );
   font-size: var(--global-font-size--small);
   font-weight: normal;
 }
-h5 + h5 { margin-block-end: env(--space--xx-small); }
+h5 + h5 { margin-block-end: var(--env-space--xx-small); }
 
 h6 {
   min-height: calc( var(--global-font-size--small) * var(--global-layout--line-height) );
   font-size: var(--global-font-size--small);
 }
-h6 + h6 { margin-block-end: env(--space--xx-small); }
+h6 + h6 { margin-block-end: var(--env-space--xx-small); }

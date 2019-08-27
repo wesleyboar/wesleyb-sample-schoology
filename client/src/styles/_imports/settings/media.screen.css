@@ -27,15 +27,15 @@ Styleguide Settings.CustomMediaQueries.ScreenWidth
          `@media (--screen-medium-to-wide), (--screen-narrow-to-medium) { … }` */
 /* SEE: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#comma-separated_lists */
 
-@custom-media --screen-narrow-to-wide   screen and (env(--vw--narrow) < width <= env(--vw--wide));
+@custom-media --screen-narrow-to-wide   screen and (var(--env-vw--narrow) < width <= var(--env-vw--wide));
 
-@custom-media --screen-narrow-and-below screen and (width <= env(--vw--narrow));
-@custom-media --screen-narrow-and-above screen and (width > env(--vw--narrow));
+@custom-media --screen-narrow-and-below screen and (width <= var(--env-vw--narrow));
+@custom-media --screen-narrow-and-above screen and (width > var(--env-vw--narrow));
 
-@custom-media --screen-narrow-to-medium screen and (env(--vw--narrow) < width <= env(--vw--medium));
-@custom-media --screen-medium-and-below screen and (width <= env(--vw--medium));
-@custom-media --screen-medium-and-above screen and (width > env(--vw--medium));
-@custom-media --screen-medium-to-wide   screen and (env(--vw--medium) < width <= env(--vw--wide));
+@custom-media --screen-narrow-to-medium screen and (var(--env-vw--narrow) < width <= var(--env-vw--medium));
+@custom-media --screen-medium-and-below screen and (width <= var(--env-vw--medium));
+@custom-media --screen-medium-and-above screen and (width > var(--env-vw--medium));
+@custom-media --screen-medium-to-wide   screen and (var(--env-vw--medium) < width <= var(--env-vw--wide));
 
-@custom-media --screen-wide-and-below   screen and (width <= env(--vw--wide));
-@custom-media --screen-wide-and-above   screen and (width > env(--vw--wide));
+@custom-media --screen-wide-and-below   screen and (width <= var(--env-vw--wide));
+@custom-media --screen-wide-and-above   screen and (width > var(--env-vw--wide));

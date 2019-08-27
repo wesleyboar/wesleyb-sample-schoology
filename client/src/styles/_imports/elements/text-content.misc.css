@@ -7,7 +7,7 @@ Styleguide Elements.TextContent.Misc
 p,
 blockquote,
 blockquote footer {
-  margin-block: env(--space--normal);
+  margin-block: var(--env-space--normal);
 }
 blockquote cite {
   opacity: 0.63;

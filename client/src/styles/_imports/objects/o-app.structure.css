@@ -1,5 +1,5 @@
 .o-app--layout-narrow {
-  max-width: env(--vw--medium);
+  max-width: var(--env-vw--medium);
   margin: 0 auto;
 }
 
@@ -10,24 +10,24 @@
 /* For wide screens, large space */
 @media (--screen-wide-and-above) {
   :root {
-    --o-app-space--large: env(--space--xx-large);
-    --o-app-space--normal: env(--space--x-large);
-    --o-app-space--small: env(--space--small);
+    --o-app-space--large: var(--env-space--xx-large);
+    --o-app-space--normal: var(--env-space--x-large);
+    --o-app-space--small: var(--env-space--small);
   }
 }
 /* For medium screens, normal space */
 @media (--screen-narrow-to-wide) {
   :root {
-    --o-app-space--large: env(--space--x-large);
-    --o-app-space--normal: env(--space--large);
-    --o-app-space--small: env(--space--x-small);
+    --o-app-space--large: var(--env-space--x-large);
+    --o-app-space--normal: var(--env-space--large);
+    --o-app-space--small: var(--env-space--x-small);
   }
 }
 /* For narrow screens, small space */
 @media (--screen-narrow-and-below) {
   :root {
-    --o-app-space--large: env(--space--large);
-    --o-app-space--normal: env(--space--normal);
-    --o-app-space--small: env(--space--xx-small);
+    --o-app-space--large: var(--env-space--large);
+    --o-app-space--normal: var(--env-space--normal);
+    --o-app-space--small: var(--env-space--xx-small);
   }
 }
