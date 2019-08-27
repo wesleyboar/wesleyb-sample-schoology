@@ -4,7 +4,8 @@
 @import "../_imports/settings/env.misc.css";
 @import "../_imports/settings/env.space.css";
 @import "../_imports/settings/env.vw.css";
-@import "../_imports/settings/media.screen.css";
+/* RFE: Support cusotm media queries in build process */
+/* @import "../_imports/settings/media.screen.css"; */
 @import "../_imports/settings/prop.colors.css";
 @import "../_imports/settings/prop.font.css";
 @import "../_imports/settings/prop.layout.css";

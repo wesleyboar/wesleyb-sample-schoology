@@ -30,7 +30,7 @@ Markup:
 
 Styleguide Settings.CustomProperties.Font.Sizes
 */
-  /* FAQ: The ratio between each adjacent style is about ~1.25 */
+  /* FAQ: The ratio between each adjacent style is ~1.25 */
   --global-font-size--small: 1.4rem;
   --global-font-size--normal: 1.8rem;
   --global-font-size--large: 2.4rem;

@@ -14,4 +14,4 @@ import './index.css';
 // !!!: Do NOT do this on production!
 import './test.css';
 
-ReactDOM.render( <App />, document.getElementById('root'));
+ReactDOM.render( <App />, document.getElementById('app-body'));

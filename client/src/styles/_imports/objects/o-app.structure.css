@@ -1,33 +1,31 @@
-.o-app--layout-narrow {
-  max-width: var(--env-vw--medium);
-  margin: 0 auto;
+/*
+App
+
+A flexible application layout.
+
+Markup: o-app.twig
+
+Styleguide Objects.App
+*/
+[class*="o-app__"] {
+  margin: var(--o-app-space--normal);
+  padding: 0 var(--o-app-space--small);
 }
 
-:--o-app--item {
-  padding-block: var(--o-app-space--normal);
+.o-app__body,
+.o-app__side {
+  /* FAQ: Allow `width` to be set with intuitive results */
+  box-sizing: content-box;
+}
+/* CAVEAT: To support these children, consider CSS grid layout */
+.o-app__side {
+  display: none;
 }
 
-/* For wide screens, large space */
-@media (--screen-wide-and-above) {
-  :root {
-    --o-app-space--large: var(--env-space--xx-large);
-    --o-app-space--normal: var(--env-space--x-large);
-    --o-app-space--small: var(--env-space--small);
-  }
-}
-/* For medium screens, normal space */
-@media (--screen-narrow-to-wide) {
-  :root {
-    --o-app-space--large: var(--env-space--x-large);
-    --o-app-space--normal: var(--env-space--large);
-    --o-app-space--small: var(--env-space--x-small);
-  }
-}
-/* For narrow screens, small space */
-@media (--screen-narrow-and-below) {
-  :root {
-    --o-app-space--large: var(--env-space--large);
-    --o-app-space--normal: var(--env-space--normal);
-    --o-app-space--small: var(--env-space--xx-small);
-  }
+/* Nested `.o-app`'s should not have horizontal padding */
+.o-app .o-app [class*="o-app__"] {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }

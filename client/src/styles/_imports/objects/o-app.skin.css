@@ -1,6 +1,0 @@
-.o-app__body,
-.o-app__foot {
-  border-block-start-width: var(--global-layout--border-width--thick);
-  border-block-start-style: var(--global-layout--border-style);
-  border-block-start-color: var(--global-color-text--normal);
-}

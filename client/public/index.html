@@ -26,16 +26,18 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body id="app" class="o-app">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- FAQ: When header becomes dynamic, it can become a component -->
-    <header class="c-intro">
+    <!-- HACK: Using `c-notice--major c-notice--inform` instead of ID-styling -->
+    <header id="app-head" class="c-intro o-app__head">
       <h1>Animal Farm</h1>
-      <p class="c-intro__major">Create a farm, one animal at a time.</p>
+      <p class="c-intro__major-text">Create a farm, one animal at a time.</p>
     </header>
-    <main id="root"></main>
+    <!-- HACK: An `o-app` block and children should be defined in one file -->
+    <main id="app-body" class="o-app__body o-app"></main>
     <!-- FAQ: If temporary notice becomes dynamic, it can become a component -->
-    <aside class="c-notice--warning c-notice--major">
+    <aside id="app-foot" class="c-notice--warning c-notice--major o-app__foot">
       <strong class="c-notice__title">Work In Progress</strong>
       <p class="c-notice__message">What could we do with the information?</p>
       <blockquote class="c-notice__message u-font-size--small">
@@ -49,7 +51,7 @@
         </ul>
         <footer>Wesley B, <cite>notes from candidate</cite></footer>
       </blockquote>
-    </header>
+    </aside>
     <div id="deferred-resources">
       <!-- Styles -->
       <!-- FAQ: Why is `<link>` element inside `<body>` tag (not permitted)?

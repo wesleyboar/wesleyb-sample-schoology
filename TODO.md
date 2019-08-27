@@ -1,10 +1,7 @@
 # To Do
 
 1. Client Web App
-    - Style UI
-        - Style main header (and app layout)
-        - Purge unused Objects
-        - Responsive Design & Media Queries
+    - Document CSS
 2. Web Services
     - Create Docker
 3. Finally

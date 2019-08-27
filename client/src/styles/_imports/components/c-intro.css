@@ -5,20 +5,32 @@ An introduction to a topic, with a short and long piece of text.
 
 _This component **should not** become some grand layout element. It has no heading and no greater semantic meaning beyond a short introduction that is part of soemthing greater._
 
+- .c-intro--minor - An intro of minor importance (compared to others)
+
 Markup: c-intro.twig
 
 Styleguide Components.Intro
 */
-.c-intro {
-    /* Remove _vertical_ layout spacing */
-    /* FAQ: The intro is meant to be a part of some greater layout,
-            which may have horizontal spacing requirements */
+.c-intro > *,
+[class*="c-intro--"] > * {
+    /* FAQ: Keep all the intro pieces together, so they appear cohesive */
     margin-top: 0;
     margin-bottom: 0;
 }
-.c-intro__major {
+.c-intro--minor {
+    text-align: center;
+}
+/* For medium screens, small space */
+@media screen and (max-width: 579px) {
+    .c-intro--minor {
+        /* RFE: Use value `unset` when IE is not supported */
+        text-align: inherit;
+    }
+}
+
+.c-intro__major-text {
     font-size: var(--global-font-size--normal);
 }
-.c-intro__minor {
+.c-intro__minor-text {
     font-size: var(--global-font-size--small);
 }

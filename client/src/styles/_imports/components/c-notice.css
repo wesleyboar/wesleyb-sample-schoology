@@ -1,7 +1,7 @@
 /*
 Notice
 
-A message for the user.
+A message for the user. Messages must be designated as major (`c-notice--major`) or minor (`c-notice--minor`).
 
 - .c-notice--danger - Negative notice
 - .c-notice--warning - Warning notice
@@ -12,10 +12,6 @@ Markup: c-notice.twig
 
 Styleguide Components.Notice
 */
-.c-notice,
-[class*="c-notice--"] {
-  /* … */
-}
 .c-notice--minor {
   display: inline-block;
   padding: var(--env-space--xx-small) 0;
@@ -27,7 +23,6 @@ Styleguide Components.Notice
 .c-notice--major {
   display: block;
   padding: var(--env-space--normal);
-  margin: var(--env-space--small) 0;
 }
 
 /* RFE: A mixin would be helpful, here */

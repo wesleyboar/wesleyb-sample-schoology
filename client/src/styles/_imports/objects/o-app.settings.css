@@ -1,4 +1,28 @@
-@custom-selector :--o-app--item
-  .o-app__head,
-  .o-app__body,
-  .o-app__foot;
+/* RFE: Use custom media queries, when supported by build */
+/* For extra wide screens, large space */
+@media screen and (min-width: 940px) {
+  :root {
+    --o-app-space--large: var(--env-space--xx-large);
+    --o-app-space--normal: var(--env-space--x-large);
+    --o-app-space--small: var(--env-space--large);
+    --o-app-space--x-small: var(--env-space--normal);
+  }
+}
+/* For wide screens, normal space */
+@media screen and (min-width: 580px) and (max-width: 939px) {
+  :root {
+    --o-app-space--large: var(--env-space--x-large);
+    --o-app-space--normal: var(--env-space--large);
+    --o-app-space--small: var(--env-space--normal);
+    --o-app-space--x-small: var(--env-space--small);
+  }
+}
+/* For medium screens, small space */
+@media screen and (max-width: 579px) {
+  :root {
+    --o-app-space--large: var(--env-space--normal);
+    --o-app-space--normal: var(--env-space--small);
+    --o-app-space--small: var(--env-space--x-small);
+    --o-app-space--x-small: var(--env-space--xx-small);
+  }
+}

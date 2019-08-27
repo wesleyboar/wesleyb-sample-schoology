@@ -18,13 +18,26 @@ input, select, textarea {
   font: var(--global-font-size--normal)/var(--global-layout--line-height) var(--global-font-family--primary);
 }
 
+:root {
+  --d-elements-form--fieldset-padding-horz: var(--o-app-space--small);
+}
 fieldset {
   border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
-  padding: var(--env-space--normal);
+  padding: var(--d-elements-form--fieldset-padding-horz);
   margin: var(--env-space--small) 0;
 }
 legend {
   padding: 0 var(--env-space--small);
+}
+/* For narrow screens, remove most of border and space */
+@media screen and (max-width: 579px) {
+  fieldset {
+    border-width: var(--global-layout--border-width) 0 0 0;
+    padding: 0;
+  }
+  legend {
+    margin-left: var(--d-elements-form--fieldset-padding-horz);
+  }
 }
 
 /* RFE: For non-pointer devices (via media query), show `[title]` attributes as content */
