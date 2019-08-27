@@ -4,5 +4,5 @@
 Styleguide Elements.InlineTextSemantics.Misc
 */
 small {
-    font-size: var(--global-font-size--small);
+  font-size: var(--global-font-size--small);
 }

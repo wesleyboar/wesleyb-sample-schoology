@@ -1,0 +1,22 @@
+/*
+Font
+
+Overrides for font-related properties; added to only as necessary.
+
+Markup:
+<main class="c-sample" id="d-trumps--utilities--form">
+  <p><small>I am isolated `<small>` text.<small></p>
+  <ul class="u-font-size--small">
+    <li>Some information belongs in one or more block elements.</li>
+    <li>But, the font-size should be less important.</li>
+    <li>Normally, use a `<small>` tag to suggest this.</li>
+    <li>A block element must not be wrapped in an inline element.</li>
+    <li>An `<small>` inner-wrap for every element <abbr title="When I can explain logically \"feels wrong\", then I will.">feels wrong</abbr>.</li>
+  </ul>
+</main>
+
+Styleguide Core.Trumps.Utilities.Font
+*/
+.u-font-size--small {
+  font-size: var(--global-font-size--small) !important;
+}

@@ -1,0 +1,18 @@
+/*
+Field
+
+Wrapper for a `<label>` and a user-entry field (`<input>`, `<select>`, `<textarea>`, etc) and any directly related elements (error text, field-specific loading UI, field-specific `<output>`).
+
+This component exists for a few reasons:
+- Layout
+    - Often, labels and inputs are treated as a block together, which requires a wrapper element.
+- Accessibility
+    - A user-entry field **should** have a label to describe the field.
+    - The label for a user-entry field **should not** contain the field.
+- Organization
+    - A `<fieldset>` can have a set of `.c-field`s.
+
+Markup: c-field.twig
+
+Styleguide Components.Field
+*/

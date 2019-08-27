@@ -2,10 +2,9 @@
 
 1. Client Web App
     - Style UI
-        - Update/purge/add Components
-        - Update/purge/add Objects
-        - Update/purge/add Elements
-        - Remove unused settings
+        - Style main header (and app layout)
+        - Purge unused Objects
+        - Responsive Design & Media Queries
 2. Web Services
     - Create Docker
 3. Finally

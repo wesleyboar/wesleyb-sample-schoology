@@ -10,8 +10,31 @@ Reference:
 Styleguide Elements.Form
 */
 
-fieldset {
-    border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
-    padding: var(--env-space--small);
-    margin: var(--env-space--small) 0;
+input, select, textarea {
+  padding: 0 var(--env-space--xxx-small);
+
+  background-color: var(--global-color-bkgd--light);
+  color: var(--global-color-text--normal);
+  font: var(--global-font-size--normal)/var(--global-layout--line-height) var(--global-font-family--primary);
 }
+
+fieldset {
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
+  padding: var(--env-space--normal);
+  margin: var(--env-space--small) 0;
+}
+legend {
+  padding: 0 var(--env-space--small);
+}
+
+/* RFE: For non-pointer devices (via media query), show `[title]` attributes as content */
+label {
+  display: block;
+}
+/* Decorative grammar is stylesheet responsibility */
+label::after {
+  content: ":";
+  margin-left: 0.05em;
+}
+/* FAQ: Not using this, yet, but the first checkbox-then-label pair will need it */
+input[type="checkbox"] + label::after { display: none; }

@@ -16,6 +16,5 @@ body {
 
   background-color: var(--global-color-bkgd--normal);
   color: var(--global-color-text--normal);
-  font-size: var(--global-font-size--normal);
-  font-family: var(--global-font-family--primary);
+  font: var(--global-font-size--normal)/var(--global-layout--line-height) var(--global-font-family--primary);
 }

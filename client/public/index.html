@@ -28,35 +28,42 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- FAQ: When header becomes dynamic, it can become an app component -->
+    <!-- FAQ: When header becomes dynamic, it can become a component -->
     <header class="c-intro">
-      <h1>Create a Farm</h1>
-      <p class="c-intro__major">One animal at a time.</p>
+      <h1>Animal Farm</h1>
+      <p class="c-intro__major">Create a farm, one animal at a time.</p>
     </header>
     <main id="root"></main>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- FAQ: If temporary notice becomes dynamic, it can become a component -->
+    <aside class="c-notice--warning c-notice--major">
+      <strong class="c-notice__title">Work In Progress</strong>
+      <p class="c-notice__message">What could we do with the information?</p>
+      <blockquote class="c-notice__message u-font-size--small">
+        <p>If <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist" target="_blank" title="The HTML &lt;datalist&gt; element contains a set of &lt;option&gt; elements that represent the values available for other controls"><code>&lt;datalist&gt;</code></a> were <strong>not</strong> used to filter the data (the project requirement to filter seems to be solved, most efficiently, by using this element), then we may make an API call… Here are other solutions that would "use" the data:</p>
+        <ul>
+          <li>Use a submit button and API call <em>or</em> silent <code>onChange</code> API call (but, it is more efficient to filter via client-side JavaScript).</li>
+          <li>Have a silent <code>onChange</code> filter perform by client-side JavaScript (but, why do that if the browser—or polyfill—can do the work).</li>
+          <li>Have a form submission (or button "press") trigger a filter perform by client-side JavaScript (still, seems better to rely on a standard HTML element).</li>
+          <li>A benefit of <strong>not</strong> using the <code>&lt;datalist&gt;</code> element would be more freedom to style the filtered list. But, even then, a standard—and most appropriate—HTML element should be the (hidden) backbone of the functionality.</li>
+          <li>If one builds stylable elements to visually—but not functionally—replace the <code>&lt;datalist&gt;</code>, then all accessibility afforded by the browser would need to be replicated. <em>Is that worth the effort compared to limited styling of widget?</em></li>
+        </ul>
+        <footer>Wesley B, <cite>notes from candidate</cite></footer>
+      </blockquote>
+    </header>
+    <div id="deferred-resources">
+      <!-- Styles -->
+      <!-- FAQ: Why is `<link>` element inside `<body>` tag (not permitted)?
+                * Defer load of print styles (not vital to page load).
+                * Liberal usage of `itemprop` permits `<link>` as "flow content". -->
+      <!-- SEE: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Technical_summary -->
+      <!-- SEE: https://schema.org/Thing -->
+      <link itemscope="" itemprop="url" rel="stylesheet" media="print" href="%PUBLIC_URL%/external/css/print.css">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-    <!-- Styles -->
-    <!-- FAQ: Why is `<link>` element inside `<body>` tag (not permitted)?
-              * Defer load of print styles (not vital to page load).
-              * Liberal usage of `itemprop` permits `<link>` as "flow content". -->
-    <!-- SEE: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Technical_summary -->
-    <!-- SEE: https://schema.org/Thing -->
-    <link itemscope="" itemprop="url" rel="stylesheet" media="print" href="%PUBLIC_URL%/external/css/print.css">
-
-    <!-- Scripts -->
-    <!-- RFE: Load polyfill, only once, via JavaScript for only the component that needs it -->
-    <!-- FAQ: Placed at end of `<body>`, because polyfill-dependent browser may not support `defer` -->
-    <!-- NOTE: With no easy way to test unsupporting browsers, I opt for reliable HTML load of script -->
-    <script src="%PUBLIC_URL%/external/js/datalist.js"></script>
+      <!-- Scripts -->
+      <!-- RFE: Load polyfill, only once, via JavaScript for only the component that needs it -->
+      <!-- FAQ: Placed at end of `<body>`, because polyfill-dependent browser may not support `defer` -->
+      <!-- NOTE: With no easy way to test unsupporting browsers, I opt for reliable HTML load of script -->
+      <script src="%PUBLIC_URL%/external/js/datalist.js"></script>
+    </div>
   </body>
 </html>

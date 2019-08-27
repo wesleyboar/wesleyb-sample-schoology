@@ -4,15 +4,31 @@ Miscellaneous
 Styleguide Elements.TextContent.Misc
 */
 
+:root {
+  --e-text-misc--blockquote-indent-width: var(--env-space--normal);
+  --e-text-misc--blockquote-border-width: var(--global-layout--border-width);
+}
 p,
 blockquote,
 blockquote footer {
-  margin-block: var(--env-space--normal);
+  margin-top: var(--env-space--normal);
+  margin-bottom: var(--env-space--normal);
+}
+blockquote {
+  margin-left: calc(
+    var(--env-space--x-large)
+    - var(--e-text-misc--blockquote-indent-width)
+    - var(--e-text-misc--blockquote-border-width)
+  );
+  margin-right: var(--env-space--x-large);
+
+  padding-left: var(--e-text-misc--blockquote-indent-width);
+  border-left: var(--e-text-misc--blockquote-border-width) var(--global-layout--border-style) var(--global-color-text--normal);
 }
 blockquote cite {
-  opacity: 0.63;
+  opacity: 0.7;
 }
 blockquote footer::before {
   content: "—";
-  margin-inline-end: 0.5ch;
+  margin-right: 0.5ch;
 }

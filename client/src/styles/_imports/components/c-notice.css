@@ -1,0 +1,70 @@
+/*
+Notice
+
+A message for the user.
+
+- .c-notice--danger - Negative notice
+- .c-notice--warning - Warning notice
+- .c-notice--inform - Objective notice
+- .c-notice--success - Positive notice
+
+Markup: c-notice.twig
+
+Styleguide Components.Notice
+*/
+.c-notice,
+[class*="c-notice--"] {
+  /* … */
+}
+.c-notice--minor {
+  display: inline-block;
+  padding: var(--env-space--xx-small) 0;
+}
+.c-notice--minor::before {
+  content: "⚠";
+  margin-right: 0.25em;
+}
+.c-notice--major {
+  display: block;
+  padding: var(--env-space--normal);
+  margin: var(--env-space--small) 0;
+}
+
+/* RFE: A mixin would be helpful, here */
+/* RFE: Support for nesting would be helpful, here */
+.c-notice--minor.c-notice--success {
+  color: var(--global-color-success);
+}
+.c-notice--major.c-notice--success {
+  color: var(--global-color-success--xx-dark);
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-success--xx-dark);
+  background-color: var(--global-color-success--xx-light);
+}
+.c-notice--minor.c-notice--warning {
+  color: var(--global-color-warning);
+}
+.c-notice--major.c-notice--warning {
+  color: var(--global-color-warning--xx-dark);
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-warning--xx-dark);
+  background-color: var(--global-color-warning--xx-light);
+}
+.c-notice--minor.c-notice--danger {
+  color: var(--global-color-danger);
+}
+.c-notice--major.c-notice--danger {
+  color: var(--global-color-danger--xx-dark);
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-danger--xx-dark);
+  background-color: var(--global-color-danger--xx-light);
+}
+.c-notice--minor.c-notice--inform {
+  color: var(--global-color-inform);
+}
+.c-notice--major.c-notice--inform {
+  color: var(--global-color-inform--xx-dark);
+  border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-inform--xx-dark);
+  background-color: var(--global-color-inform--xx-light);
+}
+
+.c-notice__title {
+  font-weight: bold;
+}

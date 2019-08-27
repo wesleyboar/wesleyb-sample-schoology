@@ -11,3 +11,7 @@ Styleguide Elements.ContentSectioning
 */
 
 @import "../../_imports/elements/content-sectioning.headings.css";
+
+header * {
+  margin: 0;
+}

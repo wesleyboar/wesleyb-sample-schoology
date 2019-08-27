@@ -1,5 +1,0 @@
-/* TODO: Add core Wesley B style sproject as a dependency */
-/* FAQ: This stylsheet is copied from core shared styles repo,
-        which has not yet been added a dependency in this project;
-        so, for now, we clone it and extend styles after it */
-@import "../../_imports/components/c-delimited-list.core.css";

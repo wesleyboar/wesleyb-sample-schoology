@@ -7,11 +7,18 @@ Styleguide Elements.InlineTextSemantics.Anchor
     --element-anchor--color: var(--global-color-accent);
 }
 
+/* The anchor itself must differ, per state, in a way that is noticeable by all users (such as via color, decoration, position) */
 a {
-    /* FAQ: Added with hopeful joy that one day it is supported — 2019-08 */
+    display: inline-block;
+    padding: 0 0.5ch;
+
+    /* FAQ: Hopefully, one day, this is supported — 2019-08 */
     text-decoration-skip-ink: auto;
 }
-a:any-link {
+a:link,
+a:focus,
+a:hover,
+a:active {
     color: var(--element-anchor--color);
 }
 a:link {
@@ -31,7 +38,34 @@ a:active {
     /* Give link the appearance of being pressed down */
     position: relative; top: 1px;
 
-    color: var(--element-anchor--color);
-
     text-decoration-line: none;
+}
+
+/* Links that open in a new window or open a different website should have a context change warning for users */
+a[target="_blank"]::after {
+  content: '(opens in new window)';
+  /* WARN: External link background-image takes precedence */
+  /* RFE: Use a `data:image/svg` constructed from a local `.svg` image */
+  background-image: url(https://i.stack.imgur.com/3H2PQ.png);
+}
+a[href^="http"]::after {
+  content: '(external link) (opens in a new window)';
+  /* RFE: Use a `data:image/svg` constructed from a local `.svg` image */
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/44/Icon_External_Link.svg);
+}
+a[href^="http"]::after,
+a[target="_blank"]::after {
+  display: inline-block;
+  margin-left: 0.1em;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* RFE: Use `0.7em` when both `background-image`'s use SVG. */
+  width: 10px;
+  height: 10px;
+  text-indent: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }

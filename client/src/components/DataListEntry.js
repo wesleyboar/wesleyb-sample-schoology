@@ -98,7 +98,7 @@ class DataListEntry extends React.Component {
     const optionElements = this.createOptionElements( list );
     // HACK: For a full-fledged project, create a component
     const errorElement = (function () { if ( error && error.message ) {
-      return( <span className="c-error">{error.message}</span> );
+      return( <span className="c-notice--danger c-notice--minor">{error.message}</span> );
     }}());
     // HACK: For a full-fledged project, create a component
     const loadingElement = (function () {
@@ -128,14 +128,14 @@ class DataListEntry extends React.Component {
     return (
       <Tag className={className}>
         {loadingElement}
-        {errorElement}
 
         <label htmlFor={inputId}>Farm Animal</label>
         <input list={listId} id={inputId} name={nameAttr} />
-
         <datalist id={listId}>
           {optionElements}
         </datalist>
+
+        {errorElement}
       </Tag>
     );
   }

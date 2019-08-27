@@ -22,8 +22,6 @@ Markup:
   <div class="{{ modifier_class }}">I am font.</div>
 </section>
 
---global-font-size--xx-small: 1.0rem
---global-font-size--x-small: 1.2rem
 --global-font-size--small: 1.4rem
 --global-font-size--normal: 1.8rem
 --global-font-size--large: 2.4rem
@@ -33,8 +31,6 @@ Markup:
 Styleguide Settings.CustomProperties.Font.Sizes
 */
   /* FAQ: The ratio between each adjacent style is about ~1.25 */
-  --global-font-size--xx-small: 1.0rem;
-  --global-font-size--x-small: 1.2rem;
   --global-font-size--small: 1.4rem;
   --global-font-size--normal: 1.8rem;
   --global-font-size--large: 2.4rem;

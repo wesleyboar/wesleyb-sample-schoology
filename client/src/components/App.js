@@ -30,18 +30,27 @@ class App extends React.Component {
       .catch( err => { throw err; });
   }
 
+  // HACK: If markup becomes re-usable, consider the following components:
+  // - Header
+  // - Form
   render() {
     return (
-      <form>
-        <fieldset class="c-intro">
-          <legend>Animal Selection</legend>
-          <small class="c-intro__minor">The purpose of your choice is for us to know and your to find out.</small>
-          <DataListEntry tagName="div"
-                         className="c-datalist"
-                         nameAttr="farm_animal"
-                         getData={this.getFarmAnimals} />
-        </fieldset>
-      </form>
+      <>
+        <header class="c-intro">
+          <h2>Farm Creation</h2>
+          <p class="c-intro__major">Add elements to your farm.</p>
+        </header>
+        <form className="s-form">
+          <fieldset class="c-intro">
+            <legend>Animal Selection</legend>
+            <small class="c-intro__minor">The purpose of your choices here are for us to know and you to find out.</small>
+            <DataListEntry tagName="div"
+                          className="c-datalist c-field"
+                          nameAttr="farm_animal"
+                          getData={this.getFarmAnimals} />
+          </fieldset>
+        </form>
+      </>
     );
   }
 }

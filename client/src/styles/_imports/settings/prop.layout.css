@@ -31,6 +31,19 @@ Styleguide Settings.CustomProperties.Layout.Border
   --global-layout--border-width--x-thick: 6px;
   --global-layout--border-style: solid;
   --global-layout--border-radius: 3px;
+
+/*
+Miscellaneous
+
+These are miscellaneous global layout properties.
+
+<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+
+--global-layout--line-height: 1.5
+
+Styleguide Settings.CustomProperties.Layout.Misc
+*/
+  --global-layout--line-height: 1.5;
 }
 
 /* DO NOT ADD STYLES HERE; USE THE VARIABLES FOR STYLES IN OTHER STYLESHEETS */

@@ -1,0 +1,18 @@
+/*
+Form
+
+Styles and visual fixes for elements within a `<form>`.
+
+Styleguide About.Trumps.Scopes.Form
+*/
+
+/* RFE: Nesting would be helpful, here */
+.s-form .c-notice--minor {
+  display: block;
+}
+/* Add space between fields and fields */
+.s-form .c-field + .c-field,
+/* Add space between fields and siblings, except legend */
+.s-form :not(legend) + .c-field {
+    margin-top: var(--env-space--small);
+}
