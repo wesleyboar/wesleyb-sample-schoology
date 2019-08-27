@@ -30,8 +30,6 @@ a:hover {
     text-decoration-style: double;
 }
 a:focus {
-    outline-color: var(--element-anchor--color);
-
     text-decoration-line: none;
 }
 a:active {

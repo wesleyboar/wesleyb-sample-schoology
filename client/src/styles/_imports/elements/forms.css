@@ -40,7 +40,6 @@ legend {
   }
 }
 
-/* RFE: For non-pointer devices (via media query), show `[title]` attributes as content */
 label {
   display: block;
 }

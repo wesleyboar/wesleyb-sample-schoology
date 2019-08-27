@@ -25,9 +25,20 @@ blockquote {
   padding-left: var(--e-text-misc--blockquote-indent-width);
   border-left: var(--e-text-misc--blockquote-border-width) var(--global-layout--border-style) var(--global-color-text--normal);
 }
+
+/* For medium screens, no superfluous space */
+@media screen and (max-width: 579px) {
+  blockquote {
+    margin-left: 0;
+    margin-right:0;
+  }
+}
 blockquote cite {
   opacity: 0.7;
 }
+/* NOTE: If app is translated, the `content` value must change for certain langauges */
+blockquote cite::before { content: "("; margin-left: 0.5ch; }
+blockquote cite::after { content: ")"; margin-right: 0.5ch; }
 blockquote footer::before {
   content: "—";
   margin-right: 0.5ch;

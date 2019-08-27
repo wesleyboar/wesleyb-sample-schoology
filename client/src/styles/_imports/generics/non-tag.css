@@ -13,7 +13,13 @@ Styleguide Generics.NonTag
 */
 
 [title] {
-  curosr: help;
+  cursor: help;
+}
+/* For low-accuracy pointer or no pointer */
+@media (pointer: coarse), (pointer: none) {
+  [title]:after {
+    content: " (" attr(title) ")";
+  }
 }
 
 :disabled {
@@ -24,7 +30,7 @@ Styleguide Generics.NonTag
 :focus {
   outline-width: var(--global-layout--border-width--thick);
   outline-style: double;
-  outline-color: var(--global-color-inform);
+  outline-color: var(--global-color-accent);
   outline-offset: calc( var(--global-layout--border-width--thick) / 2);
 }
 

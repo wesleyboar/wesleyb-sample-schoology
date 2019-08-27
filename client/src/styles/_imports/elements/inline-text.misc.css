@@ -1,8 +1,12 @@
 /*
-<small>
+<small>, <dfn>
 
 Styleguide Elements.InlineTextSemantics.Misc
 */
 small {
   font-size: var(--global-font-size--small);
+}
+dfn {
+  font-style: normal;
+  font-weight: bold;
 }
