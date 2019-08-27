@@ -1,13 +1,8 @@
 /*
-<b>, <mark>
+<small>
 
 Styleguide Elements.InlineTextSemantics.Misc
 */
-b {
-    font-weight: normal;
-}
-mark {
-    padding: 0.5ch;
-
-    background-color: var(--global-color-warning--x-light);
+small {
+    font-size: var(--global-font-size--small);
 }

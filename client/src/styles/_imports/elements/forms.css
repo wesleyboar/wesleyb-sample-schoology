@@ -10,4 +10,8 @@ Reference:
 Styleguide Elements.Form
 */
 
-@import "../../_imports/elements/forms.progress.css";
+fieldset {
+    border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
+    padding: var(--env-space--small);
+    margin: var(--env-space--small) 0;
+}

@@ -1,11 +1,1 @@
 @import "./styles/site/core.css";
-
-fieldset {
-    border: var(--global-layout--border-width) var(--global-layout--border-style) var(--global-color-text--normal);
-    padding: 1em;
-    margin: 1em;
-}
-
-small {
-    font-size: var(--global-font-size--small);
-}

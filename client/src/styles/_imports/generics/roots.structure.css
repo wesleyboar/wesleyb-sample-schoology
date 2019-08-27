@@ -1,0 +1,19 @@
+/*
+Main Root (i.e. `html`)
+
+The root (top-level element) of an HTML document. These styles cascade to affect most elements.
+- Make 1 `rem` equal 10 `px`, so we can use pixel value with rem unit.
+
+Reference:
+
+- [MDN: HTML element reference: Main root](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Main_root)
+
+Weight: 1
+
+Styleguide Generics.MainRoot
+*/
+html {
+  /* FAQ: Makes `1.0rem` equal `10px` */
+  /* SEE: http://snook.ca/archives/html_and_css/font-size-with-rem */
+  font-size: 62.5%;
+}

@@ -33,9 +33,9 @@ class App extends React.Component {
   render() {
     return (
       <form>
-        <fieldset>
+        <fieldset class="c-intro">
           <legend>Animal Selection</legend>
-          <small>The purpose of your choice is for us to know and your to find out.</small>
+          <small class="c-intro__minor">The purpose of your choice is for us to know and your to find out.</small>
           <DataListEntry tagName="div"
                          className="c-datalist"
                          nameAttr="farm_animal"
