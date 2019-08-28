@@ -76,9 +76,11 @@ These directories are automatically maintained.
 
 #### `npm build(:cached)`
 
-Perform builds for all services:
-- `npm build` will first clean and install all dependencies
-- `npm build:cached` will use available dependencies and cache
+1. Install dependencies for service.
+    - `npm build` will (re-)install all dependencies
+    - `npm build:cached` will use available dependencies
+2. Build service.
+3. Repeat steps 1 and 2 for next service.
 
 #### `npm serve`
 

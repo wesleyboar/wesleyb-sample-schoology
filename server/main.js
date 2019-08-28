@@ -26,8 +26,8 @@ const port = process.env.PORT || 9000;
 const hostname = "animal.farm";
 
 // Directories
-const staticDir = path.resolve( __dirname, '../public');
-const docsDir = path.resolve( __dirname, '../docs');
+const staticDir = path.resolve( __dirname, '../dist/public');
+const docsDir = path.resolve( __dirname, '../dist/docs');
 
 //
 // Application
