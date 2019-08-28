@@ -6,11 +6,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "docs": "npm-run-all --parallel docs:*",
+    "docs": "npm-run-all --parallel docs:**",
     "docs:js": "jsdoc --configure .jsdocrc",
-    "docs:css": "kss --config kss.config.json && npm run docs:css:copy-files",
-    "// docs:css:copy-files": "No documentation (and trial and error failed) to add custom styles, so I manually copy them in",
-    "docs:css:copy-files": "shx rm -rf ./docs/css/user-assets && shx mkdir ./docs/css/user-assets && shx cp ./src/styles/docs/*.css ./docs/css/user-assets",
+    "docs:css": "kss --config kss.config.json",
+    "// docs:css:custom-assets": "No documentation (and trial and error failed) to add custom styles, so I manually copy them in",
+    "docs:css:custom-assets": "shx rm -rf ./docs/css/user-assets && shx mkdir ./docs/css/user-assets && shx cp ./src/styles/docs/*.css ./docs/css/user-assets",
+    "// docs:css:app-styles": "!!!: 1) Final stylesheet has dynamic name; 2) Final stylesheet has no comments; 3) We don't customize build, yet",
+    "docs:css:app-styles": "echo \"App styles are not available for the documentation, yet\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "npm-watch"

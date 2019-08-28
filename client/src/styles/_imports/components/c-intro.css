@@ -5,7 +5,7 @@ An introduction to a topic, with a short and long piece of text.
 
 _This component **should not** become some grand layout element. It has no heading and no greater semantic meaning beyond a short introduction that is part of soemthing greater._
 
-- .c-intro--minor - An intro of minor importance (compared to others)
+.c-intro--minor - An intro of minor importance (compared to others)
 
 Markup: c-intro.twig
 
