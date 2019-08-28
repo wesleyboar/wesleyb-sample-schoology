@@ -11,8 +11,9 @@ const Subdomain = require('koa-subdomain');
 const app = new Koa();
 const subdomain = new Subdomain();
 const serve = require('koa-static');
+const path = require('path');
 
-const router = require('./api/main.js').koaRouter;
+const router = require('../api/main.js').koaRouter;
 
 //
 // Definitions
@@ -25,8 +26,8 @@ const port = process.env.PORT || 9000;
 const hostname = "animal.farm";
 
 // Directories
-const staticDir = './public';
-const docsDir = './docs';
+const staticDir = path.resolve( __dirname, '../public');
+const docsDir = path.resolve( __dirname, '../docs');
 
 //
 // Application

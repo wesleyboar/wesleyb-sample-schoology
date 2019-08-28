@@ -3,6 +3,7 @@
 1. Web Services
     1. Create Docker.
     2. Configure Docker.
+    4. Solve CORS issue.
     3. Document how to develop locally, and why:
         1. Run project.
         2. Run project/client.
