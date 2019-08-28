@@ -13,18 +13,25 @@ This project contains the client web app **and** the server web API. It is also 
 
 ## Requirements
 
-- [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
-    - [NPM](https://docs.npmjs.com/getting-started/installing-node#updating-npm) 6.X+ _(or latest available for given Node version)_
-- DNS manipulation (see [Quick Start](#quick-start))
-- (later) [Docker][docker]
+- [Docker][docker] 19.03.+
+- manipulate DNS _(see [Quick Start: DNS](#dns))_
 
 ## Quick Start
 
 ### Services
 
-1. Install dependencies by running `npm install`.
-    - _For CI/CD environments, run `npm ci`, instead._
-1. Build and start the services by running `npm start`.
+1. Build image.
+    ```
+    docker build --no-cache \
+                 --tag wesb-school-autofill \
+                 https://github.com/wesleyboar/wesleyb-sample-schoology.git
+    ```
+1. Run container.
+    ```
+    docker run --publish 9000:9000 \
+               wesb-school-autofill \
+               npm start
+    ```
 
 ### DNS
 
@@ -73,6 +80,10 @@ These directories are automatically maintained.
 
 ### Commands
 
+### Node
+
+Requirements:
+- [Node.js][nodejs] v 10.X.+
 - Run commands from this (`./`) directory.
 - Run command `npm install`¹ _at least once_ beforehand.
 
@@ -101,27 +112,5 @@ Compile documentation from all services.
 
 Run tests from all services.
 
-## Deployment
 
-1. Build image.
-    ```
-    docker build --no-cache \
-                 --tag wesb-school-autofill \
-                 https://github.com/wesleyboar/wesleyb-sample-schoology.git
-    ```
-1. Run container.
-    ```
-    docker run --port 9000:9000 \
-               wesb-school-autofill \
-               npm start
-    ```
-
-## Footnotes
-
-1. For Windows, ensure that `node.exe` is on the `PATH` system variable.
-2. Do **not** install dependencies globally.
-
-
-[eslint]: https://eslint.org/ "ESLint"
-[nodejs]: https://nodejs.org/ "Node.js"
 [docker]: https://www.docker.com/ "Docker"
