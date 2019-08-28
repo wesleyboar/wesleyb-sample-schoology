@@ -51,4 +51,4 @@ RUN npm install && \
 
 EXPOSE 9000
 WORKDIR ${PROJ_DIR}
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]

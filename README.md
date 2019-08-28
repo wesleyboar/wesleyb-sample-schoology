@@ -33,15 +33,11 @@ This project contains the client web app **and** the server web API. It is also 
 
 1. Build image.
     ```
-    docker build --no-cache \
-                 --tag wesb-school-autofill \
-                 https://github.com/wesleyboar/wesleyb-sample-schoology.git
+    docker build --tag wesb-school-autofill https://github.com/wesleyboar/wesleyb-sample-schoology.git
     ```
 1. Run container.
     ```
-    docker run --publish 9000:9000 \
-               wesb-school-autofill \
-               npm start
+    docker run --publish 9000:9000 wesb-school-autofill npm start
     ```
 
 ### DNS
@@ -91,6 +87,18 @@ These directories are automatically maintained.
 
 ### Commands
 
+To run these commands, use one of these options:
+- [run a docker and then run a command][docker-command-run]
+- [execute a command on a running docker][docker-command-exec]
+
+Example
+```
+# Run docker with command
+docker run --publish 9000:9000 wesb-school-autofill  npm run docs
+# Execute command on docker
+docker exec wesb-school-autofill  npm run docs
+```
+
 ### Node
 
 Requirements:
@@ -125,3 +133,5 @@ Run tests from all services.
 
 
 [docker]: https://www.docker.com/ "Docker"
+[docker-command-run]: https://docs.docker.com/engine/reference/commandline/run/ "Docker: run"
+[docker-command-exec]: https://docs.docker.com/engine/reference/commandline/exec/ "Docker: exec"
