@@ -2,7 +2,8 @@
 
 FROM node:lts-alpine
 ENV NODE_ENV=production
-ENV USER=school
+# RFE: Create a new user, to use, instead
+ENV USER=root
 LABEL version=1.0.0 \
       maintainer=wesleyb@pm.me \
       description="A container for an auto-fill web service"
@@ -19,10 +20,12 @@ ENV ASST_DIR=/srv/opt/school-autofill
 ENV PROJ_DIR=${HOME_DIR}/app
 
 # A new user has paper trail, home dir in which to build, and limited perm's
-RUN useradd --user-group --create-home ${USER} && \
-    # NOTE: Would it be better instead to just ensure the FROM image is clean?
-    apt-get clean
-RUN chown -R ${USER}:${USER} ${HOME_DIR}/*
+# WARN: This causes a bug every time, so we'll use root, instead
+# SEE: https://stackoverflow.com/a/53726938/11817077
+# RUN useradd --user-group --create-home ${USER}
+# RUN chown -R ${USER}:${USER} ${HOME_DIR}/*
+# NOTE: Would it be better instead to just ensure the FROM image is clean?
+RUN apt-get clean
 
 # The project needs many files
 COPY package.json package-lock.json ${PROJ_DIR}/
