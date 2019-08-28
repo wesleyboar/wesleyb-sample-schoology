@@ -1,6 +1,6 @@
 {
   "name": "wesleyb-sample-schoology-client-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An SPA for an auto-fill web service",
   "private": true,
   "scripts": {
