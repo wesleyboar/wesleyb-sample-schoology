@@ -1,4 +1,4 @@
-# Schoology Autofill Project - Data
+# Schoology Autofill - Server Data
 
 This is static server-side data storage for the web services.
 

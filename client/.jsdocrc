@@ -1,6 +1,6 @@
 {
   "opts": {
-    "destination": "./docs",
+    "destination": "./docs/js",
     "recurse": true,
     "readme": "README.md",
     "template": "./node_modules/ink-docstrap/template",

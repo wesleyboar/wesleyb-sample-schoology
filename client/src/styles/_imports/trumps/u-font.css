@@ -15,7 +15,7 @@ Markup:
   </ul>
 </main>
 
-Styleguide Core.Trumps.Utilities.Font
+Styleguide Trumps.Utilities.Font
 */
 .u-font-size--small {
   font-size: var(--global-font-size--small) !important;

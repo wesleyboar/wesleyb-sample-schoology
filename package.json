@@ -20,12 +20,8 @@
     "build:cache": "npm-run-all --parallel client-cache api-cache",
     "build:fresh": "npm-run-all --parallel client api",
     "serve": "node --harmony --use_strict --optimize_for_size main.js",
-    "docs": "npm-run-all --parallel docs:*",
-    "docs:client": "npm-run-all --sequential client:docs",
-    "docs:api": "npm-run-all --sequential api:docs",
-    "test": "npm-run-all --parallel test:*",
-    "test:client": "npm-run-all --sequential client:test",
-    "test:api": "npm-run-all --sequential api:test"
+    "docs": "npm-run-all --parallel client:docs api:docs",
+    "test": "npm run --parallel client:test api:test"
   },
   "author": "wesleyb@pm.me",
   "license": "UNLICENSED",

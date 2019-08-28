@@ -1,0 +1,9 @@
+{
+  "nav-depth": 2,
+  "markup": "false",
+
+  "source": "./src/styles",
+  "destination": "./docs/css",
+
+  "homepage": "./docs.md"
+}

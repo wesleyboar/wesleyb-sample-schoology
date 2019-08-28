@@ -17,7 +17,7 @@ Rules:
 
 Weight: 7
 
-Styleguide Core.Trumps
+Styleguide Trumps
 */
 
 /*
@@ -40,7 +40,9 @@ Rules:
 - All overrides **must** have a comment.
 - Scope styles should have a comment.
 
-Styleguide Core.Trumps.Scopes
+Weight: 1
+
+Styleguide Trumps.Scopes
 */
 
 /*
@@ -64,7 +66,9 @@ Rules:
 - All other existing stylesheets must be considered first.
 - Prefer this to inline styles.
 
-Styleguide Core.Trumps.Utilities
+Weight: 2
+
+Styleguide Trumps.Utilities
 */
 
 /*
@@ -75,7 +79,9 @@ Styles and visual fixes applied in a "hacky" manner.
 - **Avoid using these styles.**
 - **Avoid adding to these files.**
 
-Styleguide About.Trumps.Hacks
+Weight: 3
+
+Styleguide Trumps.Hacks
 */
 
 /*
@@ -86,7 +92,7 @@ Utility styles that should not exist.
 - **Avoid using these styles.**
 - **Avoid adding to these files.**
 
-Styleguide About.Trumps.Hacks.Utilities
+Styleguide Trumps.Hacks.Utilities
 */
 
 /*
@@ -97,7 +103,7 @@ Styles and visual fixes for elements by ID.
 - **Avoid using these styles.**
 - **Avoid adding to these files.**
 
-Styleguide About.Trumps.Hacks.IDs
+Styleguide Trumps.Hacks.IDs
 */
 
 /* DO NOT ADD STYLES HERE; ADD THEM INSIDE STYLESHEETS IN THIS DIRECTORY */

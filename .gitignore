@@ -11,8 +11,8 @@
 
 # Final location for compiled files (recursive)
 docs
-!/docs/index.html
-!/docs/README.md
+!docs/index.html
+!docs/README.md
 build
 # Final location for compiled files (root)
 /public

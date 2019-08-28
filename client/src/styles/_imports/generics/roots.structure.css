@@ -1,5 +1,5 @@
 /*
-Main Root (i.e. `html`)
+Main Root: `html`
 
 The root (top-level element) of an HTML document. These styles cascade to affect most elements.
 - Make 1 `rem` equal 10 `px`, so we can use pixel value with rem unit.

@@ -1,4 +1,4 @@
-# Schoology Autofill Project
+# Schoology Autofill
 
 This is a Node web service of a code sample for Wesley B to Schoology.
 
