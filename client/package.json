@@ -9,6 +9,7 @@
     "docs": "npm-run-all --parallel docs:*",
     "docs:js": "jsdoc --configure .jsdocrc",
     "docs:css": "kss --config kss.config.json && npm run docs:css:copy-files",
+    "// docs:css:copy-files": "No documentation (and trial and error failed) to add custom styles, so I manually copy them in",
     "docs:css:copy-files": "shx rm -rf ./docs/css/user-assets && shx mkdir ./docs/css/user-assets && shx cp ./src/styles/docs/*.css ./docs/css/user-assets",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
