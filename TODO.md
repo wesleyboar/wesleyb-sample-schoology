@@ -2,9 +2,8 @@
 
 1. Web Services
     1. Configure Docker.
-        1. Build everything.
-        2. Serve everything.
-        3. Preferrably, form the Unix-appropriate directories.
+        1. Solve CORS issue (because of API subdomain).
+        2. Preferrably, serve from Unix-appropriate directories.
     2. Document how to develop locally, and why:
         1. Run project.
         2. Run project/client.
