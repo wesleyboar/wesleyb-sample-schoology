@@ -1,39 +1,47 @@
-# RFE: All project services should probably have their own docker!
-
-FROM node:lts-alpine
-ENV NODE_ENV=production
-# RFE: Create a new user, to use, instead
-ENV USER=root
+# TODO: Give each project stage ([build|service] process) its own docker
+# SEE: https://docs.docker.com/develop/develop-images/multistage-build/
+FROM node:10.16.3 AS everything
 LABEL version=1.0.0 \
       maintainer=wesleyb@pm.me \
       description="A container for an auto-fill web service"
-USER ${USER}
-
-# There are lots of directories of which to keep track
-ENV HOME_DIR=/home/${USER}
-# SEE: https://stackoverflow.com/a/11128102/11817077
-ENV CONF_DIR=/etc/opt/school-autofill
-ENV LOGS_DIR=/var/opt/school-autofill
-ENV ASST_DIR=/srv/opt/school-autofill
-# TODO: Evaluate isolation versus standard, pros and cons
-# ENV PROJ_DIR=/opt/school-autofill
-ENV PROJ_DIR=${HOME_DIR}/app
+    # TODO: Create a new user, to use, instead of root
+    # !!!: Solve this, now! Big security issue…
+ENV USER=root \
+    HOME_DIR=/home/${USER} \
+    # TODO: Place service files in appropriate directories
+    # CONF_DIR=/etc/opt/school-autofill \
+    # LOGS_DIR=/var/opt/school-autofill \
+    # ASST_DIR=/srv/opt/school-autofill \
+    # TODO: Evaluate isolation versus standard, pros and cons
+    # PROJ_DIR=/opt/school-autofill \
+    PROJ_DIR=${HOME_DIR}/app
+    # WARN: This makes `node_modules` not exist when building
+    # NODE_ENV=production
 
 # A new user has paper trail, home dir in which to build, and limited perm's
-# WARN: This causes a bug every time, so we'll use root, instead
+# WARN: This consistently results in Docker defect, so we use root, instead
 # SEE: https://stackoverflow.com/a/53726938/11817077
 # RUN useradd --user-group --create-home ${USER}
 # RUN chown -R ${USER}:${USER} ${HOME_DIR}/*
+USER ${USER}
 
-# The project needs many files
-COPY package.json package-lock.json ${PROJ_DIR}/
-# TODO: Migrate the few source files out of `dist`
-COPY api client data dist server ${PROJ_DIR}/
+# The project needs many directories
+# FAQ: A single `src/` directory is not the chosen solution for this redundency
+# RFE: Give each directory/service its own repository and docker
+# !!!: Solve this, now! Excess layers is bad for performance…
+COPY api ${PROJ_DIR}/api
+COPY client ${PROJ_DIR}/client
+COPY data ${PROJ_DIR}/data
+COPY server ${PROJ_DIR}/server
+# TODO: Migrate the few source files out of `dist` without decoupling
+COPY dist ${PROJ_DIR}/dist
 
 # The assets for some services must be built
+# RFE: Use on docker for buildign and one docekr for serving
+COPY package.json package-lock.json ${PROJ_DIR}/
 WORKDIR ${PROJ_DIR}/
-RUN npm ci
-RUN npm run build
+RUN npm install && \
+    npm run build
 
 # The distributables belong in different locations
 ## copy service to /opt/school/

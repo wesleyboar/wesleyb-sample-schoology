@@ -1,9 +1,11 @@
 # To Do
 
 1. Web Services
-    1. Create Docker.
-    2. Configure Docker.
-    3. Document how to develop locally, and why:
+    1. Configure Docker.
+        1. Build everything.
+        2. Serve everything.
+        3. Preferrably, form the Unix-appropriate directories.
+    2. Document how to develop locally, and why:
         1. Run project.
         2. Run project/client.
         3. Load client in Safari.

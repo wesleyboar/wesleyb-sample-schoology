@@ -4,6 +4,13 @@ This is a Node web service of a code sample for Wesley B to Schoology.
 
 This project contains the client web app **and** the server web API. It is also _(to be later)_ bundled in a single docker.
 
+> **Known Issues**
+> - Using one docker for everyhting instead of a docker per build and service.
+> - See each service's `README.md` for:
+>     - "To Do"
+>     - "Warning"
+>     - "Known Issue"
+
 ## Requirements
 
 - [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
@@ -96,7 +103,18 @@ Run tests from all services.
 
 ## Deployment
 
-(Coming soon)
+1. Build image.
+    ```
+    docker build --no-cache \
+                 --tag wesb-school-autofill \
+                 https://github.com/wesleyboar/wesleyb-sample-schoology.git
+    ```
+1. Run container.
+    ```
+    docker run --port 9000:9000 \
+               wesb-school-autofill \
+               npm start
+    ```
 
 ## Footnotes
 
