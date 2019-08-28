@@ -1,7 +1,7 @@
 {
   "name": "wesleyb-sample-schoology",
   "version": "1.0.0",
-  "description": "A server for an auto-fill web service",
+  "description": "An auto-fill web service",
   "private": true,
   "main": "main.js",
   "scripts": {

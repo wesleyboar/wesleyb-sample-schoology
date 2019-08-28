@@ -1,7 +1,7 @@
 {
-  "name": "wesleyb-sample-schoology-web-service",
+  "name": "wesleyb-sample-schoology-web-server",
   "version": "1.0.0",
-  "description": "An auto-fill web service",
+  "description": "A server for an auto-fill web service",
   "private": true,
   "scripts": {
     "start": "npm run serve",
