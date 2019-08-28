@@ -10,3 +10,7 @@ See [KSS Node: Configuration](https://github.com/kss-node/kss-node#using-the-com
 
 - `homepage`
     - Relative to `source`.
+
+- `css`
+- `js`
+    - Relative to `destination`.

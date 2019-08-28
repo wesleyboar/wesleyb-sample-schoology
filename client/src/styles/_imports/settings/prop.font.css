@@ -15,18 +15,13 @@ Sizes
 
 These are the global font sizes.
 
-<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+> Example code and better formatting are pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388) or a creative but simple workaround.
 
-Markup:
-<section class="c-sample" id="d-font-size">
-  <div class="{{ modifier_class }}">I am font.</div>
-</section>
-
---global-font-size--small: 1.4rem
---global-font-size--normal: 1.8rem
---global-font-size--large: 2.4rem
---global-font-size--x-large: 3.0rem
---global-font-size--xx-large: 3.8rem
+--global-font-size--small - 1.4rem
+--global-font-size--normal - 1.8rem
+--global-font-size--large - 2.4rem
+--global-font-size--x-large - 3.0rem
+--global-font-size--xx-large - 3.8rem
 
 Styleguide Settings.CustomProperties.Font.Sizes
 */
@@ -42,14 +37,9 @@ Families
 
 These are the global font families.
 
-<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+> Example code and better formatting are pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388) or a creative but simple workaround.
 
-Markup:
-<section class="c-sample" id="d-font-size">
-  <div class="{{ modifier_class }}">I am font.</div>
-</section>
-
---global-font-family--primary: Georgia, Times, serif
+--global-font-family--primary - Georgia, Times, serif
 
 Styleguide Settings.CustomProperties.Font.Families
 */

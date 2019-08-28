@@ -39,24 +39,28 @@ Styleguide Settings.CustomProperties
 */
 
 /*
-Custom Environmental Variables
+Custom Env. Variables
 
 Custom environmental variables are variables that originate ouside the scope of CSS.
 
 > **Warning**
 >
-> - The application currently does not support these per spec. Instead, -either_ they are available as custom properties _or_ the values are used directly or indirectly.
+> - The build process currently does not support these. *Instead, __either__ they are available as custom properties __or__ the values are used directly or indirectly.*
 
 Reference:
 - [Custom Environmnetal Variables](https://preset-env.cssdb.org/features#environment-variables)
 
-Styleguide Settings.CustomEnvironmnetalVariables
+Styleguide Settings.CustomEnvironmentalVariables
 */
 
 /*
 Custom Media Queries
 
 Custom media queries are native CSS media query variables.
+
+> **Warning**
+>
+> - The build process currently does not support these. *Instead, media queries are written manually, with necessary duplication.*
 
 Reference:
 - [Custom Media Queries](https://preset-env.cssdb.org/features#custom-media-queries)
@@ -68,6 +72,10 @@ Styleguide Settings.CustomMediaQueries
 Custom Selectors
 
 Custom selectors are native CSS selector variables.
+
+> **Warning**
+>
+> - The build process currently does not support these. *Instead, common selectors are written manually, with necessary duplication.*
 
 Reference:
 - [Custom Selectors](https://preset-env.cssdb.org/features#custom-selectors)

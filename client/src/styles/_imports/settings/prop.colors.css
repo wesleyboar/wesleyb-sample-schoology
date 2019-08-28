@@ -4,16 +4,10 @@
 /*
 Colors
 
-These are standard colors for an application. The format is:
-- `--global-color-*--xxx-light`
-- `--global-color-*--xx-light`
-- `--global-color-*--x-light`
-- `--global-color-*--light`
-- `--global-color-*`
-- `--global-color-*--dark`
-- `--global-color-*--x-dark`
-- `--global-color-*--xx-dark`
-- `--global-color-*--xxx-dark`
+These are standard colors for an application.
+
+> __Known Issue__<br />
+> When rendering color swatches, every other color is being skipped. This may be a KSS Node bug—no investigation has begun.</small>
 
 __WCAG__
 - The contrast between these values _should_ pass __some__ WCAG ratios:
@@ -24,6 +18,18 @@ __WCAG__
     - from `*--xxx-dark` to `*--x-light`
 
 > For colors that do __not__ have all shades and tints defined, the WCAG ratios value contrast requirements __must__ be documented.
+
+The format matches the patterns listed under "Parameters".
+
+--global-color-*--xxx-light - …
+--global-color-*--xx-light - …
+--global-color-*--x-light - …
+--global-color-*--light - …
+--global-color-* - …
+--global-color-*--dark - …
+--global-color-*--x-dark - …
+--global-color-*--xx-dark - …
+--global-color-*--xxx-dark - …
 
 Styleguide Settings.CustomProperties.Colors
 */
@@ -213,8 +219,7 @@ Styleguide Settings.CustomProperties.Colors.Objective
 /*
 Objective
 
-These colors are for anything styled as an accent:
-- designer whim
+These colors are for anything styled as an accent.
 
 Colors:
 --global-color-accent--xxx-light: hsl(270, 100%, 98%)

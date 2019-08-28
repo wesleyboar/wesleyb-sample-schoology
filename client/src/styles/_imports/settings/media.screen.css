@@ -2,18 +2,18 @@
 /*
 Screen Width
 
-These are the only media queries that should be used.
-They are the "universal breakpoints" for Wesley B websites.
+These are the only `screen` media queriy ranges that may be used.
 
---screen-wide-and-above - `1500`+
---screen-wide-and-below - `1500`–
---screen-medium-to-wide - `670`—`1500`
---screen-medium-and-above - `670`+
---screen-medium-and-below - `670`–
---screen-narrow-to-wide - `300—1500`
---screen-narrow-and-above - `300`+
---screen-narrow-and-below - `300`–
---screen-narrow-to-medium - `300`—`670`
+--screen-narrow-to-wide - `screen and (min-width: 360px) and (max-width: 939px)`
+--screen-narrow-and-above - `screen and (min-width: 360px)`
+--screen-narrow-and-below - `screen and (max-width: 359px)`
+--screen-narrow-to-medium - `screen and (min-width: 360px) and (max-width: 579px)`
+--screen-medium-and-below - `screen and (max-width: 579px)`
+--screen-medium-and-above - `screen and (min-width: 580px)`
+--screen-medium-to-wide - `screen and (min-width: 580px) and (max-width: 939px)`
+--screen-wide-and-below - `screen and (max-width: 939px)`
+--screen-wide-and-above - `screen and (min-width: 940px)`
+
 
 Styleguide Settings.CustomMediaQueries.ScreenWidth
 */

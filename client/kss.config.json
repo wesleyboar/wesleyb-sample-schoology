@@ -5,5 +5,9 @@
   "source": "./src/styles",
   "destination": "./docs/css",
 
-  "homepage": "./docs.md"
+  "homepage": "./docs/HOMEPAGE.md",
+
+  "css": [
+    "./user-assets/kss-overrides.css"
+  ]
 }

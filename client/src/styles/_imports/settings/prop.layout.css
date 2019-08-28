@@ -15,13 +15,13 @@ Border
 
 These are the global border properties.
 
-<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+> Example code and better formatting are pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388) or a creative but simple workaround.
 
---global-layout--border-width: 1px
---global-layout--border-width--thick: 3px
---global-layout--border-width--x-thick: 6px
---global-layout--border-style: solid
---global-layout--border-radius: 3px
+--global-layout--border-width - 1px
+--global-layout--border-width--thick - 3px
+--global-layout--border-width--x-thick - 6px
+--global-layout--border-style - solid
+--global-layout--border-radius - 3px
 
 Styleguide Settings.CustomProperties.Layout.Border
 */
@@ -37,9 +37,9 @@ Miscellaneous
 
 These are miscellaneous global layout properties.
 
-<small>Better formatting is pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388).</small>
+> Example code and better formatting are pending [Framework, Typography and Color support](https://github.com/kss-node/kss-node/issues/388) or a creative but simple workaround.
 
---global-layout--line-height: 1.5
+--global-layout--line-height - 1.5
 
 Styleguide Settings.CustomProperties.Layout.Misc
 */
