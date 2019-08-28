@@ -32,9 +32,7 @@ COPY api client data dist server ${PROJ_DIR}/
 
 # The assets for some services must be built
 WORKDIR ${PROJ_DIR}/
-RUN npm cache clean && \
-    npm ci
-# FAQ: Because so much will happen, this command gets its own thread(?)
+RUN npm ci
 RUN npm run build
 
 # The distributables belong in different locations
