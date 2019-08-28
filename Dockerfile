@@ -24,8 +24,6 @@ ENV PROJ_DIR=${HOME_DIR}/app
 # SEE: https://stackoverflow.com/a/53726938/11817077
 # RUN useradd --user-group --create-home ${USER}
 # RUN chown -R ${USER}:${USER} ${HOME_DIR}/*
-# NOTE: Would it be better instead to just ensure the FROM image is clean?
-RUN apt-get clean
 
 # The project needs many files
 COPY package.json package-lock.json ${PROJ_DIR}/
