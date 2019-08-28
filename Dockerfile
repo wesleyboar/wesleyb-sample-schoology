@@ -51,9 +51,4 @@ RUN npm install && \
 
 EXPOSE 9000
 WORKDIR ${PROJ_DIR}
-CMD ["npm", "start"]
-
-# The following commands should be documented for the user
-## ???
-# docker build --tag wesb-school-autofill https://github.com/wesleyboar/wesleyb-sample-schoology.git#feature/2-server
-# docker run --port 9000:9000 wesb-school-autofill npm start
+ENTRYPOINT ["npm", "start"]
