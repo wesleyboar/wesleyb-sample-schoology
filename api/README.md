@@ -14,7 +14,7 @@ It assumes the [Koa Web Framework][koa] is used by its consumer, so it exports a
 
 ## Requirements
 
-- [Node][nodejs] 10.X+ _(do **not** exceed LTS)_
+- [Node][nodejs] `10.X`
     - [NPM](https://docs.npmjs.com/getting-started/installing-node#updating-npm) 6.X+ _(or latest available for given Node version)_
 
 ## Quick Start
