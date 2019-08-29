@@ -9,6 +9,7 @@ LABEL version=1.0.0 \
 ENV USER=root \
     HOME_DIR=/home/${USER} \
     # TODO: Place service files in appropriate directories
+    # SEE: https://unix.stackexchange.com/a/42807/364239
     # CONF_DIR=/etc/opt/school-autofill \
     # LOGS_DIR=/var/opt/school-autofill \
     # ASST_DIR=/srv/opt/school-autofill \
