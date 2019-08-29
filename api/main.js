@@ -39,11 +39,11 @@ const data = require('../data/farm-animals.json');
  * @private
 */
 function _filterListByString( list, keyString ) {
-  const newList = list.filter( item => {
-     return ( item.includes( keyString ) );
-  });
+    const newList = list.filter( item => {
+        return ( item.includes( keyString ) );
+    });
 
-  return newList;
+    return newList;
 }
 
 //
@@ -54,7 +54,7 @@ function _filterListByString( list, keyString ) {
  * @param {KoaAppContext} ctx
  */
 get = function ( ctx ) {
-  ctx.body = data;
+    ctx.body = data;
 };
 
 /** Get data, filtered by given term
@@ -66,20 +66,20 @@ get = function ( ctx ) {
  * @param {String} term
  */
 getFiltered = function ( ctx, term ) {
-  const list = _filterListByString( data, term );
-  const hasData = ( list.length > 0 );
-  const isTermLengthValid = ( term.length < 21 && term.length > 1 );
-  const isTermCharsetValid = new RegExp('^[a-zA-Z]+$').test( term );
+    const list = _filterListByString( data, term );
+    const hasData = ( list.length > 0 );
+    const isTermLengthValid = ( term.length < 21 && term.length > 1 );
+    const isTermCharsetValid = new RegExp('^[a-zA-Z]+$').test( term );
 
-  // RFE: Isolate user-entry assertions to simplify route logic
-  // RFE: Pull messages from object
-  // RFE: Pull assertions variables (like message length limits) from object
-  ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 2 characters, maximum is 20 characters.');
-  ctx.assert( isTermCharsetValid, 400, 'Search term has invalid characters; only the "ISO basic Latin alphabet" is supported.');
+    // RFE: Isolate user-entry assertions to simplify route logic
+    // RFE: Pull messages from object
+    // RFE: Pull assertions variables (like message length limits) from object
+    ctx.assert( isTermLengthValid, 400, 'Search term is outside length restriction; minimum is 2 characters, maximum is 20 characters.');
+    ctx.assert( isTermCharsetValid, 400, 'Search term has invalid characters; only the "ISO basic Latin alphabet" is supported.');
 
-  ctx.assert( hasData, 404, 'No animals found.');
+    ctx.assert( hasData, 404, 'No animals found.');
 
-  ctx.body = list;
+    ctx.body = list;
 };
 
 //
@@ -87,11 +87,11 @@ getFiltered = function ( ctx, term ) {
 //
 
 router.get('all', '/', async ctx => {
-  get( ctx );
+    get( ctx );
 });
 
 router.get('filtered', '/:term', async ctx => {
-  getFiltered( ctx, ctx.params.term );
+    getFiltered( ctx, ctx.params.term );
 });
 
 //
@@ -99,5 +99,5 @@ router.get('filtered', '/:term', async ctx => {
 //
 
 module.exports = {
-  koaRouter: router
+    koaRouter: router
 };
