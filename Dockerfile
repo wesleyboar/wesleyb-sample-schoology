@@ -26,6 +26,10 @@ ENV PORT=${port} \
     # WARN: This makes `node_modules` not exist when building
     # NODE_ENV=production
 
+# WARN: This is still manually set in docker commands and client app
+ARG port=9000
+ENV PORT=${port}
+
 # A new user has paper trail, home dir in which to build, and limited perm's
 # WARN: This consistently results in Docker defect, so we use root, instead
 # SEE: https://stackoverflow.com/a/53726938/11817077
@@ -51,5 +55,5 @@ RUN npm install && \
 ## configure logs (via RUN) to /var/opt/school/
 # …
 
-EXPOSE 9000
+EXPOSE ${port}
 CMD ["npm", "build"]

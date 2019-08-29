@@ -13,6 +13,8 @@ This project contains the client web app **and** the server web API. It is also 
 >     - _Ready to solve, because each service operates independent in its directory._
 >     - _If okay to rely on Node.js, then use `npm link`._
 >     - _Otherwise, use another solution, like `git submodules`._
+> 1. Should allow custom values: `PORT`, `HOSTNAME`.
+>     - _Complex: `env_var` or `--build-arg` → `ARG`+`ENV` and/or `.env` → `REACT_APP_…`_
 > 1. There are misc. docker configuration optimizations to make, see `Dockerfile`'s:
 >     - `TODO`
 >     - `WARN`
@@ -49,17 +51,12 @@ The URLs in documentation and CLI output assume the established domain `animal.f
 
 To use these URLs, edit your DNS, or `/etc/hosts` file, to direct specific domains to `localhost:9000`.
 
-Specific Domains:
-- `animal.farm`
-- `www.animal.farm`
-- `api.animal.farm`
-- `docs.animal.farm`
-
-Hosts Example:
+Example via `/etc/hosts`:
 ```
 127.0.0.1	animal.farm
 127.0.0.1	www.animal.farm
-# 127.0.0.1	…
+127.0.0.1	api.animal.farm
+127.0.0.1	docs.animal.farm
 ```
 
 > **Warning**
@@ -126,7 +123,6 @@ Known Methods:
     ```
 2. [Execute command on running docker container.][docker-command-exec]
     ```
-    # docker start wesb-school-autofill-container
     docker exec wesb-school-autofill-container   your command
     ```
 3. [Enter bash shell on running docker container.][docker-command-exec]
