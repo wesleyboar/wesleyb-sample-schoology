@@ -2,7 +2,7 @@
 
 This is a Node web service of a code sample for Wesley B to Schoology.
 
-This project contains the client web app **and** the server web API. It is also _(to be later)_ bundled in a single docker.
+This project contains the client web app **and** the server web API. It is also bundled in a single docker.
 
 ## Requirements
 
