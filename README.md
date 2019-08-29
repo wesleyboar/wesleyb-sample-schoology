@@ -13,11 +13,11 @@ This project contains the client web app **and** the server web API. It is also 
 >     - _Ready to solve, because each service operates independent in its directory._
 >     - _If okay to rely on Node.js, then use `npm link`._
 >     - _Otherwise, use another solution, like `git submodules`._
-> 1. Misc. docker configuration issues, see `Dockerfile`'s:
+> 1. There are misc. docker configuration optimizations to make, see `Dockerfile`'s:
 >     - `TODO`
 >     - `WARN`
 >     - `!!!`
-> 1. Misc. service-specific issues, see each top-level directory's `README.md`s:
+> 1. There are misc. service-specific known issues, see each top-level directory's `README.md`s:
 >     - "To Do"
 >     - "Warning"
 >     - "Known Issues"
