@@ -24,7 +24,7 @@ This project contains the client web app **and** the server web API. It is also 
 
 ## Requirements
 
-- [Docker][docker] 19.03.+
+- [Docker][docker] 19.X
 - manipulate DNS _(see [Quick Start: DNS](#dns))_
 
 ## Quick Start
@@ -33,11 +33,11 @@ This project contains the client web app **and** the server web API. It is also 
 
 1. Build image.
     ```
-    docker build --tag wesb-school-autofill https://github.com/wesleyboar/wesleyb-sample-schoology.git
+    docker build --tag wesb-school-autofill-image https://github.com/wesleyboar/wesleyb-sample-schoology.git
     ```
 1. Run container.
     ```
-    docker run --publish 9000:9000 wesb-school-autofill npm start
+    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image npm start
     ```
 
 ### DNS
@@ -68,16 +68,16 @@ Hosts Example:
 These directories are manually maintained.
 
     ./
-        |_ api             // source files of the server web API
-        |_ client          // source files of the client web app
-        |_ data            // data for the server web API
+        |_ api           // source files of the server web API
+        |_ client        // source files of the client web app
+        |_ data          // data for the server web API
 
 These directories are automatically maintained.
 
     ./
-        |_ docs            // developer documentation for web services
-        |_ node_modules    // node package installation
-        |_ public          // user-facing static files for client web app
+        |_ docs          // developer documentation for web services
+        |_ node_modules  // node package installation
+        |_ public        // user-facing static files for client web app
 
 ## Development
 
@@ -87,24 +87,7 @@ These directories are automatically maintained.
 
 ### Commands
 
-To run these commands, use one of these options:
-- [run a docker and then run a command][docker-command-run]
-- [execute a command on a running docker][docker-command-exec]
-
-Example
-```
-# Run docker with command
-docker run --publish 9000:9000 wesb-school-autofill  npm run docs
-# Execute command on docker
-docker exec wesb-school-autofill  npm run docs
-```
-
-### Node
-
-Requirements:
-- [Node.js][nodejs] v 10.X.+
-- Run commands from this (`./`) directory.
-- Run command `npm install`¹ _at least once_ beforehand.
+These commands require Node. For help running the commands locally or on the Docker, see [Commands: on Local](#on-local) or [Commands: on Docker](#on-docker).
 
 #### `npm start`
 
@@ -131,7 +114,31 @@ Compile documentation from all services.
 
 Run tests from all services.
 
+#### on Docker
 
+Known Methods:
+1. [Run container image with initial command.][docker-command-run]
+    ```
+    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill   your command
+    ```
+2. [Execute command on running docker container.][docker-command-exec]
+    ```
+    docker exec wesb-school-autofill-container   your command
+    ```
+3. [Enter bash shell on running docker container.][docker-command-exec]
+    ```
+    docker exec --interactive --tty wesb-school-autofill-container   bash
+    ```
+
+#### on Local
+
+Requirements:
+- [Node.js][nodejs] `10.X`
+- Run commands from this (`./`) directory.
+- Run command `npm install`¹ _at least once_ beforehand.
+
+[nodejs]: https://nodejs.org/ "Node.js"
 [docker]: https://www.docker.com/ "Docker"
+[docker-command-cp]: https://docs.docker.com/engine/reference/commandline/cp/ "Docker: cp"
 [docker-command-run]: https://docs.docker.com/engine/reference/commandline/run/ "Docker: run"
 [docker-command-exec]: https://docs.docker.com/engine/reference/commandline/exec/ "Docker: exec"
