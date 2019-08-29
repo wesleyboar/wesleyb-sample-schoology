@@ -33,6 +33,7 @@ details > summary::before {
   display: inline-block;
   content: "▸";
   width: var(--d-elements-interactive--summary-decorator-width);
+  margin-right: 0.5ch;
   transform: rotateY(0deg);
   text-align: left; /* explicit, so `[dir="rtl"] works"` */
 }
