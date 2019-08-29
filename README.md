@@ -31,13 +31,13 @@ This project contains the client web app **and** the server web API. It is also 
 
 ### Services
 
-1. Build image.
+1. Build image (also installs app dependencies).
     ```
     docker build --tag wesb-school-autofill-image https://github.com/wesleyboar/wesleyb-sample-schoology.git
     ```
-1. Run container.
+1. Run container, then serve app.
     ```
-    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image npm start
+    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image   npm run serve
     ```
 
 ### DNS
@@ -119,10 +119,11 @@ Run tests from all services.
 Known Methods:
 1. [Run container image with initial command.][docker-command-run]
     ```
-    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill   your command
+    docker run --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image   your command
     ```
 2. [Execute command on running docker container.][docker-command-exec]
     ```
+    # docker start wesb-school-autofill-container
     docker exec wesb-school-autofill-container   your command
     ```
 3. [Enter bash shell on running docker container.][docker-command-exec]
