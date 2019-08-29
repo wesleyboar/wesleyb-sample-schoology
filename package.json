@@ -11,7 +11,7 @@
     "build:cached": "npm-run-all --parallel api-cached client-cached",
     "serve": "npm run server:start",
     "docs": "npm-run-all --parallel client:docs api:docs",
-    "test": "npm run --parallel client:test api:test",
+    "test": "npm-run-all --parallel client:test api:test",
     "api": "npm-run-all --sequential api:**",
     "api-cached": "npm-run-all --sequential api:*",
     "api:opt:setup": "cd api && npm ci",
