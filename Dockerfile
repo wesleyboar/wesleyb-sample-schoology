@@ -4,9 +4,17 @@ FROM node:10.16.3 AS too-many-services
 LABEL version=1.0.0 \
       maintainer=wesleyb@pm.me \
       description="A container for an auto-fill web service"
+
+# NOTE: May need to set these before `FROM`, for multi-stage build
+# SEE: https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+ARG port=9000
+ARG hostname=animal.farm
+
+ENV PORT=${port} \
+    HOSTNAME=${hostname} \
     # TODO: Create a new user, to use, instead of root
     # !!!: Solve this, now! Big security issue…
-ENV USER=root \
+    USER=root \
     HOME_DIR=/home/${USER} \
     # TODO: Place service files in appropriate directories
     # CONF_DIR=/etc/opt/school-autofill \
@@ -29,6 +37,11 @@ USER ${USER}
 # RFE: Give each directory/service its own repository and docker
 WORKDIR ${PROJ_DIR}/
 COPY . .
+# HACK: Copy the `.env`, used for `docker` commands, for services to use also
+# RFE: Create script that explicitely creates service `.env` file per service
+COPY .env ./server
+COPY .env ./client
+COPY .env ./api
 RUN npm install && \
     npm run build
 

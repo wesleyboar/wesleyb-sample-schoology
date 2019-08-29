@@ -9,6 +9,7 @@ import React from 'react';
 import DataListEntry from './DataListEntry.js';
 
 const port = process.env.PORT;
+const hostname = process.env.HOSTNAME;
 
 // FAQ: Only use for JavaScript-specific classes require styling
 // import './App.css';
@@ -20,7 +21,7 @@ class App extends React.Component {
    * @return {Promise.<FarmAnimalList>}
    */
   getFarmAnimals() {
-    return fetch(`http://api.animal.farm:${port}/animals`)
+    return fetch(`http://api.${hostname}:${port}/animals`)
       .then( response => {
         if ( response.ok ) {
           return response.json();
