@@ -8,7 +8,8 @@ import React from 'react';
 
 import DataListEntry from './DataListEntry.js';
 
-const port = process.env.PORT;
+/* RFE: Do not provide default value */
+const port = process.env.PORT || 9000;
 
 // FAQ: Only use for JavaScript-specific classes require styling
 // import './App.css';
