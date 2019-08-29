@@ -2,7 +2,6 @@
 
 1. Web Services
     1. Configure Docker.
-        0. Test overriding and running CMD.
         1. Solve CORS issue (because of API subdomain).
         2. Preferrably, serve from Unix-appropriate directories.
     2. Document how to develop locally, and why:

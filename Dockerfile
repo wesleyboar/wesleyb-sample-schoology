@@ -25,21 +25,10 @@ ENV USER=root \
 # RUN chown -R ${USER}:${USER} ${HOME_DIR}/*
 USER ${USER}
 
-# The project needs many directories
-# FAQ: A single `src/` directory is not the chosen solution for this redundency
+# This overloaded docker needs all source and installation files
 # RFE: Give each directory/service its own repository and docker
-# !!!: Solve this, now! Excess layers is bad for performance…
-COPY api ${PROJ_DIR}/api
-COPY client ${PROJ_DIR}/client
-COPY data ${PROJ_DIR}/data
-COPY server ${PROJ_DIR}/server
-# TODO: Migrate the few source files out of `dist` without decoupling
-COPY dist ${PROJ_DIR}/dist
-
-# The assets for some services must be built
-# RFE: Use on docker for buildign and one docekr for serving
-COPY package.json package-lock.json ${PROJ_DIR}/
 WORKDIR ${PROJ_DIR}/
+COPY . .
 RUN npm install && \
     npm run build
 
@@ -50,5 +39,4 @@ RUN npm install && \
 # …
 
 EXPOSE 9000
-WORKDIR ${PROJ_DIR}
-CMD ["npm", "start"]
+CMD ["npm", "build"]
