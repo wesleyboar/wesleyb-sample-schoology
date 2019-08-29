@@ -4,26 +4,6 @@ This is a Node web service of a code sample for Wesley B to Schoology.
 
 This project contains the client web app **and** the server web API. It is also _(to be later)_ bundled in a single docker.
 
-> **Known Issues**
-> 1. There are two "source" files in `/dist/docs`.
->     - _These hack files are coupled to the directory structure._
-> 1. Should **not** use _one_ docker for _everything_.
->     - _Should use one docker for each service, and one docker for building._
-> 1. Should **not** use _one_ repository for _everything_.
->     - _Ready to solve, because each service operates independent in its directory._
->     - _If okay to rely on Node.js, then use `npm link`._
->     - _Otherwise, use another solution, like `git submodules`._
-> 1. Should allow custom values: `PORT`, `HOSTNAME`.
->     - _Complex: `env_var` or `--build-arg` → `ARG`+`ENV` and/or `.env` → `REACT_APP_…`_
-> 1. There are misc. docker configuration optimizations to make, see `Dockerfile`'s:
->     - `TODO`
->     - `WARN`
->     - `!!!`
-> 1. There are misc. service-specific known issues, see each top-level directory's `README.md`s:
->     - "To Do"
->     - "Warning"
->     - "Known Issues"
-
 ## Requirements
 
 - [Docker][docker] 19.X

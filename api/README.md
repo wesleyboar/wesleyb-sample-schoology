@@ -4,15 +4,6 @@ This is all the code for the API service logic.
 
 It assumes the [Koa Web Framework][koa] is used by its consumer, so it exports a Koa middleware that has a `routes` function.
 
-> **To Do**
->
-> - Add unit tests.
-> - Support version number in requests.
-> - Support data format in requests.
-> - Add API examples for more interfaces than just `curl`.
-> - Auto-generate API documentation from a functional API definition.
-> - Configure/support [ESLint]([eslint]).
-
 ## Requirements
 
 - [Node][nodejs] `10.X`
