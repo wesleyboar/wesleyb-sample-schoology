@@ -41,14 +41,14 @@
     <details id="app-foot" class="c-notice--warning c-notice--major o-app__foot">
       <summary>
         <strong class="c-notice__title">To Reviewers</strong>
-        <p class="c-notice__message">This app's primary feature does not rely on API activity nor data manipulation, because the browser can perform this via HTML5.</p>
+        <p class="c-notice__message">The auto-complete feature is available by typing into the "Farm Animal" `<input>` field. The filtering does not rely on API activity nor data manipulation, because the browser can perform this via HTML5.</p>
       </summary>
       <blockquote class="c-notice__message u-font-size--small">
         <p class="c-notice__message">The <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist" target="_blank"><code><dfn id="dfn-datalist">&lt;datalist&gt;</dfn></code></a> element contains a set of <code>&lt;option&gt;</code> elements that represent the values available for other controls.</p>
         <footer><abbr title="Mozilla Developer Network">MDN</abbr></footer>
       </blockquote>
       <blockquote class="c-notice__message u-font-size--small">
-        <p>If <a href="#dfn-datalist"><code>&lt;datalist&gt;</code></a> were <strong>not</strong> used to filter the data (the project requirement to filter seems to be solved, most efficiently, by using this element), then we <em>might</em>> want another API call. Here are other solutions that would "use" the data, and my comments about them:</p>
+        <p>If <a href="#dfn-datalist"><code>&lt;datalist&gt;</code></a> were <strong>not</strong> used to filter the data (the project requirement to filter seems to be solved, most efficiently, by using this element), then we <em>might</em> want another API call. Here are other solutions that would "use" the data, and my comments about them:</p>
         <ul>
           <li>Use a submit button and API call <em>or</em> silent <code>onChange</code> API call (but, it is more efficient to filter via client-side JavaScript).</li>
           <li>Have a silent <code>onChange</code> filter perform by client-side JavaScript (but, why do that if the browser—or polyfill—can do the work).</li>

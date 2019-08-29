@@ -17,18 +17,23 @@ This project contains the client web app **and** the server web API. It is also 
     ```
     docker build --tag wesb-school-autofill-image https://github.com/wesleyboar/wesleyb-sample-schoology.git
     ```
-1. Run container, then serve app.
+1. Run container, then start all services.
     ```
     docker run --hostname animal.farm --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image   npm run serve
     ```
+1. Open relevant URL from final output on the command line.
 
 ### DNS
 
-The URLs in documentation and CLI output assume the established domain `animal.farm`.
+The domain `animal.farm`, and [some subdomains](#example-etchosts), are **required** _(and not yet configurable)_. They are assumed to be functional by:
+1. API call in client app
+2. CORS solution on server
+3. CLI instructional output
+4. URLs in documentation
 
-To use these URLs, edit your DNS, or `/etc/hosts` file, to direct specific domains to `localhost:9000`.
+To use these URLs, edit the DNS or `/etc/hosts` file on the local host, so that specific domains are directed to to `localhost` i.e. `127.0.0.1`.
 
-Example via `/etc/hosts`:
+#### Example (`/etc/hosts`)
 ```
 127.0.0.1	animal.farm
 127.0.0.1	www.animal.farm
@@ -36,9 +41,8 @@ Example via `/etc/hosts`:
 127.0.0.1	docs.animal.farm
 ```
 
-> **Warning**
->
-> There is a real domain [https://www.animal.farm](https://www.animal.farm), so you will not have access to that website while these changes are in effect.
+> **Warning:**
+> There is a real domain [https://www.animal.farm](https://www.animal.farm). You will not have access to that website while these changes are in effect.
 
 ## Directories
 
@@ -60,11 +64,13 @@ These directories are automatically maintained.
 
 ### Rules
 
-- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix comments.
+- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix relevant comments.
 
 ### Commands
 
-These commands require Node. For help running the commands locally or on the Docker, see [Commands: on Local](#on-local) or [Commands: on Docker](#on-docker).
+Separate instructions exist for running these commands:
+- [Commands: on Local Host](#on-local-host)
+- [Commands: on Docker](#on-docker)
 
 #### `npm start`
 
@@ -94,20 +100,23 @@ Run tests from all services.
 #### on Docker
 
 Known Methods:
-1. [Run container image with initial command.][docker-command-run]
+1. Run container image with initial command.
+    ([more info][docker-command-run])
     ```
     docker run --hostname animal.farm --publish 9000:9000 --name wesb-school-autofill-container wesb-school-autofill-image   your command
     ```
-2. [Execute command on running docker container.][docker-command-exec]
+2. Execute command on running docker container.
+    ([more info][docker-command-exec])
     ```
     docker exec wesb-school-autofill-container   your command
     ```
-3. [Enter bash shell on running docker container.][docker-command-exec]
+3. Enter bash shell on running docker container.
+    ([more info][docker-command-exec])
     ```
     docker exec --interactive --tty wesb-school-autofill-container   bash
     ```
 
-#### on Local
+#### on Local Host
 
 Requirements:
 - [Node.js][nodejs] `10.X`

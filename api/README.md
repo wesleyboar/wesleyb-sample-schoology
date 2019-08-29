@@ -41,7 +41,7 @@ These directories are automatically maintained.
 
 ### Rules
 
-- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix comments.
+- Use [PEP 350](https://www.python.org/dev/peps/pep-0350/) to prefix relevant comments.
 
 ### Commands
 
