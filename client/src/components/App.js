@@ -8,6 +8,8 @@ import React from 'react';
 
 import DataListEntry from './DataListEntry.js';
 
+const port = process.env.PORT;
+
 // FAQ: Only use for JavaScript-specific classes require styling
 // import './App.css';
 
@@ -18,7 +20,7 @@ class App extends React.Component {
    * @return {Promise.<FarmAnimalList>}
    */
   getFarmAnimals() {
-    return fetch('http://api.animal.farm:9000/animals')
+    return fetch(`http://api.animal.farm:${port}/animals`)
       .then( response => {
         if ( response.ok ) {
           return response.json();
