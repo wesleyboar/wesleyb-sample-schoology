@@ -18,7 +18,7 @@ class App extends React.Component {
    * @return {Promise.<FarmAnimalList>}
    */
   getFarmAnimals() {
-    return fetch('http://api.animal.farm:9000')
+    return fetch('http://api.animal.farm:9000/animals')
       .then( response => {
         if ( response.ok ) {
           return response.json();

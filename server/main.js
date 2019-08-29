@@ -37,7 +37,8 @@ console.log( 'URL.client', URL.client );
 
 // Options
 const corsOpts = {
-    origin:        URL.client,
+    // The `Access-Control-Allow-Origin` must not have a trailing slash
+    origin:        URL.client.replace(/\/$/, ''),
     allowMethods:  'GET,HEAD',
 }
 
