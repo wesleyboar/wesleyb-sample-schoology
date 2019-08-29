@@ -56,8 +56,6 @@ clientRouter.get('/', async ctx => {
 // Application
 //
 
-app.use( cors( corsOpts ));
-
 // API requests must be sent to `api.domain.tld`; others may use any sub-domain
 subdomain.use( 'api', apiRouter.routes());
 subdomain.use( 'docs', serve( docsDir ));
@@ -65,6 +63,7 @@ subdomain.use( 'www', serve( staticDir ));
 subdomain.use( '', clientRouter.routes());
 
 // WARN: Subdomain routes must be "used" before static server to prevent being overridden
+app.use( cors( corsOpts ));
 app.use( subdomain.routes());
 app.use( serve( staticDir ));
 
