@@ -4,18 +4,6 @@ This is all the code for the client web app.
 
 It uses [React][react] and was bootstrapped with This project was bootstrapped with [Create React App][create-react-app].
 
-> **To Do**
->
-> - Add unit tests.
-> - Configure/support [ESLint]([eslint]).
-
-> **Notice**
->
-> I considered performing either of the following:
-> - Create a minimal React app, and add desired tooling.
-> - Run `npm run eject` to customize and trim the setup.
-> But, I do not have the time.
-
 ## Requirements
 
 - [Node][nodejs] `10.X`
