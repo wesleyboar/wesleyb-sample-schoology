@@ -5,29 +5,15 @@
  * @tutorial Server-Side Web API
  */
 
+require('dotenv').config();
+
 const Router = require('koa-router');
 const router = new Router();
 
-// RFE: Get data from external source
-// SEE: ../data/README.md
-/** List of animals
- * @const {module:api~AnimalList}
+/** Collection of data
+ * @const {module:api/data~Data}
  */
-const data = require('../data/farm-animals.json');
-
-//
-// Definitions
-//
-
-/**
- * An animal name
- * @typedef {String} Animal
- */
-
-/**
- * A list of animal names
- * @typedef {Array.<module:api~Animal>} AnimalList
- */
+const data = require('./lib/data.js');
 
 //
 // Helper Functions
@@ -52,9 +38,10 @@ function _filterListByString( list, keyString ) {
 
 /** Get all data
  * @param {KoaAppContext} ctx
+ * @param {*} list
  */
-get = function ( ctx ) {
-    ctx.body = data;
+get = function ( ctx, list ) {
+    ctx.body = list;
 };
 
 /** Get data, filtered by given term
@@ -63,11 +50,12 @@ get = function ( ctx ) {
  * - term length **must** be at least 2 characters and at most than 20 characters
  * - characters **must** be [ISO basic Latin alphabet](https://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)
  * @param {KoaAppContext} ctx
+ * @param {*} list
  * @param {String} term
  */
-getFiltered = function ( ctx, term ) {
-    const list = _filterListByString( data, term );
-    const hasData = ( list.length > 0 );
+getFiltered = function ( ctx, list, term ) {
+    const filteredList = _filterListByString( list, term );
+    const hasData = ( filteredList.length > 0 );
     const isTermLengthValid = ( term.length < 21 && term.length > 1 );
     const isTermCharsetValid = new RegExp('^[a-zA-Z]+$').test( term );
 
@@ -79,20 +67,43 @@ getFiltered = function ( ctx, term ) {
 
     ctx.assert( hasData, 404, 'No animals found.');
 
-    ctx.body = list;
+    ctx.body = filteredList;
 };
 
 //
 // Router
+// NOTE: As more similar endpoints are added, use loop(s) to reduce repition
 //
 
-router.get('all', '/', async ctx => {
-    get( ctx );
+router.get('urls', '/urls/', async ctx => {
+    getFiltered( ctx, data.food, ctx.params.type );
 });
 
-router.get('filtered', '/:term', async ctx => {
-    getFiltered( ctx, ctx.params.term );
+router.get('allAnimals', '/animals/', async ctx => {
+    get( ctx, data.animals );
 });
+router.get('filteredAnimals', '/animals/:name', async ctx => {
+    getFiltered( ctx, data.animals, ctx.params.name );
+});
+
+router.get('allFood', '/food/', async ctx => {
+    get( ctx, data.food );
+});
+router.get('filteredFood', '/food/:type', async ctx => {
+    getFiltered( ctx, data.food, ctx.params.type );
+});
+
+// Root of API may be expected to explain the API
+router.get('root', '/', async ctx => {
+    ctx.status = 200;
+    ctx.body = data.ref.intro;
+});
+// User must be lost, so lets explain the API
+router.get('unknown', '*', async ctx => {
+    ctx.status = 404;
+    ctx.body = data.ref.intro;
+});
+
 
 //
 // Export

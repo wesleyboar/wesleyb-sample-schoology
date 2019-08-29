@@ -2,8 +2,7 @@
 // Dependencies
 //
 
-// RFE: Support different environment configurations
-// require('dotenv').config();
+require('dotenv').config();
 
 const Koa = require('koa');
 const Router = require('koa-router');
@@ -15,6 +14,7 @@ const serve = require('koa-static');
 const cors = require('@koa/cors');
 const path = require('path');
 
+const URLs = require('../data/dynamic/urls.js');
 const apiRouter = require('../api/main.js').koaRouter;
 const clientRouter = new Router();
 
@@ -22,26 +22,22 @@ const clientRouter = new Router();
 // Definitions
 //
 
-// If external service defines port, then so be it
-const port = process.env.PORT || 9000;
-// This is used to log URLs of relevant resources
-// WARN: This is a real domain…
-const hostname = "animal.farm";
+// Environmental
+const port = process.env.PORT;
+const hostname = process.env.HOSTNAME;
 
 // Directories
 const staticDir = path.resolve( __dirname, '../dist/public');
 const docsDir = path.resolve( __dirname, '../dist/docs');
 
 // URLs
-const URL = {
-    api: `http://api.${hostname}:${port}`,
-    client: `http://www.${hostname}:${port}`,
-    docs: `http://docs.${hostname}:${port}`,
-}
+const URL = ( new URLs( hostname, port )).getAsStrings();
+
+console.log( 'URL.client', URL.client );
 
 // Options
 const corsOpts = {
-    origin:        `http://www.${hostname}:${port}`,
+    origin:        URL.client,
     allowMethods:  'GET,HEAD',
 }
 
@@ -50,7 +46,7 @@ const corsOpts = {
 //
 
 clientRouter.get('/', async ctx => {
-    ctx.status = 302;
+    ctx.status = 307;
     ctx.redirect( URL.client );
     ctx.body = 'Redirecting to primary website';
 });
@@ -59,14 +55,15 @@ clientRouter.get('/', async ctx => {
 // Application
 //
 
+app.use( cors( corsOpts ));
+
 // API requests must be sent to `api.domain.tld`; others may use any sub-domain
-subdomain.use( '', clientRouter.routes());
-subdomain.use( 'www', serve( staticDir ));
-subdomain.use( 'docs', serve( docsDir ));
 subdomain.use( 'api', apiRouter.routes());
+subdomain.use( 'docs', serve( docsDir ));
+subdomain.use( 'www', serve( staticDir ));
+subdomain.use( '', clientRouter.routes());
 
 // WARN: Subdomain routes must be "used" before static server to prevent being overridden
-app.use( cors( corsOpts ));
 app.use( subdomain.routes());
 app.use( serve( staticDir ));
 

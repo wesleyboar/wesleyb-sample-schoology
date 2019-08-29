@@ -6,8 +6,9 @@ It assumes the [Koa Web Framework][koa] is used by its consumer, so it exports a
 
 > **To Do**
 >
+> - Add unit tests.
 > - Support version number in requests.
-> - Consider expanding API definition to have `animals` in URL as a resource.
+> - Support data format in requests.
 > - Add API examples for more interfaces than just `curl`.
 > - Auto-generate API documentation from a functional API definition.
 > - Configure/support [ESLint]([eslint]).

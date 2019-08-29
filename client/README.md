@@ -6,7 +6,8 @@ It uses [React][react] and was bootstrapped with This project was bootstrapped w
 
 > **To Do**
 >
-> - Finish unit tests.
+> - Add unit tests.
+> - Configure/support [ESLint]([eslint]).
 
 > **Notice**
 >

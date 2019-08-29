@@ -70,7 +70,7 @@ These directories are manually maintained.
     ./
         |_ api           // source files of the server web API
         |_ client        // source files of the client web app
-        |_ data          // data for the server web API
+        |_ data          // data for web server and web API
 
 These directories are automatically maintained.
 
