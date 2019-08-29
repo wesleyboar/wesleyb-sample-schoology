@@ -86,10 +86,11 @@ getFiltered = function ( ctx, term ) {
 // Router
 //
 
-router.get('/', async ctx => {
+router.get('all', '/', async ctx => {
   get( ctx );
 });
-router.get('/:term', async ctx => {
+
+router.get('filtered', '/:term', async ctx => {
   getFiltered( ctx, ctx.params.term );
 });
 
