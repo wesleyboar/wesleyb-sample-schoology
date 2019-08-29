@@ -4,8 +4,6 @@
  * @module api/data
  */
 
-require('dotenv').config();
-
 const URLs = require('../../data/dynamic/urls.js');
 
 // RFE: Get data from external source

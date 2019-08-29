@@ -11,7 +11,6 @@
   "author": "wesleyb@pm.me",
   "license": "UNLICENSED",
   "dependencies": {
-    "dotenv": "^8.1.0",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {

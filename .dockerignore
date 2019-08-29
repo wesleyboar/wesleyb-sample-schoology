@@ -1,6 +1,5 @@
 .editorconfig
 .gitignore
-.gitignore
 Dockerfile
 node_modules
 /*.md

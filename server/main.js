@@ -2,8 +2,6 @@
 // Dependencies
 //
 
-require('dotenv').config();
-
 const Koa = require('koa');
 const Router = require('koa-router');
 const Subdomain = require('koa-subdomain');

@@ -1,6 +1,6 @@
 # TODO: Give each project stage ([build|service] process) its own docker
 # SEE: https://docs.docker.com/develop/develop-images/multistage-build/
-FROM node:10.16.3 AS everything
+FROM node:10.16.3 AS too-many-services
 LABEL version=1.0.0 \
       maintainer=wesleyb@pm.me \
       description="A container for an auto-fill web service"
