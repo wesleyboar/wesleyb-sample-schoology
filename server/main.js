@@ -33,8 +33,6 @@ const docsDir = path.resolve( __dirname, '../dist/docs');
 // URLs
 const URL = ( new URLs( hostname, port )).getAsStrings();
 
-console.log( 'URL.client', URL.client );
-
 // Options
 const corsOpts = {
     // The `Access-Control-Allow-Origin` must not have a trailing slash

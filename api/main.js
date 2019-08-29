@@ -5,8 +5,6 @@
  * @tutorial Server-Side Web API
  */
 
-require('dotenv').config();
-
 const Router = require('koa-router');
 const router = new Router();
 
