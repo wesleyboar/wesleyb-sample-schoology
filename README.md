@@ -126,7 +126,7 @@ Known Methods:
 Requirements:
 - [Node.js][nodejs] `10.X`
 - Run commands from this (`./`) directory.
-- Run command `npm install`¹ _at least once_ beforehand.
+- Run command `npm install` _at least once_ beforehand.
 
 [nodejs]: https://nodejs.org/ "Node.js"
 [docker]: https://www.docker.com/ "Docker"
