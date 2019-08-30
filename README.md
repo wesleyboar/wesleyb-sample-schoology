@@ -91,7 +91,7 @@ Run a web server.
 - `npm serve` will run a prodcution web server for all services
 - `npm serve:docs` will run an ad-hoc server for documentation
 
-#### `npm docs(:api|client)`
+#### `npm docs(:api|:client)`
 
 Compile documentation.
 - `npm docs` will compile documentation for all services

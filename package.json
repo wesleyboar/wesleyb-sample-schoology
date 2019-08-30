@@ -2,7 +2,6 @@
   "name": "wesleyb-sample-schoology",
   "version": "1.0.0",
   "description": "An auto-fill web service",
-  "private": true,
   "main": "main.js",
   "scripts": {
     "start": "npm-run-all --sequential build serve",
@@ -32,6 +31,10 @@
   },
   "author": "wesleyb@pm.me",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesleyboar/wesleyb-sample-schoology.git"
+  },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "shx": "^0.3.2"
