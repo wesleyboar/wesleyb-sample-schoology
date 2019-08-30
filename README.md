@@ -31,7 +31,7 @@ The domain `animal.farm`, and [some subdomains](#example-etchosts), are **requir
 3. CLI instructional output
 4. URLs in documentation
 
-To use these URLs, edit the DNS or `/etc/hosts` file on the local host, so that specific domains are directed to to `localhost` i.e. `127.0.0.1`.
+To use these URLs, edit the DNS or `/etc/hosts` file on the local host, so that specific domains are directed to `localhost` i.e. `127.0.0.1`.
 
 #### Example (`/etc/hosts`)
 ```
