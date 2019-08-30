@@ -85,13 +85,18 @@ Separate instructions exist for running these commands:
 2. Build service.
 3. Repeat steps 1 and 2 for next service.
 
-#### `npm serve`
+#### `npm serve(:docs)`
 
-Run the web server.
+Run a web server.
+- `npm serve` will run a prodcution web server for all services
+- `npm serve:docs` will run an ad-hoc server for documentation
 
-#### `npm docs`
+#### `npm docs(:api|client)`
 
-Compile documentation from all services.
+Compile documentation.
+- `npm docs` will compile documentation for all services
+- `npm docs:api` will compile documentation for server API only
+- `npm docs:client` will compile documentation for client app only
 
 #### `npm test`
 
