@@ -4,6 +4,32 @@ This is a Node web service of a code sample for Wesley B to Schoology.
 
 This project contains the client web app **and** the server web API. It is also bundled in a single docker.
 
+## Goal
+
+> Build a UI and backend for an auto complete using the backend you write as well as the frontend of your choosing.
+>
+> ### Requirements
+>
+> <details>
+> <summary>Show more…</summary>
+> 
+> #### Backend
+> - Language:
+>    - [Node, Node via TypeScript, PHP, Python or Java]
+> - Architecture:
+>     1. [API service has at least] one endpoint that can return data over `http` to a client. 
+>         - This will all run on a single machine, so `https` is not required.
+>     2. The API should accept at least a string to use as a search for the front-end.
+> - Instruction:
+>     1. [S]ufficient documentation such that […] developer with docker can [build and run app]
+>     2. [A `curl`] command to execute your api
+>
+> #### Frontend
+> - autocomplete component
+> - a document showing […] exact steps [to run on developer] machine
+>
+> </details>
+
 ## Requirements
 
 - [Docker][docker] 19.X
