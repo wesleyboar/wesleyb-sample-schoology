@@ -1,6 +1,6 @@
-# Schoology Autofill
+# Docker-Based Back-End & Front-End Autofill Service
 
-This is a Node web service of a code sample for Wesley B to Schoology.
+This is a Node web service of a code sample by Wesley B.
 
 This project contains the client web app **and** the server web API. It is also bundled in a single docker.
 
