@@ -1,6 +1,6 @@
 # Docker-Based Back-End & Front-End Autofill Service
 
-This is a Node web service of a code sample by Wesley B.
+This is the Node web service of an old code sample by Wesley B. _It is **not** maintained._
 
 This project contains the client web app **and** the server web API. It is also bundled in a single docker.
 
